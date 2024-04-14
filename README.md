@@ -117,3 +117,36 @@ Users: Collaborators.
 Description: The system must provide administrators with an overview of the progress of each project, including the number of tasks completed, in progress, and overdue.
 Required Data: Project Status.
 Users: Administrators.
+
+
+## Non-functional Requirements
+
+#### Security:
+
+**RNF 01:** Ensure confidentiality of sensitive data through strong encryption and secure key management practices.
+
+**RNF 02:** Implement multi-factor authentication and granular authorization to ensure secure access to the system, with constant monitoring of suspicious activities.
+
+#### Performance:
+
+**RNF 03:** Maintain consistent response times for all system operations, with an average response time of less than 500 milliseconds.
+
+**RNF 04:** Scale to handle peak loads of up to 1000 simultaneous users, maintaining stable performance without significant degradation.
+
+#### Usability:
+
+**RNF 05:** Develop an intuitive and responsive user interface, with user-centered design and support for various devices and popular web browsers.
+
+**RNF 06:** Ensure a consistent and smooth experience for both new and experienced users, with minimal learning curve and clear feedback on actions taken.
+
+#### Reliability:
+
+**RNF 07:** Ensure system availability with a planned downtime of less than 1% of total operating time, through server redundancy and automated recovery processes.
+
+**RNF 08:** Implement resilience testing and disaster recovery to ensure service continuity in case of hardware or software failures.
+
+#### Maintainability:
+
+**RNF 09:** Structure the source code in a modular and well-documented manner, following best practices of software development to facilitate future maintenance and extension.
+
+**RNF 10:** Adopt continuous integration and continuous delivery (CI/CD) practices, automating testing and deployments to ensure system stability and rapid delivery of new features
