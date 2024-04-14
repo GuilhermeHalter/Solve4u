@@ -16,6 +16,58 @@ Furthermore, Solve4u provides features to monitor the overall performance of the
 
 In summary, Solve4u is a practical and accessible tool for efficient project management. By simplifying the process of tracking tasks and team members, Solve4u helps teams work more organized and productive, fostering the success of their projects.
 
+## Business Rules
+
+#### User Registration:
+
+**BR 01:** Only registered users can access the system. </br>
+**BR 02:** User registration must include information such as name, email, and password.
+
+#### Project Registration:
+
+**BR 03:** Only authenticated users can create new projects.</br>
+**BR 04:** Project registration must include information such as name, description, and deadline.
+
+#### Assignment of Collaborators to Projects:
+
+**BR 05:** Only administrators can add collaborators to projects.</br>
+**BR 06:** Each project can have one or more collaborators assigned to it.
+
+#### Organization of Collaborators into Groups:
+
+**BR 07:** Collaborators can be organized into groups within each project.</br>
+**BR 08:** A collaborator can belong to more than one group within the same project.
+
+#### Task Creation:
+
+**BR 09:** Only administrators can create new tasks within each project.</br>
+**BR 10:** Each task must have a description, a priority, and a defined deadline.
+
+#### Assignment of Tasks to Collaborators:
+
+**BR 11:** Only administrators can assign tasks to collaborators within each project.</br>
+**BR 12:** Each task must be assigned to at least one responsible collaborator.
+
+#### Update of Task Status:
+
+**BR 13:** Collaborators can update the status of tasks assigned to them.</br>
+**BR 14:** The status of tasks must reflect whether they are in progress, completed, or overdue.
+
+#### Monitoring of Project Progress:
+
+**BR 15:** Administrators can monitor the overall progress of the project.</br>
+**BR 16:** Project progress should be assessed based on the number of tasks completed and compliance with deadlines.
+
+#### Notifications:
+
+**BR 17:** Collaborators should receive notifications about new tasks assigned to them.</br>
+**BR 18:** Administrators should be notified about overdue tasks or issues in the project.
+
+#### Activity Log:
+
+**BR 19:** The system must maintain an activity log, recording all actions performed by users.</br>
+**BR 20:** The activity log should be accessible to administrators for auditing and analysis purposes.
+
 ## Functional Requirements
 
 **RF001:** User Registration
