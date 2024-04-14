@@ -1,4 +1,11 @@
 # Solve4u
+
+## Credits
+This project was developed by:
+
+- [Guilherme Halter Nunes](https://github.com/GuilhermeHalter)
+- [Wedley Silva Schmoeller](https://github.com/WedleySilva)
+
 ## Project Description
 
 Solve4u is an online platform developed to streamline project management, providing an organized and efficient approach to coordinating tasks and team members. Created with a focus on practicality and ease of use, Solve4u is a valuable tool for businesses and teams seeking an accessible solution to track the progress of their projects.
