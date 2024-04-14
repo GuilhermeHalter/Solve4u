@@ -18,49 +18,49 @@ In summary, Solve4u is a practical and accessible tool for efficient project man
 
 ## Functional Requirements
 
-RF001: User Registration
+**RF001:** User Registration
 
 Description: The system must allow users to register by providing information such as name, email, and password.
 Required Data: Name, Email, Password.
 Users: All users.
 
-RF002: Project Creation
+**RF002:** Project Creation
 
 Description: The system must allow administrators to create new projects, providing information such as name, description, and deadline.
 Required Data: Project Name, Project Description, Deadline.
 Users: Administrators.
 
-RF003: Addition of Collaborators to Projects
+**RF003:** Addition of Collaborators to Projects
 
 Description: The system must allow administrators to add collaborators to existing projects, assigning them specific roles.
 Required Data: Collaborator Name, Role.
 Users: Administrators.
 
-RF004: Organization of Collaborators into Groups
+**RF004:** Organization of Collaborators into Groups
 
 Description: The system must allow administrators to organize collaborators into groups within each project, facilitating task distribution.
 Required Data: Group Name, Group Members.
 Users: Administrators.
 
-RF005: Task Creation
+**RF005:** Task Creation
 
 Description: The system must allow administrators to create new tasks within each project, assigning them description, priority, and deadline.
 Required Data: Task Description, Priority, Deadline.
 Users: Administrators.
 
-RF006: Assignment of Tasks to Collaborators
+**RF006:** Assignment of Tasks to Collaborators
 
 Description: The system must allow administrators to assign specific tasks to groups of collaborators within each project.
 Required Data: Task, Collaborator Group.
 Users: Administrators.
 
-RF007: Update of Task Status
+**RF007:** Update of Task Status
 
 Description: The system must allow collaborators to update the status of tasks assigned to them, indicating whether they are in progress, completed, or overdue.
 Required Data: Task Status.
 Users: Collaborators.
 
-RF008: Monitoring of Project Progress
+**RF008:** Monitoring of Project Progress
 
 Description: The system must provide administrators with an overview of the progress of each project, including the number of tasks completed, in progress, and overdue.
 Required Data: Project Status.
