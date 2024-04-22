@@ -1,4 +1,4 @@
-import "./HeaderComp.css"
+import "../../css/HomeHeaderComp.css"
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 
