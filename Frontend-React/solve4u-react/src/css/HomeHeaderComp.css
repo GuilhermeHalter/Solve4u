@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(48, 82, 235);
+    
+}
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    font-size: 19px;
+}
+
+.formItem{
+    margin-top: -3px;   
+}
+
+.logoApp{
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 90px;
+    -webkit-filter: grayscale(30%);
+    -moz-filter:    grayscale(30%);
+    -ms-filter:     grayscale(30%);
+    -o-filter:      grayscale(30%);
+    filter: rgb(206, 67, 67); 
+}
+
+input{
+    height: 100%;
+    padding: 1px 4px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+}
+
+button{
+    height: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+}
+button:hover{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+.Aheader{
+    text-decoration: none;
+    color: wheat;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+     
+}
+.Aheader:hover{
+    cursor: pointer;
+    color:rgb(243, 165, 63);
+    transition: 1s;
+}
