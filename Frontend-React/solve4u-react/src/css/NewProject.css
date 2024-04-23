@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+h1 {
+    font-weight: bold;
+    color: #0000008c;
+}
+
+.joinProjectCard {
+    border: 3px solid #0076E2;
+    border-radius: 20px;
+    padding: 20px;
+    width: 25%;
+    height: 25rem ;
+    background-color: aliceblue;
+}
+
+.joinCardButton {
+    width: 50%;
+    height: auto;
+    border: 3px solid #8BBAFF;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0076E2;
+    font-size: 18px;
+}
+
+.joinCardButton:hover {
+    transition: 1s;
+    height: auto;
+    border: 3px solid #8BBAFF;
+    border-radius: 20px;
+    color:#8BBAFF;
+    font-weight: bold;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.JoinProjectCard, p {
+    font-size: 18px;
+    color: #0000008c;
+    font-weight: bold;
+}
+
