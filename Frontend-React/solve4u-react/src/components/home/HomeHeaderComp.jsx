@@ -16,10 +16,10 @@ const HomeHeader = () => {
           </form>
           
           <li>
-          <Link to={"/signup"} className="Aheader">Sing Up</Link>
+          <Link to={"/signup"} className="Aheader">Sign Up</Link>
           </li>
           <li>
-          <Link to={"/signin"} className="Aheader">Sing In</Link>
+          <Link to={"/signin"} className="Aheader">Sign In</Link>
           </li>
           
         </ul>

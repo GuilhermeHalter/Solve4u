@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Home from './screens/HomeScreen.jsx'
 import SignIn from './screens/SignInScreen.jsx'
 import SignUp from './screens/SignUpScreen.jsx'
+import NewProject from './screens/NewProjectScreen.jsx'
 
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path:"/signup",
         element: <SignUp />
+      },
+      {
+        path:"/newproject",
+        element: <NewProject />
       },
     ],
   },
