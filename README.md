@@ -150,3 +150,19 @@ Users: Administrators.
 **RNF 09:** Structure the source code in a modular and well-documented manner, following best practices of software development to facilitate future maintenance and extension.
 
 **RNF 10:** Adopt continuous integration and continuous delivery (CI/CD) practices, automating testing and deployments to ensure system stability and rapid delivery of new features
+
+# Project Setup
+
+## React
+
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+
+
