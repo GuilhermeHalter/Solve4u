@@ -1,104 +1,111 @@
+/* NewProject.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+/* Estilos gerais */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', serif;
+  height: 100%;
+}
+
+.new-project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 h1 {
-    font-weight: bold;
-    color: #0000008c;
-    text-align: center;
+  font-weight: bold;
+  color: #0000008c;
+  text-align: center;
 }
 
 .cardsContainer {
-    width: 100%;
-    
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .cardsRow {
-    display: grid;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
 }
 
-/*Join Project Card*/
-
-.joinProjectCard {
-    border: 3px solid #0076E2;
-    border-radius: 20px;
-    padding: 20px 20px 20px 25px;
-    width: 25%;
-    height: 25rem ;
-    background-color: aliceblue;
-    text-align: center;
+/* Estilos dos cartões */
+.joinProjectCard{
+  border-radius: 20px;
+  padding: 20px 25px;
+  width: 38%;
+  max-width: 400px;
+  border: 4px solid #0076E2;
+  margin-bottom: 20px;
+  background-color: transparent;
+  text-align: center;
 }
-
-.joinCardButton {
-    width: 50%;
-    height: auto;
-    border: 3px solid #8BBAFF;
-    border-radius: 20px;
-    color: #fff;
-    font-weight: bold;
-    background-color: #0076E2;
-    font-size: 18px;
-    margin-top: 70px;
-}
-
-.joinCardButton:hover {
-    transition: 1s;
-    height: auto;
-    border: 3px solid #8BBAFF;
-    border-radius: 20px;
-    color:#8BBAFF;
-    font-weight: bold;
-    background-color: #fff;
-    font-size: 18px;
-}
-
-.JoinProjectCard, p {
-    font-size: 18px;
-    color: #0000008c;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 35px;
-}
-
-/*Create Project Card*/
 
 .createProjectCard {
-    border: 3px solid #1DB035;
     border-radius: 20px;
-    padding: 20px 20px 20px 25px;
-    width: 25%;
-    height: 25rem ;
-    background-color: #d7fade;
+    padding: 20px 25px;
+    width: 38%;
+    max-width: 400px;
+    border: 4px solid #1DB035;
+    margin-bottom: 20px;
+    background-color: transparent;
     text-align: center;
 }
 
-.createCardButton {
+.cardButtonJoin {
+  width: 50%;
+  height: auto;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #0076E2;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cardButtonJoin:hover {
+  transition: 0.5s;
+  border-color: #0076E2;
+  background-color: transparent;
+  color: #0076E2;
+}
+
+.cardButtonCreate {
     width: 50%;
     height: auto;
-    border: 3px solid #AFFFBC;
+    border: 3px solid transparent;
     border-radius: 20px;
     color: #fff;
     font-weight: bold;
     background-color: #1DB035;
     font-size: 18px;
-    margin-top: 70px;
-}
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .cardButtonCreate:hover {
+    transition: 0.5s;
+    border-color: #1DB035;
+    background-color: transparent;
+    color: #1DB035;
+  }
 
-.createCardButton:hover {
-    transition: 1s;
-    height: auto;
-    border: 3px solid #AFFFBC;
-    border-radius: 20px;
-    color:#AFFFBC;
-    font-weight: bold;
-    background-color: #fff;
-    font-size: 18px;
-}
-
-.createProjectCard, p {
-    font-size: 18px;
-    color: #0000008c;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 35px;
-    
+/* Estilos dos textos */
+.joinProjectCard p,
+.createProjectCard p {
+  font-size: 18px;
+  color: #0000008c;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
 }
 
