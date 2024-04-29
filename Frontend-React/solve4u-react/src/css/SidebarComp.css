@@ -16,20 +16,69 @@
   left: 0.1%; /* Posição fora da tela quando fechado */
 }
 
+.config{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.bell{
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebarmain{
+  height: 60%;
+}
+
+.sidebarfooter{
+  width: 100%;
+  height: 30%;
+}
+
+.folder{
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+hr{
+  width: 108.5%;
+}
+
 .sidebar h2 {
-  font-size: 1.5rem;
+  font-size: 1.5rem;;
   margin-bottom: 20px;
 }
 
 .sidebar ul {
   list-style-type: none;
   padding: 0;
+
 }
 
 .sidebar li {
-  margin-bottom: 10px;
+  align-items: center;
   cursor: pointer;
 }
+
 
 .toggle-icon {
   display: flex;

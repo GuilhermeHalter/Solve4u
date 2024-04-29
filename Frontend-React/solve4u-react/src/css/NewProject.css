@@ -39,7 +39,7 @@ h1 {
 /* Estilos dos cartões */
 .joinProjectCard{
   border-radius: 20px;
-  padding: 20px 25px;
+  padding: 20px 20px;
   width: 38%;
   max-width: 400px;
   border: 4px solid #0076E2;
@@ -50,7 +50,7 @@ h1 {
 
 .createProjectCard {
     border-radius: 20px;
-    padding: 20px 25px;
+    padding: 20px 20px;
     width: 38%;
     max-width: 400px;
     border: 4px solid #1DB035;
@@ -59,8 +59,9 @@ h1 {
     text-align: center;
 }
 
+
 .cardButtonJoin {
-  width: 50%;
+  width: 60%;
   height: auto;
   border: 3px solid transparent;
   border-radius: 20px;
@@ -80,7 +81,7 @@ h1 {
 }
 
 .cardButtonCreate {
-    width: 50%;
+    width: 60%;
     height: auto;
     border: 3px solid transparent;
     border-radius: 20px;

@@ -1,6 +1,12 @@
 // Sidebar.jsx
 import { useState } from 'react';
-import { VscLayoutSidebarRight } from 'react-icons/vsc';
+import { VscLayoutSidebarRight} from 'react-icons/vsc';
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaRegFolder, FaRegMoon  } from "react-icons/fa";
+import { BiLogOut, BiBell  } from "react-icons/bi";
+
+
+
 import '../../css/SidebarComp.css';
 
 const Sidebar = () => {
@@ -15,13 +21,20 @@ const Sidebar = () => {
       <div className="toggle-icon" onClick={toggleSidebar}>
         <VscLayoutSidebarRight />
       </div>
-      <h2>Minha Sidebar</h2>
+      <div className='sidebarmain'>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        {/* Adicione mais itens conforme necessário */}
+        <div className="bell"><li>Notifications</li><BiBell  /></div>
+        <div className="folder"><li>Item 2</li><FaRegFolder /></div>
+        <div className='config'><li>settings</li> <IoSettingsOutline /></div>
       </ul>
+      </div>
+      <div className="sidebarfooter">
+        <hr />
+        <ul>
+          <div className="logout"><li>Logout</li><BiLogOut /></div>
+          <div className="theme"><li>Theme</li><FaRegMoon /></div>
+        </ul>
+      </div>
     </div>
   );
 }
