@@ -1,8 +1,5 @@
-/* NewProject.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-/* Estilos gerais */
 body, html {
   margin: 0;
   padding: 0;
@@ -36,7 +33,7 @@ h1 {
   max-width: 1200px;
 }
 
-/* Estilos dos cartões */
+
 .joinProjectCard{
   border-radius: 20px;
   padding: 20px 20px;
@@ -71,6 +68,7 @@ h1 {
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
+  justify-content: center;
 }
 
 .cardButtonJoin:hover {
@@ -81,6 +79,8 @@ h1 {
 }
 
 .cardButtonCreate {
+    display: inline-flex;
+    align-items: center;
     width: 60%;
     height: auto;
     border: 3px solid transparent;
@@ -91,6 +91,7 @@ h1 {
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    justify-content: center;
   }
   
   .cardButtonCreate:hover {
@@ -100,7 +101,7 @@ h1 {
     color: #1DB035;
   }
 
-/* Estilos dos textos */
+
 .joinProjectCard p,
 .createProjectCard p {
   font-size: 18px;
@@ -110,3 +111,8 @@ h1 {
   margin-top: 20px;
 }
 
+.icon {
+  font-size: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+}

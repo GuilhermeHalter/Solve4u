@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@552&display=swap');
+
+.logo{
+        display: flex;
+        font-size: 30px;
+        color: white;
+        margin-left: 90%;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 552;
+        font-style: normal;
+}
+
+
+.four{
+    color: #8CC5FA;
+}
+
+
+.navbar{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(48, 82, 235);
+}
