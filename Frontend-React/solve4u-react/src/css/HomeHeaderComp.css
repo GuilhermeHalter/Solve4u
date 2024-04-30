@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-
 .navbar{
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
     background-color: rgb(48, 82, 235);
@@ -15,8 +13,9 @@
     font-size: 19px;
 }
 
-.formItem{
-    margin-top: -3px;   
+.labelItem{
+    display: flex;
+    position: relative;
 }
 
 .logoApp{
@@ -32,21 +31,24 @@
 }
 
 input{
-    height: 100%;
-    padding: 1px 4px;
+    padding-left: 35px;
+    width: 100%;
     border-radius: 5px;
-    border: none;
-    margin-right: 5px;
+    font-size: 16px;
+    background-color: white;
+    opacity: 0.3;
 }
 
-button{
-    height: 100%;
-    padding: 5px;
-    border-radius: 3px;
-    border: none;
+input::placeholder {
+    color: rgb(0, 0, 0);
 }
-button:hover{
-    cursor: pointer;
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
 }
 
 ul{
@@ -56,11 +58,26 @@ ul{
     text-decoration: none;
     color: wheat;
     font-size: 18px;
-    font-family: 'Lora', serif;
-     
 }
 .Aheader:hover{
     cursor: pointer;
     color:rgb(243, 165, 63);
     transition: 1s;
+}
+
+.signUpButton {
+    display: flex;
+    border: 1px solid #ffff;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.signInButton {
+    margin-top: 3px;
+}
+
+.discoveryComp ul li {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
 }

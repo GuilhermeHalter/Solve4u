@@ -1,4 +1,3 @@
-// Sidebar.jsx
 import { useState } from 'react';
 import { VscLayoutSidebarRight} from 'react-icons/vsc';
 import { IoSettingsOutline } from "react-icons/io5";
