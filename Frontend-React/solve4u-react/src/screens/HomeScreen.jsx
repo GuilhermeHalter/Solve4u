@@ -1,11 +1,16 @@
 import HomeHeader from "../components/home/HomeHeaderComp"
+import "../css/HomeScreen.css";
+
 const Home = () => {
   return (
     <div>
+      <div className="home-container">
       <HomeHeader />
-      <h1>Home Screen</h1>
- 
     </div>
+    </div>
+
+    
+    
   );
 }
 

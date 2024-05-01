@@ -3,7 +3,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #0076E2;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+    left: 0;
 }
 
 .homeHeaderNav ul {
