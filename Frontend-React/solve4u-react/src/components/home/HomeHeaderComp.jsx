@@ -5,18 +5,18 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const HomeHeader = () => {
     return (
-        <nav className="navbar">
+        <nav className="homeHeaderNav">
            <div className="discoveryComp">
             <ul>
-              <li>Solutions
+              <li className="solutionsli">Solutions
             <IoIosArrowDown/></li>
-              <li>Open Source
+              <li className="openSourceLi">Open Source
             <IoIosArrowDown /></li>
-              <li>Pricing
+              <li className="pricingLi">Pricing
             <IoIosArrowDown /></li>
             </ul>
           </div>
-        <ul>
+        <ul className="headerRightComps">
           <label className="labelItem">
             <input type="text" 
             placeholder="Search" 
