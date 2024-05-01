@@ -1,16 +1,19 @@
-.navbar{
+.homeHeaderNav{
+    width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: rgb(48, 82, 235);
-    
+    background-color: #0076E2;
 }
-.navbar ul {
+
+.homeHeaderNav ul {
     display: flex;
-    gap: 2rem;
+    gap: 2rem; 
     font-size: 19px;
+}
+
+.headerRightComps {
+    margin-right: 50px;
 }
 
 .labelItem{
@@ -18,29 +21,23 @@
     position: relative;
 }
 
-.logoApp{
-    margin: 0;
-    padding: 0;
-    width: 100px;
-    height: 90px;
-    -webkit-filter: grayscale(30%);
-    -moz-filter:    grayscale(30%);
-    -ms-filter:     grayscale(30%);
-    -o-filter:      grayscale(30%);
-    filter: rgb(206, 67, 67); 
-}
-
 input{
     padding-left: 35px;
+    font-weight: bold;
     width: 100%;
+    border: 1px solid #fff;
+    width: 14rem;
     border-radius: 5px;
     font-size: 16px;
-    background-color: white;
+    background-color: #ffffff;
+    outline: none;
     opacity: 0.3;
 }
 
 input::placeholder {
+    font-weight: bold;
     color: rgb(0, 0, 0);
+    opacity: 1;
 }
 
 .searchIcon {
@@ -55,13 +52,14 @@ ul{
     list-style: none;
 }
 .Aheader{
+    font-weight: bold;
     text-decoration: none;
-    color: wheat;
+    color: #ffffff;
     font-size: 18px;
 }
 .Aheader:hover{
     cursor: pointer;
-    color:rgb(243, 165, 63);
+    color:rgb(0, 0, 0);
     transition: 1s;
 }
 
@@ -72,12 +70,25 @@ ul{
     padding: 3px;
 }
 
+.signUpButton:hover {
+    transition: 1s;
+    border: 1px solid #000000;
+}   
+
 .signInButton {
     margin-top: 3px;
 }
 
 .discoveryComp ul li {
+    color: #000000;
+    font-weight: bold;  
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
     font-size: 15px;
+}
+
+.discoveryComp ul li:hover {
+    transition: 0.5s;
+    color: #0076E2;
 }
