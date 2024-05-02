@@ -151,18 +151,5 @@ Users: Administrators.
 
 **RNF 10:** Adopt continuous integration and continuous delivery (CI/CD) practices, automating testing and deployments to ensure system stability and rapid delivery of new features
 
-# Project Setup
-
-## React
-
-Installing npm Modules in Project.
-```bash
-npm install
-```
-
-```bash
-npm run dev
-```
-
 
 
