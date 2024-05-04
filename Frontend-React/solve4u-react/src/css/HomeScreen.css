@@ -1,8 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@552&display=swap');
+
 .home-container {
     background-image: url('../assets/media/Backgroud_img.png');
+    position: relative;
     background-size: cover;
     background-position: center;
     display: flex;
     height: 100vh;  
   }
-  
+ 
+.welcomeText{
+width: 50%;
+height: 100%;
+}
+
+.welcomeText h1 {
+  color: #292929;
+  font-size: 60px;
+  align-items: center;
+  margin-right: 30%;
+  margin-top: 25%;
+  margin-bottom: 0px;
+}
+
+.welcomeText h2 {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  color: #bdbdbd;
+  font-size: 50px;
+  align-items: center;
+  margin-top: 0px;
+  margin-left: 10%;
+}
+
+.four{
+  font-family: "Outfit", sans-serif;
+  color: #8CC5FA;
+}
+
+.welcomeText p {
+  width: 80%;
+  margin-left: 10%;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 80%; 
+}
+

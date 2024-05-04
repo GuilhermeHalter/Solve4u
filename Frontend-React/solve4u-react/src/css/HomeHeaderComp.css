@@ -57,25 +57,26 @@ ul{
 .Aheader{
     font-weight: bold;
     text-decoration: none;
-    color: #ffffff;
+    color: #adadad;
     font-size: 18px;
 }
 .Aheader:hover{
     cursor: pointer;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     transition: 1s;
 }
 
 .signUpButton {
     display: flex;
-    border: 1px solid #ffff;
+    color: #adadad;
+    border: 1px solid #adadad;
     border-radius: 5px;
     padding: 3px;
 }
 
 .signUpButton:hover {
     transition: 1s;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
 }   
 
 .signInButton {
