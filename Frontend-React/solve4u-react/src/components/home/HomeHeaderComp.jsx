@@ -18,7 +18,7 @@ const HomeHeader = () => {
           </div>
         <ul className="headerRightComps">
           <label className="labelItem">
-            <input type="text" 
+            <input className="searchInput" type="text" 
             placeholder="Search" 
             />
             <IoSearchOutline  className="searchIcon"/>

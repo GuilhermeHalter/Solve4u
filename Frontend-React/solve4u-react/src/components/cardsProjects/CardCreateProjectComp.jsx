@@ -11,7 +11,7 @@ const CardCreateProject = ({ onClose }) => {
           X
         </button>
         <h2>Create New Project</h2>
-        <input type="text" placeholder="Project Name" />
+        <input type="text" className="projectInput" placeholder="Project Name" />
         <input type="text" placeholder="Project Description" className="description" />
         <select name="category" id="category">
           <option value="option 1">Option 1</option>

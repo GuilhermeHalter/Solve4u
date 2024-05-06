@@ -31,11 +31,23 @@
   }
 
   .description{
+    outline: none;
+    font-weight: bold;
+    padding-left: 8px;
+    padding-top: 8px;
     padding-bottom: 70px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #575757;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
   
-  input,
+.projectInput,
   select {
+    outline: none;
+    font-weight: bold;
     display: block;
     width: 100%;
     margin-bottom: 10px;

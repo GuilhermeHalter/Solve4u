@@ -29,14 +29,12 @@
     cursor: pointer;
     color: #666;
   }
-
-  .description{
-    padding-bottom: 70px;
-  }
   
-  input,
+  .projectInput,
   select {
+    outline: none;
     display: block;
+    font-weight: bold;
     width: 100%;
     margin-bottom: 10px;
     padding: 8px;
