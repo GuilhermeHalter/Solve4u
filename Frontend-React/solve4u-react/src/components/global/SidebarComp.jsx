@@ -23,8 +23,8 @@ const Sidebar = () => {
       <div className='sidebarmain'>
       <ul>
         <div className="bell"><li>Notifications</li><BiBell  /></div>
-        <div className="folder"><li>Item 2</li><FaRegFolder /></div>
-        <div className='config'><li>settings</li> <IoSettingsOutline /></div>
+        <div className="folder"><li>Projects</li><FaRegFolder /></div>
+        <div className='config'><li>Settings</li> <IoSettingsOutline /></div>
       </ul>
       </div>
       <div className="sidebarfooter">
