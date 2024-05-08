@@ -10,9 +10,9 @@ const HomeHeader = () => {
             <ul>
               <li className="solutionsli">Solutions
             <IoIosArrowDown/></li>
-              <li className="openSourceLi">Open Source
+              <li className="performanceLi">Performance
             <IoIosArrowDown /></li>
-              <li className="pricingLi">Pricing
+              <li className="aboutUsLi">About Us
             <IoIosArrowDown /></li>
             </ul>
           </div>

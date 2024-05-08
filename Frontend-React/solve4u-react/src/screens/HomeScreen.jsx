@@ -17,13 +17,28 @@ const Home = () => {
         <img className="section2Img" src="https://www.doplim.com.br/noticias/wp-content/uploads/2024/02/relacoes-interpessoais-no-trabalho-administrativo-no-brasil-900x500.jpg" />
       </div>
       <div className="section2Text">
-          <h1>
-            
+          <h1 className="solutionsTitle">
+          We solve your
+          <br /> challenge for you.
           </h1>
+          <p>
+          Regardless of the size or complexity of your project, we are committed to delivering exceptional results that add tangible value to your business. When you choose our solutions, you are choosing partnership, innovation and excellence, guided by an unwavering commitment to your success.
+          </p>
       </div>
-    </div>
-    <div className="section3">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates consequatur saepe qui nihil temporibus omnis itaque iste tenetur incidunt voluptatibus expedita accusamus commodi quam maiores culpa recusandae, earum quia voluptate.
+      </div>
+      <div className="section3">
+        <div className="section3DivText">
+          <h1 className="performanceTitle">
+          Unlock the potential
+          <br /> of your projects.
+          </h1>
+          <p>
+          Our platform is a powerful and intuitive tool designed to simplify project management and boost your productivity. With features that go beyond simply organizing tasks, we are committed to providing a solution that inspires collaboration, creativity and innovation at every stage of your project.
+          </p>
+        </div>
+        <div className="section3DivImg">
+        <img className="section3Img" src="https://img.freepik.com/premium-vector/set-colorful-infographic-elements-presentation-graphics-statistics-data-diagrams_172533-81.jpg" />
+      </div>
     </div>
     </div>
   );
