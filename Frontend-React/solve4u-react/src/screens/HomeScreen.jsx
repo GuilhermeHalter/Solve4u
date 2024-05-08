@@ -1,4 +1,5 @@
 import HomeHeader from "../components/home/HomeHeaderComp"
+import HomeFooter from "../components/home/HomeFooterComp"
 import "../css/HomeScreen.css";
 
 const Home = () => {
@@ -38,8 +39,9 @@ const Home = () => {
         </div>
         <div className="section3DivImg">
         <img className="section3Img" src="https://img.freepik.com/premium-vector/set-colorful-infographic-elements-presentation-graphics-statistics-data-diagrams_172533-81.jpg" />
-      </div>
+      </div>  
     </div>
+    <HomeFooter />
     </div>
   );
 }
