@@ -26,4 +26,30 @@
     display: flex;
     margin-left: 8%;
   }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ButtonNew{
+    width: 8%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+    background-color: transparent;
+    color: #0076E2;
+    font-weight: bold;
+    border: 2px solid #0076E2;
+    border-radius: 40px;
+  }
+
+  .ButtonNew:hover{
+    transition: 1s;
+    cursor: pointer;
+    color: #04539c;
+    font-weight: bold;
+    border: 2px solid #04539c;
+  }
+
   

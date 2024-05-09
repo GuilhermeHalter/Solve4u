@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx";
 import CardProject from "../components/cardsProjects/CardsProjectsComp.jsx";
+import CardCreateProject from "../components/cardsProjects/CardCreateProjectComp.jsx";
+
 import "../css/ProjectsScreen.css"
 import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const [isCardVisible, setCardVisible] = useState(false);
   const navigate = useNavigate();
   const [projects, setProjects] = useState([]);
 
@@ -18,13 +21,25 @@ const Projects = () => {
     navigate(`/inproject/${project.id}`, { state: { project } });
   };
 
+  const openCard = () => {
+    setCardVisible(true);
+  };
+
+  const closeCard = () => {
+    setCardVisible(false);
+    window.location.reload();
+  };
+
+
   return (
     <div>
       <GlobalHeader />
       <Sidebar />
       <div className="project-screen">
-        <header>
-          <h1>Seus Projetos</h1>
+        <header className='header'>
+          <h1 className='title'>Seus Projetos</h1>
+
+          <button className='ButtonNew' onClick={openCard}>New Project</button>
         </header>
         <div className="projects-container">
           {projects.map((project, index) => (
@@ -41,6 +56,7 @@ const Projects = () => {
           </div>
         </section>
       </div>
+      {isCardVisible && <CardCreateProject onClose={closeCard} /> }
     </div>
   );
 };

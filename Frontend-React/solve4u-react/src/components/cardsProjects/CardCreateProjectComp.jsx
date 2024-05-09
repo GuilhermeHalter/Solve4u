@@ -63,7 +63,7 @@ const CardCreateProject = ({ onClose }) => {
           <option value="Option 2">Option 2</option>
           <option value="Option 3">Option 3</option>
         </select>
-        <button className="create-btn" onClick={handleCreateProject}>
+        <button className="create-btn" onClick={handleCreateProject} >
           Create Project <FaPlus className="iconCard" />
         </button>
       </div>
