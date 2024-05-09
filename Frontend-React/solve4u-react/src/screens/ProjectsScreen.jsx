@@ -3,14 +3,20 @@ import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx";
 import CardProject from "../components/cardsProjects/CardsProjectsComp.jsx";
 import "../css/ProjectsScreen.css"
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const navigate = useNavigate();
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     const localStorageProjects = JSON.parse(localStorage.getItem('projects')) || [];
     setProjects(localStorageProjects);
   }, []);
+
+  const handleCardClick = (project) => {
+    navigate(`/inproject/${project.id}`, { state: { project } });
+  };
 
   return (
     <div>
@@ -24,8 +30,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <CardProject
               key={index}
-              title={project.projectName}
-              content={project.projectDescription}
+              project={project}
+              onClick={handleCardClick}
             />
           ))}
         </div>

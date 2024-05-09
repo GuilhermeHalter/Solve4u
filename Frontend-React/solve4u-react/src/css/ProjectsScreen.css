@@ -17,8 +17,13 @@
     grid-template-columns: 33.3% 33.3% 33.3%;
   }
   
+  .title{
+    display: flex;
+    margin-left: 8%;
+  }
+
   .subtitle {
     display: flex;
-    justify-content: center;
+    margin-left: 8%;
   }
   
