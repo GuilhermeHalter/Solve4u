@@ -1,9 +1,12 @@
 .sector-card {
+    width: 75%;
     background-color: #f9f9f9;
     padding: 20px;
+    margin-left: 2%;
     border: 2px solid #939393;
     border-radius: 8px;
     margin-bottom: 20px;
+    word-wrap: break-word;
   }
   
   .sector-card h3 {

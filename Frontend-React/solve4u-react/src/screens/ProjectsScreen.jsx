@@ -37,7 +37,7 @@ const Projects = () => {
       <Sidebar />
       <div className="project-screen">
         <header className='header'>
-          <h1 className='title'>Seus Projetos</h1>
+          <h1 className='title'>Your Project's</h1>
 
           <button className='ButtonNew' onClick={openCard}>New Project</button>
         </header>
@@ -51,7 +51,7 @@ const Projects = () => {
           ))}
         </div>
         <section>
-          <h2 className="subtitle">Análises</h2>
+          <h2 className="subtitle">Analityc's</h2>
           <div className="analytics-container">
           </div>
         </section>

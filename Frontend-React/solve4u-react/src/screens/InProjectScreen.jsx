@@ -41,6 +41,7 @@ const InProject = () => {
 
   const closeSectorCard = () => {
     setSectorCardVisible(false);
+    window.location.reload();
   };
 
   return (

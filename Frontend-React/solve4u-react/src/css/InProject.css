@@ -61,3 +61,10 @@
 .iconC {
   margin-left: 10px;
 }
+
+.sectionCards{
+  margin-left: -2.5%;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
