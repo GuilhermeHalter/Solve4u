@@ -1,38 +1,50 @@
 import "../../css/HomeHeaderComp.css"
+import React from "react";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 
-const HomeHeader = () => {
-    return (
-        <nav className="homeHeaderNav">
-           <div className="discoveryComp">
-            <ul>
-              <li className="solutionsli">Solutions
-            <IoIosArrowDown/></li>
-              <li className="performanceLi">Performance
-            <IoIosArrowDown /></li>
-              <li className="aboutUsLi">About Us
-            <IoIosArrowDown /></li>
-            </ul>
-          </div>
-        <ul className="headerRightComps">
-          <label className="labelItem">
-            <input className="searchInput" type="text" 
-            placeholder="Search" 
-            />
-            <IoSearchOutline  className="searchIcon"/>
-          </label>
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    window.scrollTo({
+      behavior: "smooth",
+      top: section.offsetTop,
+    });
+  }
+};
 
-           <li className="signInButton">
-          <Link to={"/signin"} className="Aheader">Sign In</Link>
+const HomeHeader = () => {
+  return (
+    <nav className="homeHeaderNav">
+      <div className="discoveryComp">
+        <ul>
+          <li className="solutionsli" onClick={() => scrollToSection("solutions")}>
+            Solutions <IoIosArrowDown />
           </li>
-          <li className="signUpButton">
-          <Link to={"/signup"} className="Aheader">Sign Up</Link>
+          <li className="performanceLi" onClick={() => scrollToSection("performance")}>
+            Performance <IoIosArrowDown />
           </li>
         </ul>
-      </nav>
-      )
-  }
-  
-  export default HomeHeader;
+      </div>
+      <ul className="headerRightComps">
+        <label className="labelItem">
+          <input className="searchInput" type="text" placeholder="Search" />
+          <IoSearchOutline className="searchIcon" />
+        </label>
+        <li className="signInButton">
+          <Link to={"/signin"} className="Aheader">
+            Sign In
+          </Link>
+        </li>
+        <li className="signUpButton">
+          <Link to={"/signup"} className="Aheader">
+            Sign Up
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default HomeHeader;
