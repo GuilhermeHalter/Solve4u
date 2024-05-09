@@ -1,0 +1,24 @@
+.card-project {
+    word-wrap: break-word; 
+  }
+  
+  .projects-container {
+    margin-left: 8%;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+
+  }
+  
+  .analytics-container {
+    margin-left: 8%;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+  
+  .subtitle {
+    display: flex;
+    justify-content: center;
+  }
+  

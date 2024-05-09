@@ -6,7 +6,7 @@ import Home from './screens/HomeScreen.jsx'
 import SignIn from './screens/SignInScreen.jsx'
 import SignUp from './screens/SignUpScreen.jsx'
 import NewProject from './screens/NewProjectScreen.jsx'
-
+import Projects from './screens/ProjectsScreen.jsx'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
       {
         path:"/newproject",
         element: <NewProject />
+      },
+      {
+        path:"/projects",
+        element: <Projects />
       },
     ],
   },

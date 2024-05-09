@@ -1,0 +1,9 @@
+.card-comp{
+    width: 90%;
+    padding: 1%;
+    padding-top: 0;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
