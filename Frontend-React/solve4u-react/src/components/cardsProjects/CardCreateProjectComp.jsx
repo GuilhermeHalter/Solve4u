@@ -9,9 +9,15 @@ const CardCreateProject = ({ onClose }) => {
 
   const handleCreateProject = () => {
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
+    const lastId = projects.length > 0 ? projects[projects.length - 1].id : 0; // Obtém o último ID
+    const newProject = {
+      id: lastId + 1, // Incrementa o último ID
+      projectName,
+      projectDescription,
+      category
+    };
 
-    projects.push({ projectName, projectDescription, category });
-
+    projects.push(newProject);
     localStorage.setItem("projects", JSON.stringify(projects));
 
     setProjectName("");
