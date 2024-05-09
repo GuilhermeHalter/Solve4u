@@ -1,0 +1,52 @@
+.footerComp {
+    background-color: #232f3e;
+    color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerList .contactLi,
+.footerList .helpLi,
+.footerList .followUsLi {
+    padding: 0 150px 0px;
+}
+
+.helpLi {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.followUsLi {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.footerList h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footerList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerList ul li {
+    margin-bottom: 5px;
+}
+
+.footerList ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footerList ul li a:hover {
+    text-decoration: underline;
+}
