@@ -11,9 +11,9 @@ body, html {
   padding: 20px;
 }
 
-h1 {
+.titlen {
   font-weight: bold;
-  color: #0000008c;
+  color: #0000005e;
   text-align: center;
 }
 

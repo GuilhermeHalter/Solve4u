@@ -7,11 +7,21 @@ const CardCreateProject = ({ onClose }) => {
   const [projectDescription, setProjectDescription] = useState("");
   const [category, setCategory] = useState("Option 1");
 
+  const generateRandomCode = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let code = '';
+    for (let i = 0; i < 8; i++) {
+      code += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return code;
+  };
+
   const handleCreateProject = () => {
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
-    const lastId = projects.length > 0 ? projects[projects.length - 1].id : 0; // Obtém o último ID
+    const lastId = projects.length > 0 ? projects[projects.length - 1].id : 0;
     const newProject = {
-      id: lastId + 1, // Incrementa o último ID
+      id: lastId + 1,
+      codigo: generateRandomCode(),
       projectName,
       projectDescription,
       category

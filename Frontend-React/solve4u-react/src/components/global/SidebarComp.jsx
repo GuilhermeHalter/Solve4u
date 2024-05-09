@@ -7,6 +7,7 @@ import { BiLogOut, BiBell  } from "react-icons/bi";
 
 
 import '../../css/SidebarComp.css';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -22,8 +23,8 @@ const Sidebar = () => {
       </div>
       <div className='sidebarmain'>
       <ul>
-        <div className="bell"><li>Notifications</li><BiBell  /></div>
-        <div className="folder"><li>Projects</li><FaRegFolder /></div>
+        <Link to={""} className="Aheaders"><div className="bell"><li>Notifications</li><BiBell  /></div></Link>
+        <Link to={"/projects"} className="Aheaders"><div className="folder"><li>Projects</li><FaRegFolder /></div></Link>
         <div className='config'><li>Settings</li> <IoSettingsOutline /></div>
       </ul>
       </div>

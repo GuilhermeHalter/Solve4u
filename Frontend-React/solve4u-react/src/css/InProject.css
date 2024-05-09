@@ -1,3 +1,63 @@
-.containerCard{
-    margin-left: 8%;
+.containerCard {
+  margin-left: 8%;
+}
+
+.titleI{
+    color: #0000009c;
+}
+
+.ButtonDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 3px;
+  background-color: transparent;
+  color: #d50000;
+  font-weight: bold;
+  border: 2px solid #d50000;
+  border-radius: 40px;
+}
+
+.ButtonDelete:hover {
+  transition: 1s;
+  cursor: pointer;
+  color: #640202;
+  font-weight: bold;
+  border: 2px solid #640202;
+}
+
+.ButtonCreateSec {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 8%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3%;
+    background-color: transparent;
+    color: #0076E2;
+    font-weight: bold;
+    border: 2px solid #0076E2;
+    border-radius: 40px;
+  }
+  
+  .ButtonCreateSec:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #03417a;
+    font-weight: bold;
+    border: 2px solid #03417a;
+  }
+
+.conteinerHeader{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.iconC {
+  margin-left: 10px;
 }
