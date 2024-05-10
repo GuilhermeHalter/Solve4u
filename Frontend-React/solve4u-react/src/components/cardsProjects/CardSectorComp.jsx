@@ -19,7 +19,7 @@ SectorCard.propTypes = {
     sectorName: PropTypes.string.isRequired,
     sectorDescription: PropTypes.string.isRequired,
     selectedUsers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    sectorColor: PropTypes.string.isRequired // Adicionado PropTypes para a cor do setor
+    sectorColor: PropTypes.string.isRequired
   }).isRequired
 };
 

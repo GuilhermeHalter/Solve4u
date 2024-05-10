@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx";
-import CardCreateSectorComp from "../components/cardsProjects/CardCreateSectorComp.jsx"
+import CardCreateSectorComp from "../components/cardsProjects/CardCreateSectorComp.jsx";
+import CardDeleteConfirmation from "../components/cardsProjects/CardDeleteConfirmation.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import SectorCard from "../components/cardsProjects/CardSectorComp.jsx";
 import "../css/InProject.css";
 
 const InProject = () => {
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [isSectorCardVisible, setSectorCardVisible] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const project = location.state.project;
-  const projectId = project.id; // ID do projeto
+  const projectId = project.id;
 
   const [sectors, setSectors] = useState([]);
 
   useEffect(() => {
-    // Função para buscar setores associados ao projeto no localStorage
     const fetchSectors = () => {
       const allSectors = JSON.parse(localStorage.getItem("sectors")) || [];
       const projectSectors = allSectors.filter(sector => sector.projectId === projectId);
@@ -27,13 +29,24 @@ const InProject = () => {
   }, [projectId]);
 
   const handleDeleteProject = () => {
+    setShowConfirmation(true);
+  };
+
+  const deleteProjectAndRelatedSectors = () => {
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
     const updatedProjects = projects.filter((item) => item.id !== project.id);
     localStorage.setItem("projects", JSON.stringify(updatedProjects));
+
+    const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
+    const updatedSectors = sectors.filter(sector => sector.projectId !== projectId);
+    localStorage.setItem("sectors", JSON.stringify(updatedSectors));
+
     navigate("/projects");
   };
 
-  const [isSectorCardVisible, setSectorCardVisible] = useState(false);
+  const closeConfirmation = () => {
+    setShowConfirmation(false);
+  };
 
   const openSectorCard = () => {
     setSectorCardVisible(true);
@@ -67,6 +80,12 @@ const InProject = () => {
         </button>
       </div>
       {isSectorCardVisible && <CardCreateSectorComp projectId={projectId} onClose={closeSectorCard} />}
+      {showConfirmation && (
+        <CardDeleteConfirmation
+          onConfirm={deleteProjectAndRelatedSectors}
+          onCancel={closeConfirmation}
+        />
+      )}
     </div>
   );
 };

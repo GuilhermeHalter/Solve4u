@@ -7,7 +7,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
   const [sectorDescription, setSectorDescription] = useState("");
   const [selectedUser, setSelectedUser] = useState("");
   const [selectedUsers, setSelectedUsers] = useState([]);
-  const [sectorColor, setSectorColor] = useState("#ffffff"); // Estado para a cor do setor
+  const [sectorColor, setSectorColor] = useState("#ffffff");
 
   const users = ["User 1", "User 2", "User 3"];
 
@@ -17,7 +17,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
       sectorName,
       sectorDescription,
       selectedUsers,
-      sectorColor // Adicionando a cor do setor ao objeto do setor
+      sectorColor 
     };
 
     const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
@@ -56,7 +56,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
   };
 
   const handleColorChange = (event) => {
-    setSectorColor(event.target.value); // Atualiza a cor do setor quando o usuário seleciona uma cor
+    setSectorColor(event.target.value);
   };
 
   return (
@@ -67,14 +67,14 @@ const CardCreateSector = ({ onClose, projectId }) => {
         </button>
         <h2>Create New Sector</h2>
         <div className="color-picker-container">
-            <input
-          type="text"
-          className="sectorInput"
-          placeholder="Sector Name"
-          name="sectorName"
-          value={sectorName}
-          onChange={handleInputChange}
-        />
+          <input
+            type="text"
+            className="sectorInput"
+            placeholder="Sector Name"
+            name="sectorName"
+            value={sectorName}
+            onChange={handleInputChange}
+          />
           
           <input
             type="color"
