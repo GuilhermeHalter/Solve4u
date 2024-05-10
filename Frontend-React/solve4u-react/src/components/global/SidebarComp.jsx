@@ -31,7 +31,7 @@ const Sidebar = () => {
       <div className="sidebarfooter">
         <hr />
         <ul>
-          <div className="logout"><li>Logout</li><BiLogOut /></div>
+          <Link to={"/"} className="Aheaders"><div className="logout"><li>Logout</li><BiLogOut /></div></Link>
           <div className="theme"><li>Theme</li><FaRegMoon /></div>
         </ul>
       </div>

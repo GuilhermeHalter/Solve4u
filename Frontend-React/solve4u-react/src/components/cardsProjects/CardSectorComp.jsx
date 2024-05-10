@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../../css/CardSectorComp.css"
+import "../../css/CardSectorComp.css";
 
 const SectorCard = ({ sector }) => {
-  const { sectorName, sectorDescription, selectedUsers } = sector;
+  const { sectorName, sectorDescription, selectedUsers, sectorColor } = sector;
 
   return (
-    <div className="sector-card">
-      <h3>{sectorName}</h3>
+    <div className="sector-card" >
+      <h3 style={{ backgroundColor: sectorColor, borderRadius: "5px", minWidth: "30%", maxWidth: "50%" ,textAlign: "center" }}>{sectorName}</h3>
       <p>Description: {sectorDescription}</p>
       <p>Selected Users: {selectedUsers.join(", ")}</p>
     </div>
@@ -18,7 +18,8 @@ SectorCard.propTypes = {
   sector: PropTypes.shape({
     sectorName: PropTypes.string.isRequired,
     sectorDescription: PropTypes.string.isRequired,
-    selectedUsers: PropTypes.arrayOf(PropTypes.string).isRequired
+    selectedUsers: PropTypes.arrayOf(PropTypes.string).isRequired,
+    sectorColor: PropTypes.string.isRequired // Adicionado PropTypes para a cor do setor
   }).isRequired
 };
 

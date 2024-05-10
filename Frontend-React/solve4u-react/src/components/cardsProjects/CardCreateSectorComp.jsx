@@ -7,21 +7,21 @@ const CardCreateSector = ({ onClose, projectId }) => {
   const [sectorDescription, setSectorDescription] = useState("");
   const [selectedUser, setSelectedUser] = useState("");
   const [selectedUsers, setSelectedUsers] = useState([]);
+  const [sectorColor, setSectorColor] = useState("#ffffff"); // Estado para a cor do setor
 
-  const users = ["User 1", "User 2", "User 3"]; 
+  const users = ["User 1", "User 2", "User 3"];
 
   const handleCreateSector = () => {
     const sector = {
-      projectId: projectId, 
+      projectId: projectId,
       sectorName,
       sectorDescription,
-      selectedUsers
+      selectedUsers,
+      sectorColor // Adicionando a cor do setor ao objeto do setor
     };
 
     const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
-
     sectors.push(sector);
-
     localStorage.setItem("sectors", JSON.stringify(sectors));
 
     setSectorName("");
@@ -55,6 +55,10 @@ const CardCreateSector = ({ onClose, projectId }) => {
     setSelectedUsers(selectedUsers.filter(user => user !== userToRemove));
   };
 
+  const handleColorChange = (event) => {
+    setSectorColor(event.target.value); // Atualiza a cor do setor quando o usuário seleciona uma cor
+  };
+
   return (
     <div className="modal-background">
       <div className="modal">
@@ -62,7 +66,8 @@ const CardCreateSector = ({ onClose, projectId }) => {
           X
         </button>
         <h2>Create New Sector</h2>
-        <input
+        <div className="color-picker-container">
+            <input
           type="text"
           className="sectorInput"
           placeholder="Sector Name"
@@ -70,6 +75,15 @@ const CardCreateSector = ({ onClose, projectId }) => {
           value={sectorName}
           onChange={handleInputChange}
         />
+          
+          <input
+            type="color"
+            className="color-picker"
+            value={sectorColor}
+            onChange={handleColorChange}
+          />
+        </div>
+        
         <input
           type="text"
           placeholder="Sector Description"
