@@ -12,13 +12,14 @@
 .welcomeText{
     width: 50%;
     height: 100%;
+    
     }
 
 .welcomeText h1 {
   color: #292929;
   font-size: 60px;
   align-items: center;
-  margin-right: 30%;
+  margin-left: 10%;
   margin-top: 25%;
   margin-bottom: 0px;
 }
