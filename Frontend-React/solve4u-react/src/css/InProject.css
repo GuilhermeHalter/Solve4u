@@ -33,7 +33,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 8%;
+    width: 100%;
     height: 40px;
     margin-top: 20px;
     margin-right: 3%;
@@ -45,6 +45,36 @@
   }
   
   .ButtonCreateSec:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #03417a;
+    font-weight: bold;
+    border: 2px solid #03417a;
+  }
+
+  .ButtonEditProject {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3%;
+    background-color: transparent;
+    color: #0076E2;
+    font-weight: bold;
+    border: 2px solid #0076E2;
+    border-radius: 40px;
+  }
+
+  .sections2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .ButtonEditProject:hover {
     transition: 1s;
     cursor: pointer;
     color: #03417a;
