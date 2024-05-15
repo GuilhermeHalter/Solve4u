@@ -1,4 +1,4 @@
-import "../../css/GlobalHeaderComp.css"
+import "../../css/compStyle/compGlobalStyle/GlobalHeaderComp.css"
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 

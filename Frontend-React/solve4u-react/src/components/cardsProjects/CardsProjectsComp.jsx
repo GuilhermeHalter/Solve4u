@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../css/CardsProjectComp.css";
+import "../../css/cardStyle/CardsProjectComp.css";
 
 const CardProject = ({ project, onClick }) => (
   <div className="card-comp" onClick={() => onClick(project)}>

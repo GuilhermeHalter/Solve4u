@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/CardDeleteConfirmation.css";
+import "../../css//cardStyle/CardDeleteConfirmation.css";
 
 const DeleteConfirmation = ({ onConfirm, onCancel }) => {
   return (

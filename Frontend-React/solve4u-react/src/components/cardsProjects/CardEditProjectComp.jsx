@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/CardEditProjectComp.css";
+import "../../css/cardStyle/CardEditProjectComp.css";
 import { FaPlus } from "react-icons/fa";
 
 const CardEditProjectComp = ({ project, onClose }) => {

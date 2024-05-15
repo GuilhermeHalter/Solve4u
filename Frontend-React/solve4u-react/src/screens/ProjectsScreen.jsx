@@ -4,7 +4,7 @@ import GlobalHeader from "../components/global/GlobalHeaderComp.jsx";
 import CardProject from "../components/cardsProjects/CardsProjectsComp.jsx";
 import CardCreateProject from "../components/cardsProjects/CardCreateProjectComp.jsx";
 
-import "../css/ProjectsScreen.css"
+import "../css/screenStyle/projectScreenStyle/ProjectsScreen.css"
 import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {

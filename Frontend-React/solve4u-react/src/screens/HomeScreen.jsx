@@ -1,7 +1,7 @@
 import React from "react";
 import HomeHeader from "../components/home/HomeHeaderComp";
 import HomeFooter from "../components/home/HomeFooterComp";
-import "../css/HomeScreen.css";
+import "../css/screenStyle/homeScreenStyle/HomeScreen.css";
 
 const Home = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/CardCreateSectorComp.css";
+import "../../css/cardStyle/CardCreateSectorComp.css";
 import { FaPlus, FaTimes } from "react-icons/fa";
 
 const CardCreateSector = ({ onClose, projectId }) => {

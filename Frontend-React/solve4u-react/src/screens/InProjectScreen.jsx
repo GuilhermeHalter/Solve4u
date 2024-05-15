@@ -7,7 +7,7 @@ import CardEditProjectComp from "../components/cardsProjects/CardEditProjectComp
 import { useLocation, useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import SectorCard from "../components/cardsProjects/CardSectorComp.jsx";
-import "../css/InProject.css";
+import "../css/screenStyle/projectScreenStyle/InProjectScreen.css";
 
 const InProject = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);

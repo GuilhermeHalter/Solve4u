@@ -1,4 +1,4 @@
-import "../css/NewProject.css";
+import "../css/screenStyle/projectScreenStyle/NewProjectScreen.css";
 import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx"
 import { FaArrowRight, FaPlus } from "react-icons/fa";

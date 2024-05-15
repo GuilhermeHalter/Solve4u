@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import "../../css/CardJoinProjectComp.css";
+import "../../css/cardStyle/CardJoinProjectComp.css";
 
 const CardJoinProject = ({ onClose }) => {
   return (

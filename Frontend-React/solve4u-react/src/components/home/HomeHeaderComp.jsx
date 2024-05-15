@@ -1,4 +1,4 @@
-import "../../css/HomeHeaderComp.css"
+import "../../css/compStyle/compHomeStyle/HomeHeaderComp.css"
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";

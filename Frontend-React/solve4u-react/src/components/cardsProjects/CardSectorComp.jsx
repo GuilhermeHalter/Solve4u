@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../../css/CardSectorComp.css";
+import "../../css/cardStyle/CardSectorComp.css";
 
 const SectorCard = ({ sector }) => {
   const { sectorName, sectorDescription, selectedUsers, sectorColor } = sector;

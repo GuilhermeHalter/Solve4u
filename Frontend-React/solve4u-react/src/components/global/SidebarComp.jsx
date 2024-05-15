@@ -3,11 +3,9 @@ import { VscLayoutSidebarRight} from 'react-icons/vsc';
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegFolder, FaRegMoon  } from "react-icons/fa";
 import { BiLogOut, BiBell  } from "react-icons/bi";
-
-
-
-import '../../css/SidebarComp.css';
 import { Link } from 'react-router-dom';
+import '../../css/compStyle/compGlobalStyle/SidebarComp.css';
+
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
