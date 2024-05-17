@@ -1,31 +1,40 @@
 import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import "../css/screenStyle/signScreen/SignInScreen.css";
 
 const SignIn = () => {
     return (
-        <div>
-            <div>
-                <h1>WELCOME</h1>
-                <div className="welcomeText">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus magnam temporibus, cupiditate quisquam repellat distinctio qui commodi unde esse, expedita, non voluptatibus. Animi, quo hic molestiae perferendis ex incidunt accusamus!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod voluptatum harum, perferendis natus ad delectus iure tenetur quibusdam nihil autem recusandae molestiae at explicabo vitae earum soluta culpa. Officiis?
+        <div className="global">
+            <div className="signInContainer">
+                <div className="welcomeComp">
+                    <h1 className="welcomeTitle">WELCOME</h1>
+                    <p className="textContent"> We're here to streamline the way you manage your projects, offering powerful and intuitive tools to boost your productivity and achieve exceptional results.</p>
+                     
+                     <div className="signUpButton">
+                        <Link to={"/signup"} className="signUpButton"> SIGN UP </Link>
+                     </div>
+                     
                 </div>
-                <Link to={"/signup"}> SIGN UP </Link>
-            </div>
-            <div className="login">
-                <h1>LOGIN</h1>
-                <div className="inputSignIn">
-                    <input type="text" className="name" placeholder="Name" />
-                    <input type="text" className="password" placeholder="Password" />
-                </div>
-                <Link to={"/newproject"}> SIGN IN </Link>
-              
-                <div className="iconsLogin">
-
+                <div className="loginComp">
+                    <h1 className="loginTitle">LOGIN</h1>
+                    <div className="inputSignIn">
+                        <input type="text" className="nameInput" placeholder="Name" />
+                        <input type="text" className="passwordInput" placeholder="Password" />
+                    </div>
+                    <Link to={"/newproject"}> SIGN IN </Link>
+                    <div className="iconsLogin">
+                        <ul>
+                            <li><a target="_blank"><FcGoogle className="googleIcon" /></a></li>
+                            <li><a target="_blank"><FaGithub className="githubIcon" /></a></li>
+                            <li><a target="_blank"><FaLinkedin className="linkedinIcon" /></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     );
-
 }
 
 export default SignIn;
