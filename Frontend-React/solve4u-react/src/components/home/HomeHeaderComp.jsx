@@ -32,12 +32,12 @@ const HomeHeader = () => {
           <input className="searchInput" type="text" placeholder="Search" />
           <IoSearchOutline className="searchIcon" />
         </label>
-        <li className="signInButton">
+        <li className="signInHomeButton">
           <Link to={"/signin"} className="Aheader">
             Sign In
           </Link>
         </li>
-        <li className="signUpButton">
+        <li className="signUpHomeButton">
           <Link to={"/signup"} className="Aheader">
             Sign Up
           </Link>
