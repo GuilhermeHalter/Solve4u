@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBookmark } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import "../css/screenStyle/signScreen/SignInScreen.css";
 
@@ -13,6 +12,7 @@ const SignIn = () => {
             </div>
             <div className="signInContainer">
                 <div className="welcomeComp">
+                    <FaBookmark className="bookMarkIcon"/>
                     <h1 className="welcomeTitle">WELCOME</h1>
                     <p className="textContent"> We're here to streamline the way you manage your projects, offering powerful and intuitive tools to boost your productivity and achieve exceptional results.</p>
                      
@@ -23,10 +23,10 @@ const SignIn = () => {
                 </div>
                 <div className="loginComp">
                     <h1 className="loginTitle">LOGIN</h1>
-                    <div className="inputSignIn">
-                        <input type="text" className="nameInput" placeholder="Name" />
-                        <input type="text" className="passwordInput" placeholder="Password" />
-                    </div>
+                    <form className="inputSignIn">
+                        <input type="text" className="nameInput" placeholder="Name" required />
+                        <input type="text" className="passwordInput" placeholder="Password" required/>
+                    </form>
 
                     <div className="signInButtonComp">
                         <Link to={"/newproject"} className="singInButton"> SIGN IN </Link>

@@ -216,5 +216,10 @@
     width: 25px;
 }
 
-
+.bookMarkIcon {
+    display: flex;
+    margin-top: -25px;
+    color: #d8d8d8;
+    font-size: 30px;
+}
     

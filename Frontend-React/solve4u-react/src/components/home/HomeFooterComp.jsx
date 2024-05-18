@@ -1,6 +1,5 @@
 import "../../css/compStyle/compHomeStyle/HomeFooterComp.css"
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram, FaFacebookSquare } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const HomeFooter = () => {
