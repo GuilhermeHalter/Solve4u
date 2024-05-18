@@ -24,7 +24,7 @@ const SignIn = () => {
                 <div className="loginComp">
                     <h1 className="loginTitle">LOGIN</h1>
                     <form className="inputSignIn">
-                        <input type="text" className="nameInput" placeholder="Name" required />
+                        <input type="email" className="eMailInput" placeholder="E-mail" required />
                         <input type="text" className="passwordInput" placeholder="Password" required/>
                     </form>
 
