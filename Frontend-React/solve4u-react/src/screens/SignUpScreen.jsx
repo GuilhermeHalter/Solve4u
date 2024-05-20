@@ -20,7 +20,9 @@ const SignIn = () => {
                     <h1 className="signUpTitle">SIGN UP</h1>
                     <form className="inputSignUp">
                         <input type="text" className="newNameInput" placeholder="Name" required />
+                        <input type="email" className="newEmailInput" placeholder="E-mail" required/>
                         <input type="password" className="newPasswordInput" placeholder="Password" required/>
+                        <input type="password" className="confirmPasswordInput" placeholder="Confirm Password" required/>
                     </form>
 
                     <div className="loginButtonComp">

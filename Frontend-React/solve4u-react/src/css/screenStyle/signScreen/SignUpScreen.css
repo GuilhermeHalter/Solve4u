@@ -27,6 +27,9 @@
 }
 
 .contentText {
+    display: flex;
+    height: 55%;
+    align-items: center;
     font-weight: bold;
     color: #000000;
     text-align: left;
@@ -75,10 +78,9 @@
     color: #ffffff;
 }
 
-.inputSignIn {
-    display: grid;
+.inputSignUp {
     width: 100%;
-    height: 25%;
+    height: 70%;
     border-radius: 20px;
 }
 
@@ -145,49 +147,30 @@
 }
 
 
-.singInButton{
+.loginButton{
     display: flex;
+    position: absolute;
     width: 150px;
     text-decoration: none;
     font-weight: bold;
-    color: #0076E2;
+    color: #fff;
     justify-content: center;
     align-items: center;
-    border: 2px solid #0076E2;
+    border: 2px solid #ffff;
     border-radius: 20px;
     padding: 10px;
 }
 
-.singInButton:hover {
+.loginButton:hover {
     transition: 0.5s;
-    color: #fff;
-    background-color: #0076E2;
-}
-
-.signInButtonComp{
-    display: flex;
-    margin-top: 20%;
-    justify-content: center;
-    align-items: center;
-}
-
-.iconsLogin ul{
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    font-size: 35px;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.iconsLogin ul li:hover{
-    transition: 0.5s;
-    transform: scale(1.2);
-}
-
-.linkedinIcon {
     color: #0076E2;
+    background-color: #ffff;
+}
+
+.loginButtonComp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .signUpBackButtonComp{
@@ -215,7 +198,22 @@
 .markBookIcon {
     display: flex;
     margin-top: -25px;
+    margin-left: 90%;
     color: #d8d8d8;
     font-size: 30px;
 }
     
+.newNameInput,
+.newEmailInput,
+.newPasswordInput,
+.confirmPasswordInput{
+    border: 1px solid #ffffff;
+    margin-left: 20%;
+    background-color: transparent;
+    color: #fff;
+    width: 60%;
+    height: 31px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
