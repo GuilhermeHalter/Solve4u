@@ -7,6 +7,16 @@
     position: absolute;
     top:0;
     left: 0;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .homeHeaderNav ul {

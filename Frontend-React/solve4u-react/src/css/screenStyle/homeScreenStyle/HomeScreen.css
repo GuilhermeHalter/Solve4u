@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@552&display=swap');
 
 .home-container {
-    background-image: url('../../../assets/media/Backgroud_img.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/solve4u-5722c.appspot.com/o/HomeScreen%2FBackgroud_img.png?alt=media&token=e3901efc-ed02-4f2d-9d82-99496249aef0');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -22,6 +22,16 @@
   margin-left: 10%;
   margin-top: 25%;
   margin-bottom: 0px;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1.8s forwards;
+}
+
+@keyframes slideIn {
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
 }
 
 .welcomeText h2 {
@@ -32,6 +42,17 @@
   align-items: center;
   margin-top: 0px;
   margin-left: 10%;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1.8s forwards;
+  animation-delay: 1.3s;
+}
+
+@keyframes slideIn {
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
 }
 
 .four{
@@ -125,3 +146,16 @@
   width: 100%;
   height: auto;
 }
+
+.divHomeText{
+  opacity: 0;
+  animation: slideIn 1.8s forwards;
+  animation-delay: 2.9s;
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1;
+  }
+}
+
