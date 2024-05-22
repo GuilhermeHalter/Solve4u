@@ -6,6 +6,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [taskUser, setTaskUser] = useState("");
+  const [dateDeadline, setDateDeadline] = useState(""); 
 
   const users = ["User 1", "User 2", "User 3"];
 
@@ -14,12 +15,13 @@ const CardCreateTask = ({ onClose, sectorId }) => {
     const newTaskId = tasks.length > 0 ? tasks[tasks.length - 1].taskId + 1 : 1;
 
     const task = {
-      sectorId: sectorId, 
+      sectorId: sectorId,
       taskId: newTaskId,
       taskName,
       taskDescription,
       taskUser,
-      taskStage: "1", // Default to "Process"
+      dateDeadline, 
+      taskStage: "1",
     };
 
     tasks.push(task);
@@ -28,6 +30,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
     setTaskName("");
     setTaskDescription("");
     setTaskUser("");
+    setDateDeadline("");
     onClose();
   };
 
@@ -37,12 +40,17 @@ const CardCreateTask = ({ onClose, sectorId }) => {
       setTaskName(value);
     } else if (name === "taskDescription") {
       setTaskDescription(value);
+    } else if (name === "dateDeadline") { 
+      setDateDeadline(value);
     }
   };
 
   const handleUserSelect = (event) => {
     setTaskUser(event.target.value);
   };
+
+  
+  const today = new Date().toISOString().split("T")[0];
 
   return (
     <div className="modal-background">
@@ -66,6 +74,15 @@ const CardCreateTask = ({ onClose, sectorId }) => {
           name="taskDescription"
           value={taskDescription}
           onChange={handleInputChange}
+        />
+        <input
+          type="date" 
+          placeholder="Deadline"
+          className="dateInput"
+          name="dateDeadline"
+          value={dateDeadline}
+          onChange={handleInputChange}
+          min={today} 
         />
         <div className="user-select-container">
           <select

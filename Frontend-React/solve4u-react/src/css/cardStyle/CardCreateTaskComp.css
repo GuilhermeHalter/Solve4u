@@ -155,3 +155,12 @@
     color: #cc0000;
   }
   
+  .dateInput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #2d2d2d;
+    border-radius: 4px;
+  }
+  

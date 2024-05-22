@@ -5,19 +5,19 @@ const TaskCard = ({ task }) => {
   const getTaskColor = () => {
     switch (task.taskStage) {
       case "1":
-        return "#FFD700"; // Yellow
+        return "#FFD700";
       case "2":
-        return "#800080"; // Purple
+        return "#800080"; 
       case "3":
-        return "#008000"; // Green
+        return "#008000"; 
       case "4":
-        return "#FF0000"; // Red
+        return "#FF0000"; 
       default:
-        return "#000000"; // Black (default color)
+        return "#000000"; 
     }
   };
 
-  const taskColor = getTaskColor(); // Obter a cor da tarefa
+  const taskColor = getTaskColor(); 
 
   return (
     <div className="task-card" style={{ border: `2px solid ${taskColor}` }}>
