@@ -12,15 +12,18 @@ const CardCreateSector = ({ onClose, projectId }) => {
   const users = ["User 1", "User 2", "User 3"];
 
   const handleCreateSector = () => {
+    const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
+    const newSectorId = sectors.length > 0 ? sectors[sectors.length - 1].sectorId + 1 : 1;
+
     const sector = {
       projectId: projectId,
+      sectorId: newSectorId,
       sectorName,
       sectorDescription,
       selectedUsers,
       sectorColor 
     };
 
-    const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
     sectors.push(sector);
     localStorage.setItem("sectors", JSON.stringify(sectors));
 

@@ -8,6 +8,7 @@ import SignUp from './screens/SignUpScreen.jsx'
 import NewProject from './screens/NewProjectScreen.jsx'
 import Projects from './screens/ProjectsScreen.jsx'
 import InProject from "./screens/InProjectScreen.jsx"
+import InSector from './screens/InSectorScreen.jsx'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:"/inproject/:id",
         element: <InProject />
+      },
+      {
+        path:"/insector/:id",
+        element: <InSector />
       },
     ],
   },

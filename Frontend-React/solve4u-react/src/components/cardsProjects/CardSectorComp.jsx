@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../../css/cardStyle/CardSectorComp.css";
 
-const SectorCard = ({ sector }) => {
+const SectorCard = ({ sector, onClick }) => {
   const { sectorName, sectorDescription, selectedUsers, sectorColor } = sector;
 
   return (
-    <div className="sector-card" >
+    <div className="sector-card" onClick={() => onClick(sector)} >
       <h3 style={{ backgroundColor: sectorColor, borderRadius: "5px", minWidth: "30%", maxWidth: "50%" ,textAlign: "center" }}>{sectorName}</h3>
       <p>Description: {sectorDescription}</p>
       <p>Selected Users: {selectedUsers.join(", ")}</p>

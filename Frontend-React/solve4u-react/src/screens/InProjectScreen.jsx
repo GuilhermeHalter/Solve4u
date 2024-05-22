@@ -62,8 +62,11 @@ const InProject = () => {
     window.location.reload();
   };
 
+  const handleSectorClick = (sector) => {
+    navigate(`/insector/${sector.sectorId}`, { state: { sector } });
+  };
+
   const handleUpdateProject = (updatedProject) => {
-    // Atualiza os projetos
     const updatedProjects = projects.map((item) => {
       if (item.id === updatedProject.id) {
         return updatedProject;
@@ -71,8 +74,7 @@ const InProject = () => {
       return item;
     });
     setProjects(updatedProjects);
-  
-    // Atualiza os setores relacionados ao projeto
+
     const updatedSectors = sectors.map((sector) => {
       if (sector.projectId === updatedProject.id) {
         return {
@@ -83,11 +85,9 @@ const InProject = () => {
       return sector;
     });
     setSectors(updatedSectors);
-  
-    // Atualiza a página
+
     window.location.reload();
   };
-  
 
   return (
     <div>
@@ -116,7 +116,7 @@ const InProject = () => {
 
         <div className="sectionCards">
           {sectors.map((sector) => (
-            <SectorCard key={sector.id} sector={sector} />
+            <SectorCard key={sector.id} sector={sector} onClick={handleSectorClick} />
           ))}
         </div>
 
