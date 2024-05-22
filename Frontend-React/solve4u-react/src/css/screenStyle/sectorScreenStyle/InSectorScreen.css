@@ -20,6 +20,11 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+.sectionTasksChecking:hover {
+    cursor: pointer;
+  }
+
+
 .sectionTasksFinished{
     margin-top: 20px;
     margin-left: 30px;

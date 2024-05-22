@@ -3,7 +3,8 @@ import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx";
 import TaskCard from "../components/cardsProjects/cardTasks/CardTaskComp.jsx";
 import CardCreateTaskComp from "../components/cardsProjects/cardTasks/CardCreateTaskComp.jsx"; 
-import CardTaskProcessComp from "../components/cardsProjects/cardTasks/CardTaskProcessComp.jsx"; 
+import CardTaskProcessComp from "../components/cardsProjects/cardTasks/cardTypeTasks/CardTaskProcessComp.jsx"; 
+import CardTaskChekingComp from "../components/cardsProjects/cardTasks/cardTypeTasks/CardTaskChekingComp.jsx";
 import { useLocation } from "react-router-dom";
 
 import "../css/screenStyle/sectorScreenStyle/InSectorScreen.css";
@@ -11,8 +12,9 @@ import "../css/screenStyle/sectorScreenStyle/InSectorScreen.css";
 const InSectorScreen = () => {
   const [tasks, setTasks] = useState([]);
   const [isTaskCardVisible, setTaskCardVisible] = useState(false);
-  const [isTaskCardProcessVisible, setTaskCardProcessVisible] = useState(false); // Novo estado para o card de processo
-  const [selectedTask, setSelectedTask] = useState(null); // Novo estado para a tarefa selecionada
+  const [isTaskCardProcessVisible, setTaskCardProcessVisible] = useState(false);
+  const [isTaskCardCheckingVisible, setTaskCardCheckingVisible] = useState(false); // Novo estado para o card de checking
+  const [selectedTask, setSelectedTask] = useState(null);
   const location = useLocation();
   const sector = location.state.sector;
   const sectorId = sector.sectorId;
@@ -46,6 +48,17 @@ const InSectorScreen = () => {
     window.location.reload();
   };
 
+  const openTaskCardChecking = (task) => {
+    setSelectedTask(task);
+    setTaskCardCheckingVisible(true);
+  };
+
+  const closeTaskCardChecking = () => {
+    setTaskCardCheckingVisible(false);
+    setSelectedTask(null);
+    window.location.reload();
+  };
+
   return (
     <div>
       <Sidebar />
@@ -68,7 +81,9 @@ const InSectorScreen = () => {
         <hr className="division"/>
         <div className="sectionTasksChecking">
           {tasks.filter((task) => task.taskStage == 2).map((task) => (
-            <TaskCard key={task.taskId} task={task} />
+            <div className="cardChecking" key={task.taskId} onClick={() => openTaskCardChecking(task)}>
+              <TaskCard task={task} />
+            </div>
           ))}
         </div>
         <hr className="division"/>
@@ -89,6 +104,9 @@ const InSectorScreen = () => {
       )}
       {isTaskCardProcessVisible && selectedTask && (
         <CardTaskProcessComp task={selectedTask} onClose={closeTaskCardProcess} />
+      )}
+      {isTaskCardCheckingVisible && selectedTask && (
+        <CardTaskChekingComp task={selectedTask} onClose={closeTaskCardChecking} />
       )}
     </div>
   );
