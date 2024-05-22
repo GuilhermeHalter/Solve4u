@@ -13,7 +13,7 @@ const InSectorScreen = () => {
   const [tasks, setTasks] = useState([]);
   const [isTaskCardVisible, setTaskCardVisible] = useState(false);
   const [isTaskCardProcessVisible, setTaskCardProcessVisible] = useState(false);
-  const [isTaskCardCheckingVisible, setTaskCardCheckingVisible] = useState(false); // Novo estado para o card de checking
+  const [isTaskCardCheckingVisible, setTaskCardCheckingVisible] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
   const location = useLocation();
   const sector = location.state.sector;

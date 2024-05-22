@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../css/cardStyle/CardTaskComp.css";
+import "../../../css/cardStyle/cardTasks/CardTaskComp.css";
 
 const TaskCard = ({ task }) => {
   const getTaskColor = () => {
