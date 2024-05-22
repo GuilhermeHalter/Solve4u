@@ -25,9 +25,8 @@ const TaskCard = ({ task }) => {
 
        </div>
        <div className="down">
-            <h3>{task.taskName}</h3>
-            <p>{task.taskDescription}</p>
-            <p>Assigned User: {task.taskUser}</p>
+            <h3 className="titleTask">{task.taskName}</h3>
+            <p className="descriptionTask">{task.taskDescription}</p>
        </div>
       
     </div>
