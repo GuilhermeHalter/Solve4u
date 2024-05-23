@@ -1,4 +1,4 @@
-.modal-background-process {
+.modal-backgroundChecking{
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
     align-items: center;
   }
   
-  .modal-process {
+  .modalChecking {
     display: flex;
     background-color: #f9f9f9;
     padding-left: 20px;
@@ -21,103 +21,96 @@
     position: relative;
   }
 
-  .lineVertical{
+  .lineVerticalChecking{
     width: 25px;
     height: 100%;
-    background-color: rgb(255, 215, 0);
+    background-color: rgb(141, 64, 207);
   }
 
-  .modal-Content{
+  .modal-ContentChecking{
     padding: 20px;
     width: 100%;
   }
 
-  .modalDivision{
+  .modalDivisionChecking{
     width: 0.5px;
     margin: 15px;
   }
 
-  .modalContentLeft{
+  .modalContentLeftChecking{
     width: 40%;
     margin-left: 20px
   }
 
-  .modalContentRight{
+  .modalContentRightChecking{
     align-items: center;
   }
 
-  .horizontalDivision {
+  .horizontalDivisionChecking {
     width: 100%;
   }
 
-  .upRight{
+  .upRightChecking{
     display: block;
     align-content: end;
     height: 300px;
   }
 
-  .upRight p{
+  .upRightChecking p{
     margin-bottom: 80px;
   }
 
-  .downRight{
+  .downRightChecking{
     display: flex;
     height: 50px;
     justify-content: center;
     align-items: center;
   }
 
-  .MoveTaskBtn{
+  .approved-task-btn{
     display: inline-flex;
     align-items: center;
-    background-color: rgb(250, 250, 188);
-    border: 2px solid rgb(255, 215, 0);
-    color: rgb(212, 175, 7);
-    font-weight: bold;
+    background-color: rgb(204, 250, 188);
+    border: 2px solid rgb(102, 219, 48);
+    color: rgb(74, 201, 39);
+    font-weight: bold;    
     border-radius: 20px;
-    padding: 9px;
+    padding: 7px;
   }
 
-  .MoveTaskBtn:hover{
+  .approved-task-btn:hover{
     transition: 0.5s;
     cursor: pointer;
-    background-color: rgba(248, 237, 79, 0.904);
-    color: rgb(117, 96, 0);
+    background-color: rgb(122, 224, 75);
+    color: rgb(204, 250, 188);
   }
 
-  .DeleteTaskBtn{
+  .notApproved-task-btn{
     display: inline-flex;
     align-items: center;
     background-color: rgb(255, 142, 142);
     border: 2px solid rgb(255, 34, 34);
     color: rgb(253, 54, 54);
-    font-weight: bold;
+    font-size: 12px;
     margin-right: 5px;
+    font-weight: bold;
     border-radius: 20px;
-    padding: 9px;
+    padding: 7px;
   }
 
-  .DeleteTaskBtn:hover{
+  .notApproved-task-btn:hover{
     transition: 0.5s;
     cursor: pointer;
-    background-color: rgb(255, 34, 34);
-    color: rgb(247, 167, 167);
+    background-color: rgb(234, 48, 48);
+    color: rgb(255, 142, 142);
   }
+  
+.checkIcon{
+    margin-left: 3px
+}
 
-  .EditTaskBtn{
-    display: inline-flex;
-    align-items: center;
-    color: rgb(184, 172, 11);
+.xIcon{
+    margin-left: 3px;
+    font-size: 18px;
     font-weight: bold;
-    border: none;
-    background-color: transparent;
-  }
-
-  .EditTaskBtn:hover{
-    cursor: pointer;
-    color: rgb(102, 98, 38);
-  }
-
-  .arrowTaskIcon, .pencilTaskIcon, .deleteTaskIcon {
-    margin-left: 2px;
-  }
+}

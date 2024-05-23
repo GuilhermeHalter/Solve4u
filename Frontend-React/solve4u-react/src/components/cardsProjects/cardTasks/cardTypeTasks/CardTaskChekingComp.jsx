@@ -1,5 +1,12 @@
 import React from "react";
 
+import { FaCheck } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+
+
+
+import "../../../../css/cardStyle/cardTasks/CardTaskChekingComp.css";
+
 const CardTaskChekingComp = ({ task, onClose }) => {
   const handleApprovedTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -26,21 +33,37 @@ const CardTaskChekingComp = ({ task, onClose }) => {
   };
 
   return (
-    <div className="modal-background">
-      <div className="modal">
+    <div className="modal-backgroundChecking">
+      <div className="modalChecking">
         <button className="close-btn" onClick={onClose}>
           X
         </button>
-        <h2>Cheking Task: {task.taskName}</h2>
-        <p>Description: {task.taskDescription}</p>
-        <p>Assigned to: {task.taskUser}</p>
-        <p>Deadline: {task.dateDeadline}</p>
-        <button className="approved-task-btn" onClick={handleApprovedTask}>
-          Approved
-        </button>
-        <button className="notApproved-task-btn" onClick={handleNotApprovedTask}>
-          Not Approved
-        </button>
+        <div className="lineVerticalChecking"> </div>
+        
+        <div className="modalContentLeftChecking">
+           <h2>{task.taskName}</h2>
+           <p> {task.taskDescription}</p>
+           <p>{task.taskUser}</p>
+          
+        </div>
+        <hr className="modalDivisionChecking"/>
+        <div className="modalContentRightChecking">
+        <div className="upRightChecking">
+            <p>Deadline: {task.dateDeadline}</p>
+
+              <button className="notApproved-task-btn" onClick={handleNotApprovedTask}>
+                  Not Approved <IoClose className="xIcon" />
+              </button>
+              <button className="approved-task-btn" onClick={handleApprovedTask}>
+                Approved <FaCheck className="checkIcon" />
+              </button>
+              
+        </div>
+        <hr className="horizontalDivisionChecking"/>
+        <div className="downRightChecking"></div>
+
+        </div>
+      
       </div>
     </div>
   );
