@@ -1,5 +1,8 @@
 import React from "react";
 import "../../../../css/cardStyle/cardTasks/CardTaskProcessComp.css";
+import { MdDelete } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa";
+import { HiPencil } from "react-icons/hi2";
 
 const CardTaskProcessComp = ({ task, onClose }) => {
   const handleMoveTask = () => {
@@ -32,16 +35,16 @@ const CardTaskProcessComp = ({ task, onClose }) => {
             <div className="upRight">
                 <p>Deadline: {task.dateDeadline}</p>
 
-                <button >
-                  Delete task  {/*fazer esse botao funcionar */}
+                <button className="DeleteTaskBtn">
+                  Delete task <MdDelete className="deleteTaskIcon"/>  {/*fazer esse botao funcionar */}
                 </button>
-                <button className="move-task-btn" onClick={handleMoveTask}>
-                  Move Task
+                <button className="MoveTaskBtn" onClick={handleMoveTask}>
+                  Move Task <FaArrowRight className="arrowTaskIcon"/>
                 </button>
             </div>
-            <hr />
+            <hr className="horizontalDivision"/>
             <div className="downRight">
-                <button>Edit task</button> {/*fazer esse botao funcionar */}
+                <button className="EditTaskBtn">Edit task <HiPencil className="pencilTaskIcon"/></button> {/*fazer esse botao funcionar */}
             </div>
             
         </div>

@@ -1,11 +1,11 @@
-.homeHeaderNav{
+.homeHeaderNav {
     width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     opacity: 0;
     transform: translateY(-100px);
@@ -21,20 +21,19 @@
 
 .homeHeaderNav ul {
     display: flex;
-    gap: 2rem; 
-    font-size: 19px;
+    gap: 2rem;
 }
 
 .headerRightComps {
     margin-right: 50px;
 }
 
-.labelItem{
+.labelItem {
     display: flex;
     position: relative;
 }
 
-.searchInput{
+.searchInput {
     padding-left: 35px;
     font-weight: bold;
     width: 100%;
@@ -61,18 +60,20 @@
     height: 16px;
 }
 
-ul{
+ul {
     list-style: none;
 }
-.Aheader{
+
+.Aheader {
     font-weight: bold;
     text-decoration: none;
     color: #adadad;
     font-size: 18px;
 }
-.Aheader:hover{
+
+.Aheader:hover {
     cursor: pointer;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     transition: 1s;
 }
 
@@ -87,7 +88,7 @@ ul{
 .signUpHomeButton:hover {
     transition: 1s;
     border: 1px solid #ffffff;
-}   
+}
 
 .signInHomeButton {
     margin-top: 3px;
@@ -95,7 +96,7 @@ ul{
 
 .discoveryComp ul li {
     color: #000000;
-    font-weight: bold;  
+    font-weight: bold;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -106,3 +107,111 @@ ul{
     transition: 0.5s;
     color: #0076E2;
 }
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+@media screen and (max-width: 500px) {
+    .homeHeaderNav {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    .homeHeaderNav ul {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .headerRightComps {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 50px;
+    }
+    
+    .searchInput {
+        font-weight: bold;
+        border: 2px solid #0076E2;
+        width: 50px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 10px;
+        outline: none;
+    }
+    
+    .searchInput::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        opacity: 1;
+    }
+    
+    .searchIcon {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .Aheader {
+        font-weight: bold;
+        text-decoration: none;
+        color: #adadad;
+        font-size: 10px;
+    }
+    
+    .Aheader:hover {
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        transition: 1s;
+    }
+    
+    .signUpHomeButton {
+        display: flex;
+        color: #adadad;
+        border: 1px solid #adadad;
+        border-radius: 5px;
+    }
+    
+    .signUpHomeButton:hover {
+        transition: 1s;
+        border: 1px solid #ffffff;
+    }
+    
+    .signInHomeButton {
+        margin-top: 3px;
+    }
+
+    .headerRightComps {
+        margin-right: 500px;
+    }
+    
+    .discoveryComp ul li {
+        color: #000000;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        font-size: 10px;
+    }
+    
+    .discoveryComp ul li:hover {
+        transition: 0.5s;
+        color: #0076E2;
+    }
+  }
+
+  .discoveryCompUl {
+    padding-left: 10px;
+  }
+  

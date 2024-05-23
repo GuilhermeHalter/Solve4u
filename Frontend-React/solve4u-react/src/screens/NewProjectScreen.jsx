@@ -2,9 +2,7 @@ import "../css/screenStyle/projectScreenStyle/NewProjectScreen.css";
 import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx"
 import { FaArrowRight, FaPlus } from "react-icons/fa";
-
 import { useState } from 'react';
-
 import CardCreateProject from "../components/cardsProjects/CardCreateProjectComp.jsx";
 import CardJoinProject from "../components/cardsProjects/CardJoinProjectComp.jsx";
 
@@ -56,7 +54,7 @@ const NewProject = () => {
               <br /> <br />
               Did you like it?
                <br /> 
-Our platform has a comfortable interface, several organization options to choose from, speed and proficiency for your team to leverage your project, as well as everything needed to Solve4u.
+              Our platform has a comfortable interface, several organization options to choose from, speed and proficiency for your team to leverage your project, as well as everything needed to Solve4u.
               </p>
               <button className="cardButtonCreate" onClick={openCard} >Create Project <FaPlus className="icon" /></button>
 

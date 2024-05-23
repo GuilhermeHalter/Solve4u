@@ -18,7 +18,7 @@ const HomeHeader = () => {
   return (
     <nav className="homeHeaderNav">
       <div className="discoveryComp">
-        <ul>
+        <ul className="discoveryCompUl">
           <li className="solutionsli" onClick={() => scrollToSection("solutions")}>
             Solutions <IoIosArrowDown />
           </li>
