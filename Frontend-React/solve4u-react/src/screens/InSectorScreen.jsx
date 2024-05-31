@@ -69,7 +69,6 @@ const InSectorScreen = () => {
           New Task
         </button>
       </div>
-      
       <div className="containerTasks">
         <div className="sectionTasksProcess">
           {tasks.filter((task) => task.taskStage == 1).map((task) => (
