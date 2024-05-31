@@ -49,6 +49,7 @@ const CardEditProjectComp = ({ project, onClose }) => {
           name="projectName"
           value={projectName}
           onChange={handleInputChange}
+          required
         />
         <input
           type="text"
@@ -57,12 +58,14 @@ const CardEditProjectComp = ({ project, onClose }) => {
           name="projectDescription"
           value={projectDescription}
           onChange={handleInputChange}
+          required
         />
         <select
           name="category"
           id="category"
           value={category}
           onChange={handleInputChange}
+          required
         >
           <option value="Option 1">Option 1</option>
           <option value="Option 2">Option 2</option>

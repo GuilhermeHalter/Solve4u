@@ -10,7 +10,7 @@ const CardJoinProject = ({ onClose }) => {
           X
         </button>
         <h2>Join a Project</h2>
-        <input type="text" className="projectInput" placeholder="Enter the Code" />
+        <input type="text" className="projectInput" placeholder="Enter the Code" required/>
         <button className="create-btnJ">Join Project <FaArrowRight className="iconCardJ"/></button>
       </div>
     </div>

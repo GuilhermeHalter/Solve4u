@@ -77,6 +77,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
             name="sectorName"
             value={sectorName}
             onChange={handleInputChange}
+            required
           />
           
           <input
@@ -84,6 +85,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
             className="color-picker"
             value={sectorColor}
             onChange={handleColorChange}
+            required
           />
         </div>
         
@@ -94,12 +96,14 @@ const CardCreateSector = ({ onClose, projectId }) => {
           name="sectorDescription"
           value={sectorDescription}
           onChange={handleInputChange}
+          required
         />
         <div className="user-select-container">
           <select
             value={selectedUser}
             onChange={handleUserSelect}
             className="user-select"
+            required
           >
             <option value="" disabled>Select User</option>
             {users.map(user => (

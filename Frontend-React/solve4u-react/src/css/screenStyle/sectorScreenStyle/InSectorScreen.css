@@ -74,3 +74,11 @@
 .cardProcess{
     width: 100%;
 }
+
+.subtitlesTasks{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}

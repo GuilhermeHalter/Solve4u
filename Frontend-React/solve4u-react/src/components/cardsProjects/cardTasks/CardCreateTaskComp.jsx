@@ -66,6 +66,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
           name="taskName"
           value={taskName}
           onChange={handleInputChange}
+          required
         />
         <input
           type="text"
@@ -74,6 +75,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
           name="taskDescription"
           value={taskDescription}
           onChange={handleInputChange}
+          required
         />
         <input
           type="date" 
@@ -83,12 +85,14 @@ const CardCreateTask = ({ onClose, sectorId }) => {
           value={dateDeadline}
           onChange={handleInputChange}
           min={today} 
+          required
         />
         <div className="user-select-container">
           <select
             value={taskUser}
             onChange={handleUserSelect}
             className="user-select"
+            required
           >
             <option value="" disabled>Select User</option>
             {users.map(user => (
