@@ -1,3 +1,6 @@
+@media only screen
+and (max-width: 1920px)
+ {
 .homeHeaderNav {
     width: 100%;
     display: inline-flex;
@@ -25,39 +28,10 @@
 }
 
 .headerRightComps {
-    margin-right: 50px;
-}
-
-.labelItem {
-    display: flex;
-    position: relative;
-}
-
-.searchInput {
-    padding-left: 35px;
-    font-weight: bold;
-    width: 100%;
-    border: 1px solid #fff;
-    width: 14rem;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #ffffff;
-    outline: none;
-    opacity: 0.3;
-}
-
-.searchInput::placeholder {
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    opacity: 1;
-}
-
-.searchIcon {
-    position: absolute;
-    left: 12px;
-    top: 8px;
-    width: 16px;
-    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
 }
 
 ul {
@@ -107,14 +81,19 @@ ul {
     transition: 0.5s;
     color: #0076E2;
 }
+ }
+
+
+
 
 /* 
-                                 <---------------- Mobile ---------------->
+                                 <---------------- Tablet ---------------->
 */
 
 @media only screen
-and (min-width: 320px)
+and (min-width: 541px)
 and (max-width: 768px)
+
  {
     .homeHeaderNav {
         width: 100%;
@@ -137,29 +116,17 @@ and (max-width: 768px)
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
-        margin-right: 50px;
+        margin-right: 10px;
     }
     
     .searchInput {
         font-weight: bold;
         border: 2px solid #0076E2;
-        width: 50px;
+        width: 120px;
         height: 20px;
         border-radius: 5px;
-        font-size: 10px;
+        font-size: 15px;
         outline: none;
-    }
-    
-    .searchInput::placeholder {
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        opacity: 1;
-    }
-    
-    .searchIcon {
-        position: absolute;
-        width: 10px;
-        height: 10px;
     }
     
     ul {
@@ -170,7 +137,7 @@ and (max-width: 768px)
         font-weight: bold;
         text-decoration: none;
         color: #adadad;
-        font-size: 10px;
+        font-size: 15px;
     }
     
     .Aheader:hover {
@@ -192,20 +159,83 @@ and (max-width: 768px)
     }
     
     .signInHomeButton {
-        margin-top: 3px;
-    }
-
-    .headerRightComps {
-        margin-right: 500px;
+        margin-top: 0px;
     }
     
+    .discoveryComp ul li {
+        color: #000000;
+        font-weight: bold;  
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        font-size: 15px;
+    }
+    
+    .discoveryComp ul li:hover {
+        transition: 0.5s;
+        color: #0076E2;
+    }
+  }
+
+  .discoveryCompUl {
+    padding-left: 10px;
+ }
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+@media only screen
+and (max-width: 541px)
+ {
+
+    .headerRightComps {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 8px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .Aheader {
+        font-weight: bold;
+        text-decoration: none;
+        color: #adadad;
+        font-size: 8px;
+    }
+    
+    .Aheader:hover {
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        transition: 1s;
+    }
+    
+    .signUpHomeButton {
+        display: flex;
+        color: #adadad;
+        border: 1px solid #adadad;
+        border-radius: 5px;
+    }
+    
+    .signUpHomeButton:hover {
+        transition: 1s;
+        border: 1px solid #ffffff;
+    }
+    
+    .signInHomeButton {
+        margin-top: -3px;
+    }
+
     .discoveryComp ul li {
         color: #000000;
         font-weight: bold;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
-        font-size: 10px;
+        font-size: 8px;
     }
     
     .discoveryComp ul li:hover {
@@ -217,23 +247,3 @@ and (max-width: 768px)
   .discoveryCompUl {
     padding-left: 10px;
   }
-  
-/* 
-                                 <---------------- Tablet ---------------->
-*/
-
-@media only screen
-and (min-width: 768px)
-and (max-width: 1280px)
- {
-
- }
-
-/* 
-                                 <---------------- Notebook ---------------->
-*/
-
-@media only screen
-and (min-width: 1280px)
-and (max-width: 1920px)
- {}

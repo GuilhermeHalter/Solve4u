@@ -1,7 +1,6 @@
 import React from "react";
 import "../../css/compStyle/compHomeStyle/HomeHeaderComp.css"
 import { Link } from "react-router-dom";
-import { IoSearchOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 
 const scrollToSection = (sectionId) => {
@@ -28,10 +27,6 @@ const HomeHeader = () => {
         </ul>
       </div>
       <ul className="headerRightComps">
-        <label className="labelItem">
-          <input className="searchInput" type="text" placeholder="Search" />
-          <IoSearchOutline className="searchIcon" />
-        </label>
         <li className="signInHomeButton">
           <Link to={"/signin"} className="Aheader">
             Sign In
