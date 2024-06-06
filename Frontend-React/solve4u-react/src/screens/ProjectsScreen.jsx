@@ -3,6 +3,7 @@ import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx";
 import CardProject from "../components/cardsProjects/CardsProjectsComp.jsx";
 import CardCreateProject from "../components/cardsProjects/CardCreateProjectComp.jsx";
+import CardAnalitycsComp from "../components/cardsProjects/cardAnalitycs/CardAnalitycsComp.jsx";
 
 import "../css/screenStyle/projectScreenStyle/ProjectsScreen.css"
 import { useNavigate } from 'react-router-dom';
@@ -53,6 +54,7 @@ const Projects = () => {
         <section>
           <h2 className="subtitle">Analityc's</h2>
           <div className="analytics-container">
+            <CardAnalitycsComp />
           </div>
         </section>
       </div>
