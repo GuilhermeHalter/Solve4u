@@ -1,0 +1,18 @@
+.cardAnalitycs{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.conteinerCardAnalitycs{
+    width: 95%;
+    height: 90%;
+    margin-top: 40px;
+    border: 1px solid #3b3b3b;
+    border-radius: 10px;
+}
+
+.titleAnalitycs{
+    margin-left: 20px;
+    margin-bottom: 0;
+}

@@ -11,9 +11,6 @@
   
   .analytics-container {
     margin-left: 8%;
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: 33.3% 33.3% 33.3%;
   }
   
   .title{

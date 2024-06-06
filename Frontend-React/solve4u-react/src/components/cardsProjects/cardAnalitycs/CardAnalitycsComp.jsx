@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Chart } from 'react-google-charts';
+import "../../../css/cardStyle/cardAnalitycs/CardAnalitycsComp.css"
 
 // Função para recuperar os dados do localStorage
 const getProjectsFromLocalStorage = () => {
@@ -62,14 +63,14 @@ const CardAnalitycsComp = () => {
   }, []);
 
   return (
-    <div>
+    <div className='cardAnalitycs'>
       {chartsData.map((chart, index) => (
-        <div key={index} style={{ margin: '20px 0' }}>
-          <h2>{chart.projectName}</h2>
+        <div className='conteinerCardAnalitycs' key={index} >
+          <h2 className='titleAnalitycs'>{chart.projectName}</h2>
           <Chart
             chartType="ColumnChart"
             width="100%"
-            height="400px"
+            height="200px"
             data={chart.data}
           />
         </div>
