@@ -5,6 +5,7 @@ import TaskCard from "../components/cardsProjects/cardTasks/CardTaskComp.jsx";
 import CardCreateTaskComp from "../components/cardsProjects/cardTasks/CardCreateTaskComp.jsx"; 
 import CardTaskProcessComp from "../components/cardsProjects/cardTasks/cardTypeTasks/CardTaskProcessComp.jsx"; 
 import CardTaskChekingComp from "../components/cardsProjects/cardTasks/cardTypeTasks/CardTaskChekingComp.jsx";
+import CardTaskFinishedComp from "../components/cardsProjects/cardTasks/cardTypeTasks/CardTaskFinishedComp.jsx";
 import { useLocation } from "react-router-dom";
 
 import "../css/screenStyle/sectorScreenStyle/InSectorScreen.css";
@@ -14,6 +15,7 @@ const InSectorScreen = () => {
   const [isTaskCardVisible, setTaskCardVisible] = useState(false);
   const [isTaskCardProcessVisible, setTaskCardProcessVisible] = useState(false);
   const [isTaskCardCheckingVisible, setTaskCardCheckingVisible] = useState(false);
+  const [isTaskCardFinishedVisible, setTaskCardFinishedVisible] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
   const location = useLocation();
   const sector = location.state.sector;
@@ -59,6 +61,17 @@ const InSectorScreen = () => {
     window.location.reload();
   };
 
+  const openTaskCardFinished = (task) => {
+    setSelectedTask(task);
+    setTaskCardFinishedVisible(true);
+  };
+
+  const closeTaskCardFinished = () => {
+    setTaskCardFinishedVisible(false);
+    setSelectedTask(null);
+    window.location.reload();
+  };
+
   return (
     <div>
       <Sidebar />
@@ -84,6 +97,7 @@ const InSectorScreen = () => {
           ))}
         </div>
         <hr className="division"/>
+
         <div className="sectionTasksChecking">
           {tasks.filter((task) => task.taskStage == 2).map((task) => (
             <div className="cardChecking" key={task.taskId} onClick={() => openTaskCardChecking(task)}>
@@ -91,12 +105,18 @@ const InSectorScreen = () => {
             </div>
           ))}
         </div>
+
         <hr className="division"/>
+
         <div className="sectionTasksFinished">
           {tasks.filter((task) => task.taskStage == 3).map((task) => (
-            <TaskCard key={task.taskId} task={task} />
+            <div className="cardFinished" key={task.taskId} onClick={() => openTaskCardFinished(task)}>
+              <TaskCard task={task} />
+            </div>
+            
           ))}
         </div>
+
         <hr className="division"/>
         <div className="sectionTasksPending">
           {tasks.filter((task) => task.taskStage == 4).map((task) => (
@@ -112,6 +132,9 @@ const InSectorScreen = () => {
       )}
       {isTaskCardCheckingVisible && selectedTask && (
         <CardTaskChekingComp task={selectedTask} onClose={closeTaskCardChecking} />
+      )}
+      {isTaskCardFinishedVisible && selectedTask && (
+        <CardTaskFinishedComp task={selectedTask} onClose={closeTaskCardFinished} />
       )}
     </div>
   );

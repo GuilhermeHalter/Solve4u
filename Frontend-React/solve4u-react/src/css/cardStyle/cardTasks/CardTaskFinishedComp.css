@@ -1,0 +1,116 @@
+.modal-backgroundFinished{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalFinished {
+    display: flex;
+    background-color: #f9f9f9;
+    padding-left: 20px;
+    border: 2px solid #939393;
+    border-radius: 8px;
+    width: 500px;
+    height: 400px;
+    position: relative;
+  }
+
+  .lineVerticalFinished{
+    width: 25px;
+    height: 100%;
+    background-color: rgb(59, 203, 56);
+  }
+
+  .modal-ContentFinished{
+    padding: 20px;
+    width: 100%;
+  }
+
+  .modalDivisionFinished{
+    width: 0.5px;
+    margin: 15px;
+  }
+
+  .modalContentLeftFinished{
+    width: 40%;
+    margin-left: 20px
+  }
+
+  .modalContentRightFinished{
+    align-items: center;
+  }
+
+  .horizontalDivisionFinished {
+    width: 100%;
+  }
+
+  .upRightFinished{
+    display: block;
+    align-content: end;
+    height: 300px;
+  }
+
+  .upRightFinished p{
+    margin-bottom: 80px;
+  }
+
+  .downRightFinished{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .approved-task-btn{
+    display: inline-flex;
+    align-items: center;
+    background-color: rgb(204, 250, 188);
+    border: 2px solid rgb(102, 219, 48);
+    color: rgb(74, 201, 39);
+    font-weight: bold;    
+    border-radius: 20px;
+    padding: 7px;
+  }
+
+  .approved-task-btn:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(122, 224, 75);
+    color: rgb(204, 250, 188);
+  }
+
+  .notApproved-task-btn{
+    display: inline-flex;
+    align-items: center;
+    background-color: rgb(255, 142, 142);
+    border: 2px solid rgb(255, 34, 34);
+    color: rgb(253, 54, 54);
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 7px;
+  }
+
+  .notApproved-task-btn:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(234, 48, 48);
+    color: rgb(255, 142, 142);
+  }
+  
+.checkIcon{
+    margin-left: 3px
+}
+
+.xIcon{
+    margin-left: 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
