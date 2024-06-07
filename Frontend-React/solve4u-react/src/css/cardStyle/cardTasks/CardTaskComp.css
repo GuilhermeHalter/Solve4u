@@ -12,6 +12,7 @@
 
 .down{
     margin-left: 10px;
+
 }
 
 .titleTask{
@@ -22,4 +23,5 @@
 
 .descriptionTask{
     font-size: 14px;
+    overflow: hidden;
 }

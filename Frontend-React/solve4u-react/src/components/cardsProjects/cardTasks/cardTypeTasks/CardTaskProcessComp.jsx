@@ -26,7 +26,7 @@ const CardTaskProcessComp = ({ task, onClose }) => {
         <div className="lineVertical"> </div>
         <div className="modalContentLeft">
            <h2>{task.taskName}</h2>
-           <p> {task.taskDescription}</p>
+           <p className="descriptionTaskCardProcess"> {task.taskDescription}</p>
            <p>{task.taskUser}</p>
           
         </div>

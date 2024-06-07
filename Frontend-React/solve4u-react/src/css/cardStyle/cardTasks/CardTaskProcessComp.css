@@ -42,6 +42,11 @@
     margin-left: 20px
   }
 
+  .descriptionTaskCardProcess{
+    word-wrap: break-word;
+  }
+
+
   .modalContentRight{
     align-items: center;
   }
