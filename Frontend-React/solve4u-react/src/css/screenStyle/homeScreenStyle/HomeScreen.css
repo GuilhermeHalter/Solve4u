@@ -343,6 +343,166 @@ and (max-width: 768px)
 
 @media only screen
 and (max-width: 541px)
- {
+{
+  .home-container {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/solve4u-5722c.appspot.com/o/HomeScreen%2FBackgroud_img.png?alt=media&token=e3901efc-ed02-4f2d-9d82-99496249aef0');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: auto;  
+  }
+
+.welcomeText{
+    width: 60%;
+    height: auto;
     
+    }
+
+.welcomeText h1 {
+  color: #292929;
+  font-size: 30px;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 25%;
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1.8s forwards;
+}
+
+@keyframes slideIn {
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.welcomeText h2 {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  color: #bdbdbd;
+  font-size: 25px;
+  align-items: center;
+  margin-top: 0px;
+  margin-left: 10%;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1.8s forwards;
+  animation-delay: 1.3s;
+}
+
+@keyframes slideIn {
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.four{
+  font-family: "Outfit", sans-serif;
+  color: #8CC5FA;
+}
+
+.welcomeText p {
+  width: 80%;
+  margin-left: 10%;
+  font-size: 10px;
+  font-weight: bold;
+  opacity: 80%; 
+}
+
+.section2 {
+  background: rgb(0,118,226);
+  background: linear-gradient(180deg, rgba(0,118,226,1) 0%, rgba(0,65,124,1) 100%);
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2Img {
+  border-radius: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.section2DivImg {
+  width: 80%;
+  height: auto;
+}
+
+.section2Text {
+  width: 100%;
+  height: 300px;
+}
+
+.solutionsTitle {
+  color: #ffff;
+  font-size: 20px;
+  text-align: left;
+  width: 80%;
+}
+
+.section2Text p {
+  color: #ffff;
+  width: 70%;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.section3 {
+  background-color: #ffff;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section3DivText {
+  width: 50%;
+  height: auto;
+  margin-left: 10%;
+}
+
+.performanceTitle {
+  color: #292929;
+  font-size: 25px;
+  text-align: left;
+}
+
+.section3DivText p {
+  color: #292929;
+  width: 100%;
+  height: auto;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.section3DivImg {
+  width: 50%;
+  height: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 0;
+}
+
+.section3Img {
+  width: 100%;
+  height: auto;
+}
+
+.divHomeText{
+  opacity: 0;
+  animation: slideIn 1.8s forwards;
+  animation-delay: 2.9s;
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1;
+  }
+}  
 }
