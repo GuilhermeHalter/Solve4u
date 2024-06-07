@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-## dependências // bibliotecas
+## dependencies // libraries
 
 - [Axios](https://www.npmjs.com/package/axios)
 - [React-DOM](https://www.npmjs.com/package/react-dom)
