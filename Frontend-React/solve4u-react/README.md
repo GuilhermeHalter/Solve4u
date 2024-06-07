@@ -21,6 +21,7 @@ npm run dev
 - [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
 - [React-Slick](https://www.npmjs.com/package/react-slick)
 - [Styled-Components](https://www.npmjs.com/package/styled-components)
+- [React-loader-sppiner](https://www.npmjs.com/package/react-loader-spinner)
 
 <br />
 
@@ -66,6 +67,11 @@ npm install react-slick slick-carousel
 **Styled-Components:** A library for writing CSS styles directly into your React components using JavaScript. It allows you to create React components with encapsulated styles, eliminating the need for separate CSS files and simplifying style maintenance in a React application.
 ```bash
 npm install styled-components
+```
+
+**React-Loader-Spinner:** Provides a collection of ready-to-use spinners and loading indicators in React applications. It makes it easy to add customizable loading animations, allowing developers to visually show the loading status in their applications.
+```bash
+npm install react-loader-spinner --save
 ```
 
 
