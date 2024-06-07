@@ -7,6 +7,8 @@ import CardTaskProcessComp from "../components/cardsProjects/cardTasks/cardTypeT
 import CardTaskChekingComp from "../components/cardsProjects/cardTasks/cardTypeTasks/CardTaskChekingComp.jsx";
 import CardTaskFinishedComp from "../components/cardsProjects/cardTasks/cardTypeTasks/CardTaskFinishedComp.jsx";
 import { useLocation } from "react-router-dom";
+import { MdDelete } from "react-icons/md";
+
 
 import "../css/screenStyle/sectorScreenStyle/InSectorScreen.css";
 
@@ -123,6 +125,9 @@ const InSectorScreen = () => {
             <TaskCard key={task.taskId} task={task} />
           ))}
         </div>
+      </div>
+      <div className="containerButton">
+        <button className="ButtonDeleteSector">Delete Sector <MdDelete/></button>
       </div>
       {isTaskCardVisible && (
         <CardCreateTaskComp sectorId={sectorId} onClose={closeTaskCard} />
