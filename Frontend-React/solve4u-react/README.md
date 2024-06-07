@@ -13,14 +13,14 @@ npm run dev
 
 ## dependências // bibliotecas
 
-- Axios
-- React-DOM
-- React-Google-Charts
-- React-Icons
-- React-Modal
-- React-Router-Dom
-- React-Slick
-- Styled-Components
+- [Axios](https://www.npmjs.com/package/axios)
+- [React-DOM](https://www.npmjs.com/package/react-dom)
+- [React-Google-Charts](https://www.npmjs.com/package/react-google-charts)
+- [React-Icons](https://www.npmjs.com/package/react-icons)
+- [React-Modal](https://www.npmjs.com/package/react-modal)
+- [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
+- [React-Slick](https://www.npmjs.com/package/react-slick)
+- [Styled-Components](https://www.npmjs.com/package/styled-components)
 
 <br />
 
