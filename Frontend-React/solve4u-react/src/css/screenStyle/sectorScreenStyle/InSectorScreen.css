@@ -6,6 +6,35 @@
     
 }
 
+.containerButton{
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+}
+
+.ButtonDeleteSector {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+    background-color: transparent;
+    color: #d50000;
+    font-weight: bold;
+    border: 2px solid #d50000;
+    border-radius: 40px;
+  }
+  
+  .ButtonDeleteSector:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #640202;
+    font-weight: bold;
+    border: 2px solid #640202;
+  }
+
 .sectionTasksProcess {
   margin-top: 20px;
   margin-right: 50px;

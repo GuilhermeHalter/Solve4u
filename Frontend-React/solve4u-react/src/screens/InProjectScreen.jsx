@@ -120,10 +120,14 @@ const InProject = () => {
           ))}
         </div>
 
+       
+      </div> 
+      <div className="containerButton">
         <button className="ButtonDelete" onClick={handleDeleteProject}>
           Delete Project <MdDelete className="iconC" />
         </button>
       </div>
+        
       {isSectorCardVisible && (
         <CardCreateSectorComp projectId={projectId} onClose={closeSectorCard} />
       )}
