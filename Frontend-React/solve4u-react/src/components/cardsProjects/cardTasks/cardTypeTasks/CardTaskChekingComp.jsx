@@ -49,7 +49,10 @@ const CardTaskChekingComp = ({ task, onClose }) => {
         <hr className="modalDivisionChecking"/>
         <div className="modalContentRightChecking">
         <div className="upRightChecking">
-            <p>Deadline: {task.dateDeadline}</p>
+                <div className="dateTaks">
+                  <p>Deadline: {task.startDate}</p>
+                  <p>Deadline: {task.dateDeadline}</p>
+                </div>
 
               <button className="notApproved-task-btn" onClick={handleNotApprovedTask}>
                   Not Approved <IoClose className="xIcon" />

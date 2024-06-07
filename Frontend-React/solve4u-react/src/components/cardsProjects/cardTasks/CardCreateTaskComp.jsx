@@ -13,6 +13,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
   const handleCreateTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const newTaskId = tasks.length > 0 ? tasks[tasks.length - 1].taskId + 1 : 1;
+    const today = new Date().toISOString().split("T")[0];
 
     const task = {
       sectorId: sectorId,
@@ -20,8 +21,9 @@ const CardCreateTask = ({ onClose, sectorId }) => {
       taskName,
       taskDescription,
       taskUser,
-      dateDeadline, 
+      dateDeadline,
       taskStage: "1",
+      startDate: today,
     };
 
     tasks.push(task);
@@ -49,7 +51,6 @@ const CardCreateTask = ({ onClose, sectorId }) => {
     setTaskUser(event.target.value);
   };
 
-  
   const today = new Date().toISOString().split("T")[0];
 
   return (

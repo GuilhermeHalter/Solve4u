@@ -33,7 +33,10 @@ const CardTaskProcessComp = ({ task, onClose }) => {
            <hr className="modalDivision"/>
         <div className="modalContentRight">
             <div className="upRight">
-                <p>Deadline: {task.dateDeadline}</p>
+                <div className="dateTaks">
+                  <p>Deadline: {task.startDate}</p>
+                  <p>Deadline: {task.dateDeadline}</p>
+                </div>
 
                 <button className="DeleteTaskBtn">
                   Delete task <MdDelete className="deleteTaskIcon"/>  {/*fazer esse botao funcionar */}

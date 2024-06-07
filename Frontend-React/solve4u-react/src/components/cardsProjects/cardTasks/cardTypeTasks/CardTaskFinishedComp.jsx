@@ -20,8 +20,10 @@ const CardTaskFinishedComp = ({ task, onClose }) => {
         <hr className="modalDivisionFinished"/>
         <div className="modalContentRightFinished">
         <div className="upRightFinished">
-            <p>Deadline: {task.dateDeadline}</p>
-              
+                <div className="dateTaks">
+                  <p>Deadline: {task.startDate}</p>
+                  <p>Deadline: {task.dateDeadline}</p>
+                </div>
         </div>
         <hr className="horizontalDivisionFinished"/>
         <div className="downRightFinished"></div>

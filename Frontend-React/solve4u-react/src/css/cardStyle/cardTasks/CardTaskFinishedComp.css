@@ -56,10 +56,6 @@
     height: 300px;
   }
 
-  .upRightFinished p{
-    margin-bottom: 80px;
-  }
-
   .downRightFinished{
     display: flex;
     height: 50px;

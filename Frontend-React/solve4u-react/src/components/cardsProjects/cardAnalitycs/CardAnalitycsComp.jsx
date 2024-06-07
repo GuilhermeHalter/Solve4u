@@ -54,7 +54,7 @@ const CardAnalitycsComp = () => {
         ['Process', Math.max(0, counts.process), "#F2E307"],
         ['Checking', Math.max(0, counts.checking), "#6328F5" ],
         ['Finished', Math.max(0, counts.finished), "#46CC26" ],
-        ['Pending', Math.max(0, counts.pending), "#00000" ],
+        ['Pending', Math.max(0, counts.pending), "#EA1711" ],
       ];
       return { projectName: project.projectName, data: chartData };
     });

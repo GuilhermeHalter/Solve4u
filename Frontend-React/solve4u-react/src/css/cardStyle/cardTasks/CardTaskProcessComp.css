@@ -56,9 +56,9 @@
     height: 300px;
   }
 
-  .upRight p{
-    margin-bottom: 80px;
-  }
+.dateTaks{
+  margin-bottom: 100px;
+}
 
   .downRight{
     display: flex;
