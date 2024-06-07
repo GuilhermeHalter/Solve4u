@@ -17,6 +17,13 @@ const CardTaskProcessComp = ({ task, onClose }) => {
     onClose();
   };
 
+  const handleDeleteTask = () => {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const updatedTasks = tasks.filter((t) => t.taskId !== task.taskId);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+    onClose();
+  };
+
   return (
     <div className="modal-background-process">
       <div className="modal-process">
@@ -28,18 +35,17 @@ const CardTaskProcessComp = ({ task, onClose }) => {
            <h2>{task.taskName}</h2>
            <p className="descriptionTaskCardProcess"> {task.taskDescription}</p>
            <p>{task.taskUser}</p>
-          
         </div>
            <hr className="modalDivision"/>
         <div className="modalContentRight">
             <div className="upRight">
                 <div className="dateTaks">
-                  <p>Deadline: {task.startDate}</p>
+                  <p>Start Date: {task.startDate}</p>
                   <p>Deadline: {task.dateDeadline}</p>
                 </div>
 
-                <button className="DeleteTaskBtn">
-                  Delete task <MdDelete className="deleteTaskIcon"/>  {/*fazer esse botao funcionar */}
+                <button className="DeleteTaskBtn" onClick={handleDeleteTask}>
+                  Delete task <MdDelete className="deleteTaskIcon"/> 
                 </button>
                 <button className="MoveTaskBtn" onClick={handleMoveTask}>
                   Move Task <FaArrowRight className="arrowTaskIcon"/>
@@ -47,11 +53,9 @@ const CardTaskProcessComp = ({ task, onClose }) => {
             </div>
             <hr className="horizontalDivision"/>
             <div className="downRight">
-                <button className="EditTaskBtn">Edit task <HiPencil className="pencilTaskIcon"/></button> {/*fazer esse botao funcionar */}
+                <button className="EditTaskBtn">Edit task <HiPencil className="pencilTaskIcon"/></button> 
             </div>
-            
         </div>
-
       </div>
     </div>
   );
