@@ -11,59 +11,59 @@ npm install
 npm run dev
 ```
 
-## dependências // bibliotecas
+## dependencies // libraries
 
-- Axios
-- React-DOM
-- React-Google-Charts
-- React-Icons
-- React-Modal
-- React-Router-Dom
-- React-Slick
-- Styled-Components
+- [Axios](https://www.npmjs.com/package/axios)
+- [React-DOM](https://www.npmjs.com/package/react-dom)
+- [React-Google-Charts](https://www.npmjs.com/package/react-google-charts)
+- [React-Icons](https://www.npmjs.com/package/react-icons)
+- [React-Modal](https://www.npmjs.com/package/react-modal)
+- [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
+- [React-Slick](https://www.npmjs.com/package/react-slick)
+- [Styled-Components](https://www.npmjs.com/package/styled-components)
 
 <br />
 
-**Axios:** Uma biblioteca para fazer requisições HTTP em JavaScript. É amplamente utilizada para fazer requisições a APIs e servidores backend de forma fácil e eficiente.
+**Axios:** A library for making HTTP requests in JavaScript. It is widely used to make requests to APIs and backend servers easily and efficiently.
 ```bash
 npm install axios
 ```
 
-**React-DOM:** É a biblioteca que lida com a renderização de elementos React no navegador. Ele fornece métodos para interagir com o DOM (Document Object Model) e renderizar componentes React em um ambiente de navegador web.
+**React-DOM:** This is the library that handles the rendering of React elements in the browser. It provides methods for interacting with the Document Object Model (DOM) and rendering React components in a web browser environment.
 
 ```bash
 npm install react-dom
 ```
 
-**React-Google-Charts:** Permite a integração de gráficos e visualizações do Google Charts em aplicativos React. Simplifica a criação de gráficos com uma API fácil de usar, fornecendo componentes React para renderização de diversos tipos de gráficos, como barras, linhas e pizza.
+**React-Google-Charts:** Allows integration of Google Charts charts and visualizations into React applications. Simplifies chart creation with an easy-to-use API by providing React components for rendering a variety of chart types, such as bars, lines, and pies.
 
 ```bash
 npm install react-google-charts
 ```
 
-**React-Icons:** Oferece uma coleção de ícones prontos para uso em aplicativos React. Ele simplifica a incorporação de ícones em componentes React, fornecendo componentes de ícones reutilizáveis para uma variedade de conjuntos de ícones populares.
+**React-Icons:** Offers a collection of ready-to-use icons in React apps. It simplifies embedding icons into React components by providing reusable icon components for a variety of popular icon sets.
 
 ```bash
 npm install react-icons
 ```
 
-**React-Modal:** Uma biblioteca para criar modais em aplicativos React. Ela fornece uma maneira simples de exibir conteúdo em uma sobreposição modal, útil para diálogos, alertas e outros tipos de interações com o usuário.
+**React-Modal:** A library for creating modals in React applications. It provides a simple way to display content in a modal overlay, useful for dialogs, alerts, and other types of user interactions.
 
 ```bash
 npm install react-modal
 ```
 
-**React-Router-Dom:** Uma biblioteca para adicionar roteamento de páginas em aplicativos React. Ele permite configurar diferentes rotas em seu aplicativo e renderizar componentes específicos com base no URL atual, facilitando a criação de aplicativos com várias páginas.
+**React-Router-Dom:** A library for adding page routing in React applications. It allows you to configure different routes in your app and render specific components based on the current URL, making it easy to build multi-page apps.
 ```bash
 npm install react-router-dom
 ```
 
-**React-Slick:** Uma biblioteca para criar carrosséis responsivos em aplicativos React. Ele fornece uma interface simples para criar carrosséis de imagens ou conteúdo com muitas opções de configuração e personalização.
+**React-Slick:** A library for creating responsive carousels in React apps. It provides a simple interface for creating image or content carousels with plenty of configuration and customization options.
 ```bash
 npm install react-slick slick-carousel
 ```
 
-**Styled-Components:** Uma biblioteca para escrever estilos CSS diretamente em seus componentes React usando JavaScript. Ele permite criar componentes React com estilos encapsulados, eliminando a necessidade de arquivos CSS separados e simplificando a manutenção do estilo em um aplicativo React.
+**Styled-Components:** A library for writing CSS styles directly into your React components using JavaScript. It allows you to create React components with encapsulated styles, eliminating the need for separate CSS files and simplifying style maintenance in a React application.
 ```bash
 npm install styled-components
 ```
