@@ -1,97 +1,91 @@
-@media only screen
-and (max-width: 1920px)
- {
-.homeHeaderNav {
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: translateY(-100px);
-    animation: slideIn 1.5s forwards;
-}
+@media only screen and (max-width: 1920px) {
+    .homeHeaderNav {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(-100px);
+        animation: slideIn 1.5s forwards;
+    }
 
-@keyframes slideIn {
-    to {
-        transform: translateY(0);
-        opacity: 1;
+    @keyframes slideIn {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .homeHeaderNav ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .headerRightComps {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 10px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .Aheader {
+        font-weight: bold;
+        text-decoration: none;
+        color: #adadad;
+        font-size: 18px;
+        transition: color 1s;
+    }
+
+    .Aheader:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .signUpHomeButton {
+        display: flex;
+        color: #adadad;
+        border: 1px solid #adadad;
+        border-radius: 5px;
+        padding: 3px;
+        transition: border 1s;
+    }
+
+    .signUpHomeButton:hover {
+        border: 1px solid #fff;
+    }
+
+    .signInHomeButton {
+        margin-top: 3px;
+    }
+
+    .discoveryComp ul li {
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        font-size: 15px;
+        transition: color 0.5s;
+    }
+
+    .discoveryComp ul li:hover {
+        color: #0076E2;
     }
 }
-
-.homeHeaderNav ul {
-    display: flex;
-    gap: 2rem;
-}
-
-.headerRightComps {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 10px;
-}
-
-ul {
-    list-style: none;
-}
-
-.Aheader {
-    font-weight: bold;
-    text-decoration: none;
-    color: #adadad;
-    font-size: 18px;
-}
-
-.Aheader:hover {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    transition: 1s;
-}
-
-.signUpHomeButton {
-    display: flex;
-    color: #adadad;
-    border: 1px solid #adadad;
-    border-radius: 5px;
-    padding: 3px;
-}
-
-.signUpHomeButton:hover {
-    transition: 1s;
-    border: 1px solid #ffffff;
-}
-
-.signInHomeButton {
-    margin-top: 3px;
-}
-
-.discoveryComp ul li {
-    color: #000000;
-    font-weight: bold;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    font-size: 15px;
-}
-
-.discoveryComp ul li:hover {
-    transition: 0.5s;
-    color: #0076E2;
-}
- }
 
 /* 
                                  <---------------- Tablet ---------------->
 */
 
-@media only screen
-and (min-width: 541px)
-and (max-width: 768px)
-
- {
+@media only screen and (min-width: 541px) and (max-width: 768px) {
     .homeHeaderNav {
         width: 100%;
         display: inline-flex;
@@ -108,14 +102,14 @@ and (max-width: 768px)
         display: flex;
         gap: 0.5rem;
     }
-    
+
     .headerRightComps {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
         margin-right: 10px;
     }
-    
+
     .searchInput {
         font-weight: bold;
         border: 2px solid #0076E2;
@@ -125,124 +119,119 @@ and (max-width: 768px)
         font-size: 15px;
         outline: none;
     }
-    
+
     ul {
         list-style: none;
     }
-    
+
     .Aheader {
         font-weight: bold;
         text-decoration: none;
         color: #adadad;
         font-size: 15px;
+        transition: color 1s;
     }
-    
+
     .Aheader:hover {
         cursor: pointer;
-        color: rgb(255, 255, 255);
-        transition: 1s;
+        color: #fff;
     }
-    
+
     .signUpHomeButton {
         display: flex;
         color: #adadad;
         border: 1px solid #adadad;
         border-radius: 5px;
+        transition: border 1s;
     }
-    
+
     .signUpHomeButton:hover {
-        transition: 1s;
-        border: 1px solid #ffffff;
+        border: 1px solid #fff;
     }
-    
+
     .signInHomeButton {
-        margin-top: 0px;
+        margin-top: 0;
     }
-    
+
     .discoveryComp ul li {
-        color: #000000;
-        font-weight: bold;  
+        color: #000;
+        font-weight: bold;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         font-size: 15px;
+        transition: color 0.5s;
     }
-    
+
     .discoveryComp ul li:hover {
-        transition: 0.5s;
         color: #0076E2;
     }
-    .discoveryCompUl {
-    padding-left: 10px;
- }
-  }
 
+    .discoveryCompUl {
+        padding-left: 10px;
+    }
+}
 
 /* 
                                  <---------------- Mobile ---------------->
 */
 
-@media only screen
-and (max-width: 541px)
- {
-
+@media only screen and (max-width: 541px) {
     .headerRightComps {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
         margin-right: 8px;
     }
-    
+
     ul {
         list-style: none;
     }
-    
+
     .Aheader {
         font-weight: bold;
         text-decoration: none;
         color: #adadad;
         font-size: 8px;
+        transition: color 1s;
     }
-    
+
     .Aheader:hover {
         cursor: pointer;
-        color: rgb(255, 255, 255);
-        transition: 1s;
+        color: #fff;
     }
-    
+
     .signUpHomeButton {
         display: flex;
         color: #adadad;
         border: 1px solid #adadad;
         border-radius: 5px;
+        transition: border 1s;
     }
-    
+
     .signUpHomeButton:hover {
-        transition: 1s;
-        border: 1px solid #ffffff;
+        border: 1px solid #fff;
     }
-    
+
     .signInHomeButton {
         margin-top: -3px;
     }
 
     .discoveryComp ul li {
-        color: #000000;
+        color: #000;
         font-weight: bold;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         font-size: 8px;
+        transition: color 0.5s;
     }
-    
+
     .discoveryComp ul li:hover {
-        transition: 0.5s;
         color: #0076E2;
     }
+
     .discoveryCompUl {
-    padding-left: 10px;
-  }
-
-  }
-
-  
+        padding-left: 10px;
+    }
+}
