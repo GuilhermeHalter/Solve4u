@@ -84,66 +84,27 @@
     border-radius: 20px;
 }
 
-.eMailInput {
+.newNameInput,
+.newEmailInput,
+.newPasswordInput,
+.confirmPasswordInput{
     border: 1px solid #ffffff;
     margin-left: 20%;
+    background-color: transparent;
+    color: #fff;
     width: 60%;
+    height: 31px;
     outline: none;
     border-radius: 5px;
     margin-bottom: 30px;
 }
 
-.passwordInput { 
-    border: 1px solid #ffff;
-    margin-left: 20%;
-    width: 60%;
-    outline: none;
-    border-radius: 5px;
-}
-
-.signButton {
-    border-radius: 20px;
-    border: 2px solid #ffff;
-    text-decoration: none;
-    font-weight: bold;
-    color: #ffff;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 8%;
-}
-
-.signButton:hover {
-    background-color: #ffffff;
-    color: #0076E2;
-    transition: 0.5 s;
-}
-
-.upSignButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20%;
-}
-
-
-.signUpButton {
-    display: flex;
-    width: 150px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #ffff;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #ffff;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.signUpButton:hover {
-    transition: 0.5s;
-    color: #0076E2;
-    background-color: #ffffff;
+.newNameInput::placeholder,
+.newEmailInput::placeholder,
+.newPasswordInput::placeholder,
+.confirmPasswordInput::placeholder{
+    color: #ffffff;
+    opacity: 0.5;
 }
 
 
@@ -202,26 +163,175 @@
     color: #d8d8d8;
     font-size: 30px;
 }
-    
-.newNameInput,
-.newEmailInput,
-.newPasswordInput,
-.confirmPasswordInput{
-    border: 1px solid #ffffff;
-    margin-left: 20%;
-    background-color: transparent;
-    color: #fff;
-    width: 60%;
-    height: 31px;
-    outline: none;
-    border-radius: 5px;
-    margin-bottom: 30px;
-}
 
-.newNameInput::placeholder,
-.newEmailInput::placeholder,
-.newPasswordInput::placeholder,
-.confirmPasswordInput::placeholder{
-    color: #ffffff;
-    opacity: 0.5;
+/* 
+                                 <---------------- Tablet ---------------->
+*/
+
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+    .manageJobComp {
+        width: 30%;
+        height: 300px;
+        margin-left: 5%;
+        background-color: whitesmoke;
+        border: 1px solid rgba(129, 129, 129, 0.377);
+        padding: 20px;
+        transform: translateX(200px);
+        animation: slideIn 1.8s forwards;
+        border-radius: 20px 0 0 20px;
+        -webkit-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+        -moz-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+        box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+    }
+    
+    @keyframes slideIn {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .text{
+        width: 100%;
+        max-height: 50%;    
+        overflow: hidden;
+    }
+    
+    .contentText {
+        margin-top: 20%;
+        font-weight: bold;
+        color: #000000;
+        text-align: left;
+        font-size: 12px;
+    }
+    
+    .signUpComp {
+        border: none;
+        width: 30%;
+        height: 300px;
+        margin-right: 5%;
+        background: linear-gradient(180deg, rgba(0,118,226,1) 0%, rgba(0,65,124,1) 100%);
+        padding: 20px;
+        transform: translateX(-100px);
+        animation: slideIn 1.5s forwards;
+    }
+    
+    @keyframes slideIn {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .signUpContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cardTitle {
+        text-align: center;
+        color: rgb(255, 255, 255)00;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .signUpTitle {
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+        font-size: 20px;
+    }
+    
+    .inputSignUp {
+        display: grid;
+        width: 100%;
+        height: auto;
+        margin-left: -20%;
+        border-radius: 20px;
+        margin-bottom: 20%;
+    }
+
+    .newNameInput,
+    .newEmailInput,
+    .newPasswordInput,
+    .confirmPasswordInput{
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        font-size: 12px;
+        color: #fff;
+        width: 100%;
+        height: 20px;
+        outline: none;
+        border-radius: 5px;
+        margin-bottom: 10%;
+    }
+    
+    .newNameInput::placeholder,
+    .newEmailInput::placeholder,
+    .newPasswordInput::placeholder,
+    .confirmPasswordInput::placeholder{
+        color: #ffffff;
+        opacity: 0.5;
+    }
+    
+
+    
+    .loginButton{
+        display: flex;
+        position: absolute;
+        font-size: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #ffff;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    
+    .loginButton:hover {
+        transition: 0.5s;
+        color: #0076E2;
+        background-color: #ffff;
+    }
+    
+    .loginButtonComp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .signUpBackButtonComp{
+        position: absolute;
+        width: 140px;
+        top: 20px;
+        left: 20px;
+    }
+    
+    .signUpBackButton{
+        display: flex;
+        font-weight: bold;
+        text-decoration: none;
+        color: #0076E2;
+        font-size: 18px;
+    }
+    
+    .arrowBack{
+        color: #0076E2;
+        margin-right: 8%;
+        height: auto;
+        width: 25px;
+    }
+    
+    .markBookIcon {
+        display: flex;
+        margin-top: -25px;
+        margin-left: 90%;
+        color: #d8d8d8;
+        font-size: 30px;
+    }
+
 }

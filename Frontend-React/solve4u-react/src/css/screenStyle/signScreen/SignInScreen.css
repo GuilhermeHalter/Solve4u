@@ -291,17 +291,11 @@
         align-items: center;
     }
     
-    .global {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    
     .welcomeTitle {
         text-align: center;
         color: #ffff;
         font-size: 20px;
+        font-weight: bold;
     }
     
     .loginTitle {
