@@ -24,8 +24,8 @@ const SignIn = () => {
                 <div className="loginComp">
                     <h1 className="loginTitle">LOGIN</h1>
                     <form className="inputSignIn">
-                        <input type="email" className="eMailInput" placeholder="E-mail" required />
-                        <input type="password" className="passwordInput" placeholder="Password" required/>
+                        <input type="email" className="inEmailInput" placeholder="E-mail" required />
+                        <input type="password" className="inPasswordInput" placeholder="Password" required/>
                     </form>
 
                     <div className="signInButtonComp">

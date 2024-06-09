@@ -85,7 +85,7 @@
 }
 
 .eMailInput {
-    border: 1px solid #5e5d5d7e;
+    border: 1px solid #ffffff;
     margin-left: 20%;
     width: 60%;
     outline: none;
@@ -94,7 +94,7 @@
 }
 
 .passwordInput { 
-    border: 1px solid #5e5d5d7e;
+    border: 1px solid #ffff;
     margin-left: 20%;
     width: 60%;
     outline: none;
@@ -216,4 +216,12 @@
     outline: none;
     border-radius: 5px;
     margin-bottom: 30px;
+}
+
+.newNameInput::placeholder,
+.newEmailInput::placeholder,
+.newPasswordInput::placeholder,
+.confirmPasswordInput::placeholder{
+    color: #ffffff;
+    opacity: 0.5;
 }

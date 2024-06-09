@@ -82,7 +82,7 @@
     border-radius: 20px;
 }
 
-.eMailInput {
+.inEmailInput {
     border: 1px solid #5e5d5d7e;
     margin-left: 20%;
     width: 60%;
@@ -91,7 +91,7 @@
     margin-bottom: 30px;
 }
 
-.passwordInput { 
+.inPasswordInput { 
     border: 1px solid #5e5d5d7e;
     margin-left: 20%;
     width: 60%;
