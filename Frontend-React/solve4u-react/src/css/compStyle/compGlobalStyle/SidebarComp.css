@@ -8,6 +8,7 @@
   padding: 20px;
   box-sizing: border-box;
   transition: left 0.3s ease;
+  z-index: 9999;
 }
 
 .Aheaders {
