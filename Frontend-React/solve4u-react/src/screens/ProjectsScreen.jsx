@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import Sidebar from "../components/global/SidebarComp.jsx";
 import GlobalHeader from "../components/global/GlobalHeaderComp.jsx";
 import CardProject from "../components/cardsProjects/CardsProjectsComp.jsx";
 import CardCreateProject from "../components/cardsProjects/CardCreateProjectComp.jsx";
 import CardAnalitycsComp from "../components/cardsProjects/cardAnalitycs/CardAnalitycsComp.jsx";
 
-import "../css/screenStyle/projectScreenStyle/ProjectsScreen.css"
-import { useNavigate } from 'react-router-dom';
+import "../css/screenStyle/projectScreenStyle/ProjectsScreen.css";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
   const [isCardVisible, setCardVisible] = useState(false);
@@ -14,7 +14,8 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const localStorageProjects = JSON.parse(localStorage.getItem('projects')) || [];
+    const localStorageProjects =
+      JSON.parse(localStorage.getItem("projects")) || [];
     setProjects(localStorageProjects);
   }, []);
 
@@ -31,16 +32,17 @@ const Projects = () => {
     window.location.reload();
   };
 
-
   return (
     <div>
       <GlobalHeader />
       <Sidebar />
       <div className="project-screen">
-        <header className='header'>
-          <h1 className='title'>Your Project's</h1>
+        <header className="header">
+          <h1 className="title">Your Project's</h1>
 
-          <button className='ButtonNew' onClick={openCard}>New Project</button>
+          <button className="ButtonNew" onClick={openCard}>
+            New Project
+          </button>
         </header>
         <div className="projects-container">
           {projects.map((project, index) => (
@@ -58,7 +60,7 @@ const Projects = () => {
           </div>
         </section>
       </div>
-      {isCardVisible && <CardCreateProject onClose={closeCard} /> }
+      {isCardVisible && <CardCreateProject onClose={closeCard} />}
     </div>
   );
 };

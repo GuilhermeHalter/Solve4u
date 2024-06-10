@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { Chart } from 'react-google-charts';
-import "../../../css/cardStyle/cardAnalitycs/CardAnalitycsComp.css"
+import React, { useEffect, useState } from "react";
+import { Chart } from "react-google-charts";
+import "../../../css/cardStyle/cardAnalitycs/CardAnalitycsComp.css";
 
-// Função para recuperar os dados do localStorage
 const getProjectsFromLocalStorage = () => {
-  const projects = JSON.parse(localStorage.getItem('projects')) || [];
-  const sectors = JSON.parse(localStorage.getItem('sectors')) || [];
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  const projects = JSON.parse(localStorage.getItem("projects")) || [];
+  const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   return { projects, sectors, tasks };
 };
 
@@ -21,10 +20,14 @@ const countTasksByStage = (projects, sectors, tasks) => {
       pending: 0,
     };
 
-    const projectSectors = sectors.filter((sector) => sector.projectId === project.id);
+    const projectSectors = sectors.filter(
+      (sector) => sector.projectId === project.id
+    );
 
     projectSectors.forEach((sector) => {
-      const sectorTasks = tasks.filter((task) => task.sectorId === sector.sectorId);
+      const sectorTasks = tasks.filter(
+        (task) => task.sectorId === sector.sectorId
+      );
 
       sectorTasks.forEach((task) => {
         if (task.taskStage === "1") taskCounts[project.id].process += 1;
@@ -48,11 +51,11 @@ const CardAnalitycsComp = () => {
     const allChartData = projects.map((project) => {
       const counts = taskCounts[project.id];
       const chartData = [
-        ['Stage', 'Tasks', { role: "style" }],
-        ['Process', Math.max(0, counts.process), "#F2E307"],
-        ['Checking', Math.max(0, counts.checking), "#6328F5" ],
-        ['Finished', Math.max(0, counts.finished), "#46CC26" ],
-        ['Pending', Math.max(0, counts.pending), "#EA1711" ],
+        ["Stage", "Tasks", { role: "style" }],
+        ["Process", Math.max(0, counts.process), "#F2E307"],
+        ["Checking", Math.max(0, counts.checking), "#6328F5"],
+        ["Finished", Math.max(0, counts.finished), "#46CC26"],
+        ["Pending", Math.max(0, counts.pending), "#EA1711"],
       ];
       return { projectName: project.projectName, data: chartData };
     });
@@ -61,10 +64,10 @@ const CardAnalitycsComp = () => {
   }, []);
 
   return (
-    <div className='cardAnalitycs'>
+    <div className="cardAnalitycs">
       {chartsData.map((chart, index) => (
-        <div className='conteinerCardAnalitycs' key={index} >
-          <h2 className='titleAnalitycs'>{chart.projectName}</h2>
+        <div className="conteinerCardAnalitycs" key={index}>
+          <h2 className="titleAnalitycs">{chart.projectName}</h2>
           <Chart
             chartType="ColumnChart"
             width="100%"

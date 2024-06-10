@@ -116,18 +116,20 @@ const InProject = () => {
 
         <div className="sectionCards">
           {sectors.map((sector) => (
-            <SectorCard key={sector.id} sector={sector} onClick={handleSectorClick} />
+            <SectorCard
+              key={sector.id}
+              sector={sector}
+              onClick={handleSectorClick}
+            />
           ))}
         </div>
-
-       
-      </div> 
+      </div>
       <div className="containerButton">
         <button className="ButtonDelete" onClick={handleDeleteProject}>
           Delete Project <MdDelete className="iconC" />
         </button>
       </div>
-        
+
       {isSectorCardVisible && (
         <CardCreateSectorComp projectId={projectId} onClose={closeSectorCard} />
       )}

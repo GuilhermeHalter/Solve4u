@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/compStyle/compHomeStyle/HomeHeaderComp.css"
+import "../../css/compStyle/compHomeStyle/HomeHeaderComp.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -18,10 +18,16 @@ const HomeHeader = () => {
     <nav className="homeHeaderNav">
       <div className="discoveryComp">
         <ul className="discoveryCompUl">
-          <li className="solutionsli" onClick={() => scrollToSection("solutions")}>
+          <li
+            className="solutionsli"
+            onClick={() => scrollToSection("solutions")}
+          >
             Solutions <IoIosArrowDown />
           </li>
-          <li className="performanceLi" onClick={() => scrollToSection("performance")}>
+          <li
+            className="performanceLi"
+            onClick={() => scrollToSection("performance")}
+          >
             Performance <IoIosArrowDown />
           </li>
         </ul>

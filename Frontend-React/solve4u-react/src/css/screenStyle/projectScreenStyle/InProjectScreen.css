@@ -2,8 +2,8 @@
   margin-left: 8%;
 }
 
-.titleI{
-    color: #0000009c;
+.titleI {
+  color: #0000009c;
 }
 
 .ButtonDelete {
@@ -30,69 +30,68 @@
 }
 
 .ButtonCreateSec {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    margin-right: 3%;
-    background-color: transparent;
-    color: #0076E2;
-    font-weight: bold;
-    border: 2px solid #0076E2;
-    border-radius: 40px;
-  }
-  
-  .ButtonCreateSec:hover {
-    transition: 1s;
-    cursor: pointer;
-    color: #03417a;
-    font-weight: bold;
-    border: 2px solid #03417a;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 3%;
+  background-color: transparent;
+  color: #0076e2;
+  font-weight: bold;
+  border: 2px solid #0076e2;
+  border-radius: 40px;
+}
 
-  .ButtonEditProject {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    margin-right: 3%;
-    background-color: transparent;
-    color: #0076E2;
-    font-weight: bold;
-    border: 2px solid #0076E2;
-    border-radius: 40px;
-  }
+.ButtonCreateSec:hover {
+  transition: 1s;
+  cursor: pointer;
+  color: #03417a;
+  font-weight: bold;
+  border: 2px solid #03417a;
+}
 
-  .sections2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  
-  .ButtonEditProject:hover {
-    transition: 1s;
-    cursor: pointer;
-    color: #03417a;
-    font-weight: bold;
-    border: 2px solid #03417a;
-  }
+.ButtonEditProject {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 3%;
+  background-color: transparent;
+  color: #0076e2;
+  font-weight: bold;
+  border: 2px solid #0076e2;
+  border-radius: 40px;
+}
 
-.conteinerHeader{
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
+.sections2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ButtonEditProject:hover {
+  transition: 1s;
+  cursor: pointer;
+  color: #03417a;
+  font-weight: bold;
+  border: 2px solid #03417a;
+}
+
+.conteinerHeader {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
 }
 
 .iconC {
   margin-left: 10px;
 }
 
-.sectionCards{
+.sectionCards {
   margin-left: -2.5%;
   display: grid;
   flex-wrap: wrap;

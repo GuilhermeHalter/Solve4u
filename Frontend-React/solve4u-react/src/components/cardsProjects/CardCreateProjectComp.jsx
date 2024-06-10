@@ -8,8 +8,9 @@ const CardCreateProject = ({ onClose }) => {
   const [category, setCategory] = useState("Option 1");
 
   const generateRandomCode = () => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let code = '';
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let code = "";
     for (let i = 0; i < 8; i++) {
       code += characters.charAt(Math.floor(Math.random() * characters.length));
     }
@@ -24,7 +25,7 @@ const CardCreateProject = ({ onClose }) => {
       codigo: generateRandomCode(),
       projectName,
       projectDescription,
-      category
+      category,
     };
 
     projects.push(newProject);
@@ -82,7 +83,7 @@ const CardCreateProject = ({ onClose }) => {
           <option value="Option 2">Option 2</option>
           <option value="Option 3">Option 3</option>
         </select>
-        <button className="create-btn" onClick={handleCreateProject} >
+        <button className="create-btn" onClick={handleCreateProject}>
           Create Project <FaPlus className="iconCard" />
         </button>
       </div>
