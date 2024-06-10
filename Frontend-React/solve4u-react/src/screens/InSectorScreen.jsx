@@ -23,13 +23,16 @@ const InSectorScreen = () => {
   const sector = location.state.sector;
   const sectorId = sector.sectorId;
 
-  useEffect(() => {
-    const fetchTasks = () => {
-      const allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-      setTasks(allTasks.filter((task) => task.sectorId === sectorId));
-    };
+  const fetchTasks = () => {
+    const allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    setTasks(allTasks.filter((task) => task.sectorId === sectorId));
+  };
 
+  useEffect(() => {
     fetchTasks();
+    const interval = setInterval(fetchTasks); 
+
+    return () => clearInterval(interval); 
   }, [sectorId]);
 
   const openTaskCard = () => {
@@ -38,7 +41,6 @@ const InSectorScreen = () => {
 
   const closeTaskCard = () => {
     setTaskCardVisible(false);
-    window.location.reload();
   };
 
   const openTaskCardProcess = (task) => {
@@ -49,7 +51,6 @@ const InSectorScreen = () => {
   const closeTaskCardProcess = () => {
     setTaskCardProcessVisible(false);
     setSelectedTask(null);
-    window.location.reload();
   };
 
   const openTaskCardChecking = (task) => {
@@ -60,7 +61,6 @@ const InSectorScreen = () => {
   const closeTaskCardChecking = () => {
     setTaskCardCheckingVisible(false);
     setSelectedTask(null);
-    window.location.reload();
   };
 
   const openTaskCardFinished = (task) => {
@@ -71,7 +71,6 @@ const InSectorScreen = () => {
   const closeTaskCardFinished = () => {
     setTaskCardFinishedVisible(false);
     setSelectedTask(null);
-    window.location.reload();
   };
 
   return (

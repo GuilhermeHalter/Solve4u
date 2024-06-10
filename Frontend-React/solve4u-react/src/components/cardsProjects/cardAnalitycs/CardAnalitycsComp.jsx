@@ -10,7 +10,6 @@ const getProjectsFromLocalStorage = () => {
   return { projects, sectors, tasks };
 };
 
-// Função para contar as tasks por estágio em cada projeto
 const countTasksByStage = (projects, sectors, tasks) => {
   const taskCounts = {};
 
@@ -46,7 +45,6 @@ const CardAnalitycsComp = () => {
     const { projects, sectors, tasks } = getProjectsFromLocalStorage();
     const taskCounts = countTasksByStage(projects, sectors, tasks);
 
-    // Preparar os dados para o Google Chart para cada projeto
     const allChartData = projects.map((project) => {
       const counts = taskCounts[project.id];
       const chartData = [
