@@ -5,7 +5,7 @@
         align-items: center;
         justify-content: space-between;
         background-color: transparent;
-        position: absolute;
+        position: absolute; 
         top: 0;
         left: 0;
         opacity: 0;
@@ -13,72 +13,72 @@
         animation: slideIn 1.5s forwards;
     }
 
-    @keyframes slideIn {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
+  }
 
-    .homeHeaderNav ul {
-        display: flex;
-        gap: 2rem;
-    }
+  .homeHeaderNav ul {
+    display: flex;
+    gap: 2rem;
+  }
 
-    .headerRightComps {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-right: 10px;
-    }
+  .headerRightComps {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+  }
 
-    ul {
-        list-style: none;
-    }
+  ul {
+    list-style: none;
+  }
 
-    .Aheader {
-        font-weight: bold;
-        text-decoration: none;
-        color: #adadad;
-        font-size: 18px;
-        transition: color 1s;
-    }
+  .Aheader {
+    font-weight: bold;
+    text-decoration: none;
+    color: #adadad;
+    font-size: 18px;
+    transition: color 1s;
+  }
 
-    .Aheader:hover {
-        cursor: pointer;
-        color: #fff;
-    }
+  .Aheader:hover {
+    cursor: pointer;
+    color: #fff;
+  }
 
-    .signUpHomeButton {
-        display: flex;
-        color: #adadad;
-        border: 1px solid #adadad;
-        border-radius: 5px;
-        padding: 3px;
-        transition: border 1s;
-    }
+  .signUpHomeButton {
+    display: flex;
+    color: #adadad;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    padding: 3px;
+    transition: border 1s;
+  }
 
-    .signUpHomeButton:hover {
-        border: 1px solid #fff;
-    }
+  .signUpHomeButton:hover {
+    border: 1px solid #fff;
+  }
 
-    .signInHomeButton {
-        margin-top: 3px;
-    }
+  .signInHomeButton {
+    margin-top: 3px;
+  }
 
-    .discoveryComp ul li {
-        color: #000;
-        font-weight: bold;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        font-size: 15px;
-        transition: color 0.5s;
-    }
+  .discoveryComp ul li {
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    transition: color 0.5s;
+  }
 
-    .discoveryComp ul li:hover {
-        color: #0076E2;
-    }
+  .discoveryComp ul li:hover {
+    color: #0076e2;
+  }
 }
 
 /* 
@@ -86,90 +86,90 @@
 */
 
 @media only screen and (min-width: 541px) and (max-width: 768px) {
-    .homeHeaderNav {
-        width: 100%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: transparent;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-    }
+  .homeHeaderNav {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
 
-    .homeHeaderNav ul {
-        display: flex;
-        gap: 0.5rem;
-    }
+  .homeHeaderNav ul {
+    display: flex;
+    gap: 0.5rem;
+  }
 
-    .headerRightComps {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-right: 10px;
-    }
+  .headerRightComps {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+  }
 
-    .searchInput {
-        font-weight: bold;
-        border: 2px solid #0076E2;
-        width: 120px;
-        height: 20px;
-        border-radius: 5px;
-        font-size: 15px;
-        outline: none;
-    }
+  .searchInput {
+    font-weight: bold;
+    border: 2px solid #0076e2;
+    width: 120px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+  }
 
-    ul {
-        list-style: none;
-    }
+  ul {
+    list-style: none;
+  }
 
-    .Aheader {
-        font-weight: bold;
-        text-decoration: none;
-        color: #adadad;
-        font-size: 15px;
-        transition: color 1s;
-    }
+  .Aheader {
+    font-weight: bold;
+    text-decoration: none;
+    color: #adadad;
+    font-size: 15px;
+    transition: color 1s;
+  }
 
-    .Aheader:hover {
-        cursor: pointer;
-        color: #fff;
-    }
+  .Aheader:hover {
+    cursor: pointer;
+    color: #fff;
+  }
 
-    .signUpHomeButton {
-        display: flex;
-        color: #adadad;
-        border: 1px solid #adadad;
-        border-radius: 5px;
-        transition: border 1s;
-    }
+  .signUpHomeButton {
+    display: flex;
+    color: #adadad;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    transition: border 1s;
+  }
 
-    .signUpHomeButton:hover {
-        border: 1px solid #fff;
-    }
+  .signUpHomeButton:hover {
+    border: 1px solid #fff;
+  }
 
-    .signInHomeButton {
-        margin-top: 0;
-    }
+  .signInHomeButton {
+    margin-top: 0;
+  }
 
-    .discoveryComp ul li {
-        color: #000;
-        font-weight: bold;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        font-size: 15px;
-        transition: color 0.5s;
-    }
+  .discoveryComp ul li {
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    transition: color 0.5s;
+  }
 
-    .discoveryComp ul li:hover {
-        color: #0076E2;
-    }
+  .discoveryComp ul li:hover {
+    color: #0076e2;
+  }
 
-    .discoveryCompUl {
-        padding-left: 10px;
-    }
+  .discoveryCompUl {
+    padding-left: 10px;
+  }
 }
 
 /* 
@@ -177,61 +177,61 @@
 */
 
 @media only screen and (max-width: 541px) {
-    .headerRightComps {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-right: 8px;
-    }
+  .headerRightComps {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 8px;
+  }
 
-    ul {
-        list-style: none;
-    }
+  ul {
+    list-style: none;
+  }
 
-    .Aheader {
-        font-weight: bold;
-        text-decoration: none;
-        color: #adadad;
-        font-size: 8px;
-        transition: color 1s;
-    }
+  .Aheader {
+    font-weight: bold;
+    text-decoration: none;
+    color: #adadad;
+    font-size: 8px;
+    transition: color 1s;
+  }
 
-    .Aheader:hover {
-        cursor: pointer;
-        color: #fff;
-    }
+  .Aheader:hover {
+    cursor: pointer;
+    color: #fff;
+  }
 
-    .signUpHomeButton {
-        display: flex;
-        color: #adadad;
-        border: 1px solid #adadad;
-        border-radius: 5px;
-        transition: border 1s;
-    }
+  .signUpHomeButton {
+    display: flex;
+    color: #adadad;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    transition: border 1s;
+  }
 
-    .signUpHomeButton:hover {
-        border: 1px solid #fff;
-    }
+  .signUpHomeButton:hover {
+    border: 1px solid #fff;
+  }
 
-    .signInHomeButton {
-        margin-top: -3px;
-    }
+  .signInHomeButton {
+    margin-top: -3px;
+  }
 
-    .discoveryComp ul li {
-        color: #000;
-        font-weight: bold;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        font-size: 8px;
-        transition: color 0.5s;
-    }
+  .discoveryComp ul li {
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 8px;
+    transition: color 0.5s;
+  }
 
-    .discoveryComp ul li:hover {
-        color: #0076E2;
-    }
+  .discoveryComp ul li:hover {
+    color: #0076e2;
+  }
 
-    .discoveryCompUl {
-        padding-left: 10px;
-    }
+  .discoveryCompUl {
+    padding-left: 10px;
+  }
 }

@@ -10,26 +10,23 @@ const CardTaskFinishedComp = ({ task, onClose }) => {
           X
         </button>
         <div className="lineVerticalFinished"> </div>
-        
-        <div className="modalContentLeftFinished">
-           <h2>{task.taskName}</h2>
-           <p className="descriptionTaskCardProcess"> {task.taskDescription}</p>
-           <p>{task.taskUser}</p>
-          
-        </div>
-        <hr className="modalDivisionFinished"/>
-        <div className="modalContentRightFinished">
-        <div className="upRightFinished">
-                <div className="dateTaks">
-                  <p>Deadline: {task.startDate}</p>
-                  <p>Deadline: {task.dateDeadline}</p>
-                </div>
-        </div>
-        <hr className="horizontalDivisionFinished"/>
-        <div className="downRightFinished"></div>
 
+        <div className="modalContentLeftFinished">
+          <h2>{task.taskName}</h2>
+          <p className="descriptionTaskCardProcess"> {task.taskDescription}</p>
+          <p>{task.taskUser}</p>
         </div>
-      
+        <hr className="modalDivisionFinished" />
+        <div className="modalContentRightFinished">
+          <div className="upRightFinished">
+            <div className="dateTaks">
+              <p>Deadline: {task.startDate}</p>
+              <p>Deadline: {task.dateDeadline}</p>
+            </div>
+          </div>
+          <hr className="horizontalDivisionFinished" />
+          <div className="downRightFinished"></div>
+        </div>
       </div>
     </div>
   );

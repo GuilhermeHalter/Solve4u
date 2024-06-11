@@ -1,50 +1,50 @@
 .footerComp {
-    background-color: #232f3e;
-    color: #ffffff;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
+  background-color: #232f3e;
+  color: #ffffff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .footerList {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footerList .contactLi,
 .footerList .helpLi,
 .footerList .followUsLi {
-    padding: 0 50px 0px;
+  padding: 0 50px 0px;
 }
 
 .helpLi,
 .followUsLi {
-    flex-grow: 1;
-    text-align: left;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .footerList h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .footerList ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .footerList ul li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .footerList ul li a {
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .footerList ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* 
@@ -52,27 +52,24 @@
 */
 
 @media only screen and (min-width: 541px) and (max-width: 768px) {
+  .footerList .contactLi,
+  .footerList .helpLi,
+  .footerList .followUsLi {
+    padding: 0 180px 0px;
+  }
 
-    .footerList .contactLi,
-    .footerList .helpLi,
-    .footerList .followUsLi {
-        padding: 0 180px 0px;
-    }
+  .helpLi,
+  .followUsLi,
+  .contactLi {
+    flex-grow: 1;
+    text-align: center;
+  }
 
-    .helpLi,
-    .followUsLi,
-    .contactLi {
-        flex-grow: 1;
-        text-align: center;
-    }
-
-    .footerList h2 {
-        font-size: 25px;
-        margin-bottom: 10px;
-        color: #ffffff;
-    }
-    
-
+  .footerList h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
 }
 
 /* 
@@ -80,23 +77,22 @@
 */
 
 @media only screen and (max-width: 541px) {
-    .footerList .contactLi,
-    .footerList .helpLi,
-    .footerList .followUsLi {
-        padding: 0 180px 0px;
-    }
+  .footerList .contactLi,
+  .footerList .helpLi,
+  .footerList .followUsLi {
+    padding: 0 180px 0px;
+  }
 
-    .helpLi,
-    .followUsLi,
-    .contactLi {
-        flex-grow: 1;
-        text-align: center;
-    }
+  .helpLi,
+  .followUsLi,
+  .contactLi {
+    flex-grow: 1;
+    text-align: center;
+  }
 
-    .footerList h2 {
-        font-size: 15px;
-        margin-bottom: 10px;
-        color: #ffffff;
-    }
- 
+  .footerList h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
 }

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import { Outlet } from 'react-router-dom';
-import { InfinitySpin } from 'react-loader-spinner';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { Outlet } from "react-router-dom";
+import { InfinitySpin } from "react-loader-spinner";
 
 function App() {
   const [loading, setLoading] = useState(true);

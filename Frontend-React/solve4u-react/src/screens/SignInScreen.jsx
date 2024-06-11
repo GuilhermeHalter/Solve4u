@@ -28,20 +28,35 @@ const SignIn = () => {
                         <input type="password" className="inPasswordInput" placeholder="Password" required/>
                     </form>
 
-                    <div className="signInButtonComp">
-                        <Link to={"/newproject"} className="singInButton"> SIGN IN </Link>
-                    </div>
-                    <div className="iconsLogin">
-                        <ul>
-                            <li><a target="_blank"><FcGoogle className="googleIcon" /></a></li>
-                            <li><a target="_blank"><FaGithub className="githubIcon" /></a></li>
-                            <li><a target="_blank"><FaLinkedin className="linkedinIcon" /></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          <div className="signInButtonComp">
+            <Link to={"/newproject"} className="singInButton">
+              {" "}
+              SIGN IN{" "}
+            </Link>
+          </div>
+          <div className="iconsLogin">
+            <ul>
+              <li>
+                <a target="_blank">
+                  <FcGoogle className="googleIcon" />
+                </a>
+              </li>
+              <li>
+                <a target="_blank">
+                  <FaGithub className="githubIcon" />
+                </a>
+              </li>
+              <li>
+                <a target="_blank">
+                  <FaLinkedin className="linkedinIcon" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default SignIn;

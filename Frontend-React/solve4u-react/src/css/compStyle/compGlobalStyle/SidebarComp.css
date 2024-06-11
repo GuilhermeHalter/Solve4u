@@ -1,32 +1,33 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -200px; 
+  left: -200px;
   width: 250px;
   height: 100%;
   background-color: #f0f0f0;
   padding: 20px;
   box-sizing: border-box;
   transition: left 0.3s ease;
+  z-index: 9999;
 }
 
-.Aheaders{
+.Aheaders {
   text-decoration: none;
   color: #272727;
 }
 
 .closed {
-  left: 0.1%; 
+  left: 0.1%;
 }
 
-.config{
+.config {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
 
-.bell{
+.bell {
   display: flex;
   margin-top: 90px;
   margin-bottom: 40px;
@@ -34,54 +35,52 @@
   align-items: center;
 }
 
-.logout{
+.logout {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.theme{
+.theme {
   display: flex;
   margin-top: 20px;
   justify-content: space-between;
   align-items: center;
 }
 
-.sidebarmain{
+.sidebarmain {
   height: 60%;
 }
 
-.sidebarfooter{
+.sidebarfooter {
   width: 100%;
   height: 30%;
 }
 
-.folder{
+.folder {
   display: flex;
   margin-bottom: 40px;
   justify-content: space-between;
   align-items: center;
 }
-hr{
+hr {
   width: 108.5%;
 }
 
 .sidebar h2 {
-  font-size: 1.5rem;;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 .sidebar ul {
   list-style-type: none;
   padding: 0;
-
 }
 
 .sidebar li {
   align-items: center;
   cursor: pointer;
 }
-
 
 .toggle-icon {
   display: flex;

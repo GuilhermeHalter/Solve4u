@@ -6,8 +6,18 @@ const SectorCard = ({ sector, onClick }) => {
   const { sectorName, sectorDescription, selectedUsers, sectorColor } = sector;
 
   return (
-    <div className="sector-card" onClick={() => onClick(sector)} >
-      <h3 style={{ backgroundColor: sectorColor, borderRadius: "5px", minWidth: "30%", maxWidth: "50%" ,textAlign: "center" }}>{sectorName}</h3>
+    <div className="sector-card" onClick={() => onClick(sector)}>
+      <h3
+        style={{
+          backgroundColor: sectorColor,
+          borderRadius: "5px",
+          minWidth: "30%",
+          maxWidth: "50%",
+          textAlign: "center",
+        }}
+      >
+        {sectorName}
+      </h3>
       <p>Description: {sectorDescription}</p>
       <p>Selected Users: {selectedUsers.join(", ")}</p>
     </div>
@@ -19,8 +29,8 @@ SectorCard.propTypes = {
     sectorName: PropTypes.string.isRequired,
     sectorDescription: PropTypes.string.isRequired,
     selectedUsers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    sectorColor: PropTypes.string.isRequired
-  }).isRequired
+    sectorColor: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default SectorCard;

@@ -4,18 +4,20 @@ import { FaPlus } from "react-icons/fa";
 
 const CardEditProjectComp = ({ project, onClose }) => {
   const [projectName, setProjectName] = useState(project.projectName);
-  const [projectDescription, setProjectDescription] = useState(project.projectDescription);
+  const [projectDescription, setProjectDescription] = useState(
+    project.projectDescription
+  );
   const [category, setCategory] = useState(project.category);
 
   const handleEditProject = () => {
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
-    const updatedProjects = projects.map(item => {
+    const updatedProjects = projects.map((item) => {
       if (item.id === project.id) {
         return {
           ...item,
           projectName: projectName,
           projectDescription: projectDescription,
-          category: category
+          category: category,
         };
       }
       return item;

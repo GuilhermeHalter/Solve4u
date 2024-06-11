@@ -1,25 +1,24 @@
 .sector-card {
-    width: 75%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-left: 2%;
-    border: 2px solid #939393;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    word-wrap: break-word;
-  }
-  
-  .sector-card h3 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .sector-card p {
-    margin: 0;
-    color: #666;
-  }
-  
-  .sector-card p:first-child {
-    margin-bottom: 10px;
-  }
-  
+  width: 75%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-left: 2%;
+  border: 2px solid #939393;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.sector-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.sector-card p {
+  margin: 0;
+  color: #666;
+}
+
+.sector-card p:first-child {
+  margin-bottom: 10px;
+}

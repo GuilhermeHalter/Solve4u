@@ -3,8 +3,6 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
-
-
 import "../../../../css/cardStyle/cardTasks/CardTaskChekingComp.css";
 
 const CardTaskChekingComp = ({ task, onClose }) => {
@@ -39,34 +37,33 @@ const CardTaskChekingComp = ({ task, onClose }) => {
           X
         </button>
         <div className="lineVerticalChecking"> </div>
-        
+
         <div className="modalContentLeftChecking">
-           <h2>{task.taskName}</h2>
-           <p className="descriptionTaskCardProcess"> {task.taskDescription}</p>
-           <p>{task.taskUser}</p>
-          
+          <h2>{task.taskName}</h2>
+          <p className="descriptionTaskCardProcess"> {task.taskDescription}</p>
+          <p>{task.taskUser}</p>
         </div>
-        <hr className="modalDivisionChecking"/>
+        <hr className="modalDivisionChecking" />
         <div className="modalContentRightChecking">
-        <div className="upRightChecking">
-                <div className="dateTaks">
-                  <p>Deadline: {task.startDate}</p>
-                  <p>Deadline: {task.dateDeadline}</p>
-                </div>
+          <div className="upRightChecking">
+            <div className="dateTaks">
+              <p>Deadline: {task.startDate}</p>
+              <p>Deadline: {task.dateDeadline}</p>
+            </div>
 
-              <button className="notApproved-task-btn" onClick={handleNotApprovedTask}>
-                  Not Approved <IoClose className="xIcon" />
-              </button>
-              <button className="approved-task-btn" onClick={handleApprovedTask}>
-                Approved <FaCheck className="checkIcon" />
-              </button>
-              
+            <button
+              className="notApproved-task-btn"
+              onClick={handleNotApprovedTask}
+            >
+              Not Approved <IoClose className="xIcon" />
+            </button>
+            <button className="approved-task-btn" onClick={handleApprovedTask}>
+              Approved <FaCheck className="checkIcon" />
+            </button>
+          </div>
+          <hr className="horizontalDivisionChecking" />
+          <div className="downRightChecking"></div>
         </div>
-        <hr className="horizontalDivisionChecking"/>
-        <div className="downRightChecking"></div>
-
-        </div>
-      
       </div>
     </div>
   );

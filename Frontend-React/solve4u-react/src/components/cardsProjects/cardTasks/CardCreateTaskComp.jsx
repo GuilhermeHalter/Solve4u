@@ -6,7 +6,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [taskUser, setTaskUser] = useState("");
-  const [dateDeadline, setDateDeadline] = useState(""); 
+  const [dateDeadline, setDateDeadline] = useState("");
 
   const users = ["User 1", "User 2", "User 3"];
 
@@ -42,7 +42,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
       setTaskName(value);
     } else if (name === "taskDescription") {
       setTaskDescription(value);
-    } else if (name === "dateDeadline") { 
+    } else if (name === "dateDeadline") {
       setDateDeadline(value);
     }
   };
@@ -79,13 +79,13 @@ const CardCreateTask = ({ onClose, sectorId }) => {
           required
         />
         <input
-          type="date" 
+          type="date"
           placeholder="Deadline"
           className="dateInput"
           name="dateDeadline"
           value={dateDeadline}
           onChange={handleInputChange}
-          min={today} 
+          min={today}
           required
         />
         <div className="user-select-container">
@@ -95,9 +95,13 @@ const CardCreateTask = ({ onClose, sectorId }) => {
             className="user-select"
             required
           >
-            <option value="" disabled>Select User</option>
-            {users.map(user => (
-              <option key={user} value={user}>{user}</option>
+            <option value="" disabled>
+              Select User
+            </option>
+            {users.map((user) => (
+              <option key={user} value={user}>
+                {user}
+              </option>
             ))}
           </select>
         </div>

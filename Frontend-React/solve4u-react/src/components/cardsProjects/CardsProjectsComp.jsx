@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "../../css/cardStyle/CardsProjectComp.css";
 
 const CardProject = ({ project, onClick }) => (

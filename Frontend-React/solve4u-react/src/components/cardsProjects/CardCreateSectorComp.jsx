@@ -13,7 +13,8 @@ const CardCreateSector = ({ onClose, projectId }) => {
 
   const handleCreateSector = () => {
     const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
-    const newSectorId = sectors.length > 0 ? sectors[sectors.length - 1].sectorId + 1 : 1;
+    const newSectorId =
+      sectors.length > 0 ? sectors[sectors.length - 1].sectorId + 1 : 1;
 
     const sector = {
       projectId: projectId,
@@ -21,7 +22,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
       sectorName,
       sectorDescription,
       selectedUsers,
-      sectorColor 
+      sectorColor,
     };
 
     sectors.push(sector);
@@ -55,7 +56,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
   };
 
   const handleRemoveUser = (userToRemove) => {
-    setSelectedUsers(selectedUsers.filter(user => user !== userToRemove));
+    setSelectedUsers(selectedUsers.filter((user) => user !== userToRemove));
   };
 
   const handleColorChange = (event) => {
@@ -79,7 +80,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
             onChange={handleInputChange}
             required
           />
-          
+
           <input
             type="color"
             className="color-picker"
@@ -88,7 +89,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
             required
           />
         </div>
-        
+
         <input
           type="text"
           placeholder="Sector Description"
@@ -105,20 +106,28 @@ const CardCreateSector = ({ onClose, projectId }) => {
             className="user-select"
             required
           >
-            <option value="" disabled>Select User</option>
-            {users.map(user => (
-              <option key={user} value={user}>{user}</option>
+            <option value="" disabled>
+              Select User
+            </option>
+            {users.map((user) => (
+              <option key={user} value={user}>
+                {user}
+              </option>
             ))}
           </select>
           <button className="add-user-btn" onClick={handleAddUser}>
-            Add User<FaPlus className="iconCard" />
+            Add User
+            <FaPlus className="iconCard" />
           </button>
         </div>
         <div className="selected-users">
-          {selectedUsers.map(user => (
+          {selectedUsers.map((user) => (
             <div key={user} className="selected-user">
               {user}
-              <button className="remove-user-btn" onClick={() => handleRemoveUser(user)}>
+              <button
+                className="remove-user-btn"
+                onClick={() => handleRemoveUser(user)}
+              >
                 <FaTimes />
               </button>
             </div>

@@ -25,13 +25,16 @@ const SignIn = () => {
                         <input type="password" className="confirmPasswordInput" placeholder="Confirm Password" required/>
                     </form>
 
-                    <div className="loginButtonComp">
-                        <Link to={"/signin"} className="loginButton"> LOGIN </Link>
-                    </div>
-                </div>
-            </div>
+          <div className="loginButtonComp">
+            <Link to={"/signin"} className="loginButton">
+              {" "}
+              LOGIN{" "}
+            </Link>
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default SignIn;
