@@ -7,7 +7,7 @@ const SignIn = () => {
     return (
         <div className="global">
             <div className="signUpBackButtonComp">     
-            <Link to={"/signin"} className="signUpBackButton"><FaArrowLeftLong className="arrowBack"/> BACK </Link>
+            <Link to={"/signin"} className="signUpBackButton"><FaArrowLeftLong className="signUpArrowBack"/> BACK </Link>
             </div>
             <div className="signUpContainer">
                 <div className="manageJobComp">

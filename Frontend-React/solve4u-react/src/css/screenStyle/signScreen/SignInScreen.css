@@ -2,7 +2,7 @@
     width: 25%;
     height: 400px;
     margin-left: 5%;
-    background: linear-gradient(180deg, rgba(0,118,226,1) 0%, rgba(0,65,124,1) 100%);
+    background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
     padding: 20px;
     transform: translateX(200px);
     animation: slideIn 1.8s forwards;
@@ -15,9 +15,9 @@
     }
 }
 
-.text{
+.text {
     width: 100%;
-    max-height: 50%;    
+    max-height: 50%;
     overflow: hidden;
 }
 
@@ -33,21 +33,11 @@
     margin-right: 5%;
     background-color: whitesmoke;
     border: 1px solid rgba(129, 129, 129, 0.377);
-    box-shadow: Vertical offset 19px;
+    box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
     padding: 20px;
     border-radius: 0 20px 20px 0;
-    -webkit-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-    -moz-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-    box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
     transform: translateX(-100px);
     animation: slideIn 1.5s forwards;
-}
-
-@keyframes slideIn {
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 .signInContainer {
@@ -82,21 +72,16 @@
     border-radius: 20px;
 }
 
-.inEmailInput {
+.inEmailInput, .inPasswordInput {
     border: 1px solid #5e5d5d7e;
     margin-left: 20%;
     width: 60%;
     outline: none;
     border-radius: 5px;
-    margin-bottom: 30px;
 }
 
-.inPasswordInput { 
-    border: 1px solid #5e5d5d7e;
-    margin-left: 20%;
-    width: 60%;
-    outline: none;
-    border-radius: 5px;
+.inEmailInput {
+    margin-bottom: 30px;
 }
 
 .signButton {
@@ -114,16 +99,15 @@
 .signButton:hover {
     background-color: #ffffff;
     color: #0076E2;
-    transition: 0.5 s;
+    transition: 0.5s;
 }
 
-.upSignButton{
+.upSignButton {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20%;
 }
-
 
 .signUpButton {
     display: flex;
@@ -144,14 +128,14 @@
     background-color: #ffffff;
 }
 
-.signUpButtonComp{
+.signUpButtonComp {
     display: flex;
     margin-top: 40%;
     align-items: center;
     justify-content: center;
 }
 
-.singInButton{
+.singInButton {
     display: flex;
     width: 150px;
     text-decoration: none;
@@ -170,14 +154,14 @@
     background-color: #0076E2;
 }
 
-.signInButtonComp{
+.signInButtonComp {
     display: flex;
     margin-top: 20%;
     justify-content: center;
     align-items: center;
 }
 
-.iconsLogin ul{
+.iconsLogin ul {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     font-size: 35px;
@@ -187,7 +171,7 @@
     text-align: center;
 }
 
-.iconsLogin ul li:hover{
+.iconsLogin ul li:hover {
     transition: 0.5s;
     transform: scale(1.2);
 }
@@ -196,14 +180,14 @@
     color: #0076E2;
 }
 
-.signInBackButtonComp{
+.signInBackButtonComp {
     position: absolute;
     width: 140px;
     top: 20px;
     left: 20px;
 }
 
-.signInBackButton{
+.signInBackButton {
     display: flex;
     font-weight: bold;
     text-decoration: none;
@@ -211,7 +195,7 @@
     font-size: 18px;
 }
 
-.arrowBack{
+.signInArrowBack {
     color: #0076E2;
     margin-right: 8%;
     height: auto;
@@ -234,25 +218,18 @@
         width: 30%;
         height: 300px;
         margin-left: 5%;
-        background: linear-gradient(180deg, rgba(0,118,226,1) 0%, rgba(0,65,124,1) 100%);
+        background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
         padding: 20px;
         transform: translateX(200px);
         animation: slideIn 1.8s forwards;
     }
-    
-    @keyframes slideIn {
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    .text{
+
+    .text {
         width: 100%;
-        max-height: 50%;    
+        max-height: 50%;
         overflow: hidden;
     }
-    
+
     .textContent {
         margin-top: 20%;
         font-weight: bold;
@@ -260,76 +237,61 @@
         text-align: left;
         font-size: 12px;
     }
-    
+
     .loginComp {
         width: 30%;
         height: 300px;
         margin-right: 5%;
         background-color: whitesmoke;
         border: 1px solid rgba(129, 129, 129, 0.377);
-        box-shadow: Vertical offset 19px;
+        box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
         padding: 20px;
         border-radius: 0 20px 20px 0;
-        -webkit-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-        -moz-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-        box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
         transform: translateX(-100px);
         animation: slideIn 1.5s forwards;
     }
-    
-    @keyframes slideIn {
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
+
     .signInContainer {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
-    
+
     .welcomeTitle {
         text-align: center;
         color: #ffff;
         font-size: 20px;
         font-weight: bold;
     }
-    
+
     .loginTitle {
         font-weight: bold;
         text-align: center;
         color: #000000;
         font-size: 20px;
     }
-    
+
     .inputSignIn {
         display: grid;
         width: 60%;
         height: auto;
         border-radius: 20px;
     }
-    
-    .inEmailInput {
+
+    .inEmailInput, .inPasswordInput {
         border: 1px solid #5e5d5d7e;
-        margin-top: 25%;
         width: 130%;
         outline: none;
         border-radius: 5px;
         font-size: 12px;
+    }
+
+    .inEmailInput {
+        margin-top: 25%;
         margin-bottom: 20px;
     }
-    
-    .inPasswordInput { 
-        border: 1px solid #5e5d5d7e;
-        width: 130%;
-        outline: none;
-        border-radius: 5px;
-        font-size: 12px;
-    }
-    
+
     .signButton {
         border-radius: 20px;
         border: 2px solid #ffff;
@@ -341,21 +303,20 @@
         width: 50%;
         height: 8%;
     }
-    
+
     .signButton:hover {
         background-color: #ffffff;
         color: #0076E2;
-        transition: 0.5 s;
+        transition: 0.5s;
     }
-    
-    .upSignButton{
+
+    .upSignButton {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 20%;
     }
-    
-    
+
     .signUpButton {
         display: flex;
         font-size: 10px;
@@ -368,21 +329,21 @@
         border-radius: 20px;
         padding: 10px;
     }
-    
+
     .signUpButton:hover {
         transition: 0.5s;
         color: #0076E2;
         background-color: #ffffff;
     }
-    
-    .signUpButtonComp{
+
+    .signUpButtonComp {
         display: flex;
         margin-top: 30%;
         align-items: center;
         justify-content: center;
     }
-    
-    .singInButton{
+
+    .singInButton {
         display: flex;
         width: 150px;
         text-decoration: none;
@@ -394,65 +355,276 @@
         border-radius: 20px;
         padding: 10px;
     }
-    
+
     .singInButton:hover {
         transition: 0.5s;
         color: #fff;
         background-color: #0076E2;
     }
-    
-    .signInButtonComp{
+
+    .signInButtonComp {
         font-size: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .iconsLogin ul{
+    .iconsLogin ul {
         display: grid;
         grid-template-columns: 33.3% 33.3% 33.3%;
         font-size: 20px;
         padding: 0;
         justify-content: center;
         align-items: center;
-        text-align: center; 
+        text-align: center;
     }
-    
-    .iconsLogin ul li:hover{
+
+    .iconsLogin ul li:hover {
         transition: 0.5s;
         transform: scale(1.2);
     }
-    
+
     .linkedinIcon {
         color: #0076E2;
     }
-    
-    .signInBackButtonComp{
+
+    .signInBackButtonComp {
         position: absolute;
         width: 140px;
         top: 20px;
         left: 20px;
     }
-    
-    .signInBackButton{
+
+    .signInBackButton {
         display: flex;
         font-weight: bold;
         text-decoration: none;
         color: #0076E2;
         font-size: 18px;
     }
-    
-    .arrowBack{
+
+    .signInArrowBack {
         color: #0076E2;
         margin-right: 8%;
         height: auto;
-        width: 12px;
+        width: 22px;
     }
-    
+
     .bookMarkIcon {
         display: flex;
         margin-top: -25px;
         color: #d8d8d8;
         font-size: 30px;
+    }
+}
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+@media only screen
+and (max-width: 541px){
+    .welcomeComp {
+        width: 20%;
+        height: 250px;
+        margin-left: 5%;
+        background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
+        padding: 20px;
+        transform: translateX(200px);
+        animation: slideIn 1.8s forwards;
+    }
+
+    .text {
+        width: 100%;
+        max-height: 50%;
+        overflow: hidden;
+    }
+
+    .textContent {
+        margin-top: 20%;
+        font-weight: bold;
+        color: #ffff;
+        text-align: left;
+        font-size: 10px;
+        width: 120%;
+    }
+
+    .loginComp {
+        width: 20%;
+        height: 250px;
+        margin-right: 5%;
+        background-color: whitesmoke;
+        border: 1px solid rgba(129, 129, 129, 0.377);
+        box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+        padding: 20px;
+        border-radius: 0 20px 20px 0;
+        transform: translateX(-100px);
+        animation: slideIn 1.5s forwards;
+    }
+
+    .signInContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .welcomeTitle {
+        text-align: center;
+        color: #ffff;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .loginTitle {
+        font-weight: bold;
+        text-align: center;
+        color: #000000;
+        font-size: 15px;
+    }
+
+    .inputSignIn {
+        display: grid;
+        width: 20%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .inEmailInput, .inPasswordInput {
+        border: 1px solid #5e5d5d7e;
+        width: 420%;
+        outline: none;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+
+    .inEmailInput {
+        margin-top: 25%;
+        margin-bottom: 20px;
+    }
+
+    .signButton {
+        border-radius: 20px;
+        border: 2px solid #ffff;
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffff;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 8%;
+    }
+
+    .signButton:hover {
+        background-color: #ffffff;
+        color: #0076E2;
+        transition: 0.5s;
+    }
+
+    .upSignButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+    }
+
+    .signUpButton {
+        display: flex;
+        font-size: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffff;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #ffff;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .signUpButton:hover {
+        transition: 0.5s;
+        color: #0076E2;
+        background-color: #ffffff;
+    }
+
+    .signUpButtonComp {
+        display: flex;
+        margin-top: 30%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .singInButton {
+        display: flex;
+        width: 150px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 8px;
+        color: #0076E2;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #0076E2;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .singInButton:hover {
+        transition: 0.5s;
+        color: #fff;
+        background-color: #0076E2;
+    }
+
+    .signInButtonComp {
+        font-size: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .iconsLogin ul {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        font-size: 20px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .iconsLogin ul li:hover {
+        transition: 0.5s;
+        transform: scale(1.2);
+    }
+
+    .linkedinIcon {
+        color: #0076E2;
+    }
+
+    .signInBackButtonComp {
+        position: absolute;
+        width: 140px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .signInBackButton {
+        display: flex;
+        font-weight: bold;
+        text-decoration: none;
+        color: #0076E2;
+        font-size: 10px;
+    }
+
+    .signInArrowBack {
+        color: #0076E2;
+        margin-right: 8%;
+        width: 12px;
+    }
+
+    .bookMarkIcon {
+        display: flex;
+        margin-top: -25px;
+        color: #d8d8d8;
+        font-size: 25px;
     }
 }

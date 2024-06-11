@@ -8,7 +8,7 @@ const SignIn = () => {
     return (
         <div className="global">
             <div className="signInBackButtonComp">     
-            <Link to={"/"} className="signInBackButton"><FaArrowLeftLong className="arrowBack"/> BACK </Link>
+            <Link to={"/"} className="signInBackButton"><FaArrowLeftLong className="signInArrowBack"/> BACK </Link>
             </div>
             <div className="signInContainer">
                 <div className="welcomeComp">

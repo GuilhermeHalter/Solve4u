@@ -149,7 +149,7 @@
     font-size: 18px;
 }
 
-.arrowBack{
+.signUpArrowBack{
     color: #0076E2;
     margin-right: 8%;
     height: auto;
@@ -319,11 +319,11 @@
         font-size: 18px;
     }
     
-    .arrowBack{
+    .signUpArrowBack{
         color: #0076E2;
         margin-right: 8%;
         height: auto;
-        width: 25px;
+        width: 22px;
     }
     
     .markBookIcon {
