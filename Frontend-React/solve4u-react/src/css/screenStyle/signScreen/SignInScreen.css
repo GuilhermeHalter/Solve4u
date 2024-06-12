@@ -1,234 +1,233 @@
 .welcomeComp {
   width: 25%;
   height: 400px;
-width: 25%;
-height: 400px;
-margin-left: 5%;
-background: linear-gradient(
-  180deg,
-  rgba(0, 118, 226, 1) 0%,
-  rgba(0, 65, 124, 1) 100%
-);
-padding: 20px;
-transform: translateX(200px);
-animation: slideIn 1.8s forwards;
+  width: 25%;
+  height: 400px;
+  margin-left: 5%;
+  background: linear-gradient(180deg,
+      rgba(0, 118, 226, 1) 0%,
+      rgba(0, 65, 124, 1) 100%);
+  padding: 20px;
+  transform: translateX(200px);
+  animation: slideIn 1.8s forwards;
 }
 
 @keyframes slideIn {
-to {
-  transform: translateX(0);
-  opacity: 1;
-}
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .text {
-width: 100%;
-max-height: 50%;
-overflow: hidden;
+  width: 100%;
+  max-height: 50%;
+  overflow: hidden;
 }
 
 .textContent {
-font-weight: bold;
-color: #ffff;
-text-align: left;
+  font-weight: bold;
+  color: #ffff;
+  text-align: left;
 }
 
 .loginComp {
-width: 25%;
-height: 400px;
-margin-right: 5%;
-background-color: whitesmoke;
-border: 1px solid rgba(129, 129, 129, 0.377);
-box-shadow: Vertical offset 19px;
-padding: 20px;
-border-radius: 0 20px 20px 0;
--webkit-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
--moz-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-transform: translateX(-100px);
-animation: slideIn 1.5s forwards;
+  width: 25%;
+  height: 400px;
+  margin-right: 5%;
+  background-color: whitesmoke;
+  border: 1px solid rgba(129, 129, 129, 0.377);
+  box-shadow: Vertical offset 19px;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+  -webkit-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+  -moz-box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+  box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+  transform: translateX(-100px);
+  animation: slideIn 1.5s forwards;
 }
 
 @keyframes slideIn {
-to {
-  transform: translateX(0);
-  opacity: 1;
-}
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .signInContainer {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .global {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .welcomeTitle {
-text-align: center;
-color: #ffff;
+  text-align: center;
+  color: #ffff;
 }
 
 .loginTitle {
-font-weight: bold;
-text-align: center;
-color: #000000;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
 }
 
 .inputSignIn {
-display: grid;
-width: 100%;
-height: 20%;
-border-radius: 20px;
+  display: grid;
+  width: 100%;
+  height: 20%;
+  border-radius: 20px;
 }
 
 .inEmailInput {
-border: 1px solid #5e5d5d7e;
-margin-left: 20%;
-width: 60%;
-outline: none;
-border-radius: 5px;
-margin-bottom: 30px;
+  border: 1px solid #5e5d5d7e;
+  margin-left: 20%;
+  width: 60%;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 .inPasswordInput {
-border: 1px solid #5e5d5d7e;
-margin-left: 20%;
-width: 60%;
-outline: none;
-border-radius: 5px;
+  border: 1px solid #5e5d5d7e;
+  margin-left: 20%;
+  width: 60%;
+  outline: none;
+  border-radius: 5px;
 }
 
 .signButton {
-border-radius: 20px;
-border: 2px solid #ffff;
-text-decoration: none;
-font-weight: bold;
-color: #ffff;
-justify-content: center;
-align-items: center;
-width: 50%;
-height: 8%;
+  border-radius: 20px;
+  border: 2px solid #ffff;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffff;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 8%;
 }
 
 .signButton:hover {
-background-color: #ffffff;
-color: #0076e2;
-transition: 0.5 s;
+  background-color: #ffffff;
+  color: #0076e2;
+  transition: 0.5 s;
 }
 
 .upSignButton {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
 }
 
 .signUpButton {
-display: flex;
-width: 150px;
-text-decoration: none;
-font-weight: bold;
-color: #ffff;
-justify-content: center;
-align-items: center;
-border: 2px solid #ffff;
-border-radius: 20px;
-padding: 10px;
+  display: flex;
+  width: 150px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffff;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffff;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .signUpButton:hover {
-transition: 0.5s;
-color: #0076e2;
-background-color: #ffffff;
+  transition: 0.5s;
+  color: #0076e2;
+  background-color: #ffffff;
 }
 
 .signUpButtonComp {
-display: flex;
-margin-top: 40%;
-align-items: center;
-justify-content: center;
+  display: flex;
+  margin-top: 40%;
+  align-items: center;
+  justify-content: center;
 }
 
 .singInButton {
-display: flex;
-width: 150px;
-text-decoration: none;
-font-weight: bold;
-color: #0076e2;
-justify-content: center;
-align-items: center;
-border: 2px solid #0076e2;
-border-radius: 20px;
-padding: 10px;
+  display: flex;
+  width: 150px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0076e2;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #0076e2;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .singInButton:hover {
-transition: 0.5s;
-color: #fff;
-background-color: #0076e2;
+  transition: 0.5s;
+  color: #fff;
+  background-color: #0076e2;
 }
 
 .signInButtonComp {
-display: flex;
-margin-top: 20%;
-justify-content: center;
-align-items: center;
+  display: flex;
+  margin-top: 20%;
+  justify-content: center;
+  align-items: center;
 }
 
 .iconsLogin ul {
-display: grid;
-grid-template-columns: 33.3% 33.3% 33.3%;
-font-size: 35px;
-padding: 0;
-justify-content: center;
-align-items: center;
-text-align: center;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  font-size: 35px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .iconsLogin ul li:hover {
-transition: 0.5s;
-transform: scale(1.2);
+  transition: 0.5s;
+  transform: scale(1.2);
 }
 
 .linkedinIcon {
-color: #0076e2;
+  color: #0076e2;
 }
 
 .signInBackButtonComp {
-position: absolute;
-width: 140px;
-top: 20px;
-left: 20px;
+  position: absolute;
+  width: 140px;
+  top: 20px;
+  left: 20px;
 }
 
 .signInBackButton {
-display: flex;
-font-weight: bold;
-text-decoration: none;
-color: #0076e2;
-font-size: 18px;
+  display: flex;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0076e2;
+  font-size: 18px;
 }
 
-.arrowBack {
-color: #0076e2;
-margin-right: 8%;
-height: auto;
-width: 25px;
+.signInArrowBack {
+  color: #0076e2;
+  margin-right: 8%;
+  height: auto;
+  width: 25px;
 }
 
 .bookMarkIcon {
-display: flex;
-margin-top: -25px;
-color: #d8d8d8;
-font-size: 30px;
+  display: flex;
+  margin-top: -25px;
+  color: #d8d8d8;
+  font-size: 30px;
 }
+
 /* 
                                  <---------------- Tablet ---------------->
 */
@@ -238,11 +237,9 @@ font-size: 30px;
     width: 30%;
     height: 300px;
     margin-left: 5%;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 118, 226, 1) 0%,
-      rgba(0, 65, 124, 1) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(0, 118, 226, 1) 0%,
+        rgba(0, 65, 124, 1) 100%);
     padding: 20px;
     transform: translateX(200px);
     animation: slideIn 1.8s forwards;
@@ -414,160 +411,162 @@ font-size: 30px;
     justify-content: center;
     align-items: center;
   }
-    .welcomeComp {
-        width: 30%;
-        height: 300px;
-        margin-left: 5%;
-        background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
-        padding: 20px;
-        transform: translateX(200px);
-        animation: slideIn 1.8s forwards;
-    }
 
-    .text {
-        width: 100%;
-        max-height: 50%;
-        overflow: hidden;
-    }
+  .welcomeComp {
+    width: 30%;
+    height: 300px;
+    margin-left: 5%;
+    background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
+    padding: 20px;
+    transform: translateX(200px);
+    animation: slideIn 1.8s forwards;
+  }
 
-    .textContent {
-        margin-top: 20%;
-        font-weight: bold;
-        color: #ffff;
-        text-align: left;
-        font-size: 12px;
-    }
+  .text {
+    width: 100%;
+    max-height: 50%;
+    overflow: hidden;
+  }
 
-    .loginComp {
-        width: 30%;
-        height: 300px;
-        margin-right: 5%;
-        background-color: whitesmoke;
-        border: 1px solid rgba(129, 129, 129, 0.377);
-        box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-        padding: 20px;
-        border-radius: 0 20px 20px 0;
-        transform: translateX(-100px);
-        animation: slideIn 1.5s forwards;
-    }
+  .textContent {
+    margin-top: 20%;
+    font-weight: bold;
+    color: #ffff;
+    text-align: left;
+    font-size: 15px;
+  }
 
-    .signInContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+  .loginComp {
+    width: 30%;
+    height: 300px;
+    margin-right: 5%;
+    background-color: whitesmoke;
+    border: 1px solid rgba(129, 129, 129, 0.377);
+    box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    transform: translateX(-100px);
+    animation: slideIn 1.5s forwards;
+  }
 
-    .welcomeTitle {
-        text-align: center;
-        color: #ffff;
-        font-size: 20px;
-        font-weight: bold;
-    }
+  .signInContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .loginTitle {
-        font-weight: bold;
-        text-align: center;
-        color: #000000;
-        font-size: 20px;
-    }
+  .welcomeTitle {
+    text-align: center;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: bold;
+  }
 
-    .inputSignIn {
-        display: grid;
-        width: 60%;
-        height: auto;
-        border-radius: 20px;
-    }
+  .loginTitle {
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+  }
 
-    .inEmailInput, .inPasswordInput {
-        border: 1px solid #5e5d5d7e;
-        width: 130%;
-        outline: none;
-        border-radius: 5px;
-        font-size: 12px;
-    }
+  .inputSignIn {
+    display: grid;
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+  }
 
-    .inEmailInput {
-        margin-top: 25%;
-        margin-bottom: 20px;
-    }
+  .inEmailInput,
+  .inPasswordInput {
+    border: 1px solid #5e5d5d7e;
+    width: 130%;
+    outline: none;
+    border-radius: 5px;
+    font-size: 12px;
+  }
 
-    .signButton {
-        border-radius: 20px;
-        border: 2px solid #ffff;
-        text-decoration: none;
-        font-weight: bold;
-        color: #ffff;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 8%;
-    }
+  .inEmailInput {
+    margin-top: 25%;
+    margin-bottom: 20px;
+  }
 
-    .signButton:hover {
-        background-color: #ffffff;
-        color: #0076E2;
-        transition: 0.5s;
-    }
+  .signButton {
+    border-radius: 20px;
+    border: 2px solid #ffff;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 8%;
+  }
 
-    .upSignButton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20%;
-    }
+  .signButton:hover {
+    background-color: #ffffff;
+    color: #0076E2;
+    transition: 0.5s;
+  }
 
-    .signUpButton {
-        display: flex;
-        font-size: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        color: #ffff;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #ffff;
-        border-radius: 20px;
-        padding: 10px;
-    }
+  .upSignButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+  }
 
-    .signUpButton:hover {
-        transition: 0.5s;
-        color: #0076E2;
-        background-color: #ffffff;
-    }
+  .signUpButton {
+    display: flex;
+    font-size: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffff;
+    border-radius: 20px;
+    padding: 10px;
+  }
 
-    .signUpButtonComp {
-        display: flex;
-        margin-top: 30%;
-        align-items: center;
-        justify-content: center;
-    }
+  .signUpButton:hover {
+    transition: 0.5s;
+    color: #0076E2;
+    background-color: #ffffff;
+  }
 
-    .singInButton {
-        display: flex;
-        width: 150px;
-        text-decoration: none;
-        font-weight: bold;
-        color: #0076E2;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #0076E2;
-        border-radius: 20px;
-        padding: 10px;
-    }
+  .signUpButtonComp {
+    display: flex;
+    margin-top: 30%;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .singInButton:hover {
-        transition: 0.5s;
-        color: #fff;
-        background-color: #0076E2;
-    }
+  .singInButton {
+    display: flex;
+    width: 150px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0076E2;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0076E2;
+    border-radius: 20px;
+    padding: 10px;
+  }
 
-    .signInButtonComp {
-        font-size: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .singInButton:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #0076E2;
+  }
+
+  .signInButtonComp {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .iconsLogin ul {
     display: grid;
@@ -616,53 +615,54 @@ font-size: 30px;
     color: #d8d8d8;
     font-size: 30px;
   }
-    .iconsLogin ul {
-        display: grid;
-        grid-template-columns: 33.3% 33.3% 33.3%;
-        font-size: 20px;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 
-    .iconsLogin ul li:hover {
-        transition: 0.5s;
-        transform: scale(1.2);
-    }
+  .iconsLogin ul {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    font-size: 20px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-    .linkedinIcon {
-        color: #0076E2;
-    }
+  .iconsLogin ul li:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+  }
 
-    .signInBackButtonComp {
-        position: absolute;
-        width: 140px;
-        top: 20px;
-        left: 20px;
-    }
+  .linkedinIcon {
+    color: #0076E2;
+  }
 
-    .signInBackButton {
-        display: flex;
-        font-weight: bold;
-        text-decoration: none;
-        color: #0076E2;
-        font-size: 18px;
-    }
+  .signInBackButtonComp {
+    position: absolute;
+    width: 140px;
+    top: 20px;
+    left: 20px;
+  }
 
-    .signInArrowBack {
-        color: #0076E2;
-        margin-right: 8%;
-        height: auto;
-        width: 22px;
-    }
+  .signInBackButton {
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0076E2;
+    font-size: 18px;
+  }
 
-    .bookMarkIcon {
-        display: flex;
-        margin-top: -25px;
-        color: #d8d8d8;
-        font-size: 30px;
-    }
+  .signInArrowBack {
+    color: #0076E2;
+    margin-right: 8%;
+    height: auto;
+    width: 22px;
+  }
+
+  .bookMarkIcon {
+    display: flex;
+    margin-top: -25px;
+    color: #d8d8d8;
+    font-size: 30px;
+  }
 }
 
 
@@ -670,209 +670,209 @@ font-size: 30px;
                                  <---------------- Mobile ---------------->
 */
 
-@media only screen
-and (max-width: 541px){
-    .welcomeComp {
-        width: 20%;
-        height: 250px;
-        margin-left: 5%;
-        background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
-        padding: 20px;
-        transform: translateX(200px);
-        animation: slideIn 1.8s forwards;
-    }
+@media only screen and (max-width: 541px) {
+  .welcomeComp {
+    width: 20%;
+    height: 250px;
+    margin-left: 5%;
+    background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
+    padding: 20px;
+    transform: translateX(200px);
+    animation: slideIn 1.8s forwards;
+  }
 
-    .text {
-        width: 100%;
-        max-height: 50%;
-        overflow: hidden;
-    }
+  .text {
+    width: 100%;
+    max-height: 50%;
+    overflow: hidden;
+  }
 
-    .textContent {
-        margin-top: 20%;
-        font-weight: bold;
-        color: #ffff;
-        text-align: left;
-        font-size: 10px;
-        width: 120%;
-    }
+  .textContent {
+    margin-top: 20%;
+    font-weight: bold;
+    color: #ffff;
+    text-align: left;
+    font-size: 10px;
+    width: 120%;
+  }
 
-    .loginComp {
-        width: 20%;
-        height: 250px;
-        margin-right: 5%;
-        background-color: whitesmoke;
-        border: 1px solid rgba(129, 129, 129, 0.377);
-        box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
-        padding: 20px;
-        border-radius: 0 20px 20px 0;
-        transform: translateX(-100px);
-        animation: slideIn 1.5s forwards;
-    }
+  .loginComp {
+    width: 20%;
+    height: 250px;
+    margin-right: 5%;
+    background-color: whitesmoke;
+    border: 1px solid rgba(129, 129, 129, 0.377);
+    box-shadow: inset 0px 7px 13px 0px rgba(94, 94, 94, 0.377);
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    transform: translateX(-100px);
+    animation: slideIn 1.5s forwards;
+  }
 
-    .signInContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+  .signInContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .welcomeTitle {
-        text-align: center;
-        color: #ffff;
-        font-size: 15px;
-        font-weight: bold;
-    }
+  .welcomeTitle {
+    text-align: center;
+    color: #ffff;
+    font-size: 15px;
+    font-weight: bold;
+  }
 
-    .loginTitle {
-        font-weight: bold;
-        text-align: center;
-        color: #000000;
-        font-size: 15px;
-    }
+  .loginTitle {
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    font-size: 15px;
+  }
 
-    .inputSignIn {
-        display: grid;
-        width: 20%;
-        height: auto;
-        border-radius: 20px;
-    }
+  .inputSignIn {
+    display: grid;
+    width: 20%;
+    height: auto;
+    border-radius: 20px;
+  }
 
-    .inEmailInput, .inPasswordInput {
-        border: 1px solid #5e5d5d7e;
-        width: 420%;
-        outline: none;
-        border-radius: 5px;
-        font-size: 10px;
-    }
+  .inEmailInput,
+  .inPasswordInput {
+    border: 1px solid #5e5d5d7e;
+    width: 420%;
+    outline: none;
+    border-radius: 5px;
+    font-size: 10px;
+  }
 
-    .inEmailInput {
-        margin-top: 25%;
-        margin-bottom: 20px;
-    }
+  .inEmailInput {
+    margin-top: 25%;
+    margin-bottom: 20px;
+  }
 
-    .signButton {
-        border-radius: 20px;
-        border: 2px solid #ffff;
-        text-decoration: none;
-        font-weight: bold;
-        color: #ffff;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 8%;
-    }
+  .signButton {
+    border-radius: 20px;
+    border: 2px solid #ffff;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 8%;
+  }
 
-    .signButton:hover {
-        background-color: #ffffff;
-        color: #0076E2;
-        transition: 0.5s;
-    }
+  .signButton:hover {
+    background-color: #ffffff;
+    color: #0076E2;
+    transition: 0.5s;
+  }
 
-    .upSignButton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20%;
-    }
+  .upSignButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+  }
 
-    .signUpButton {
-        display: flex;
-        font-size: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        color: #ffff;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #ffff;
-        border-radius: 20px;
-        padding: 10px;
-    }
+  .signUpButton {
+    display: flex;
+    font-size: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffff;
+    border-radius: 20px;
+    padding: 10px;
+  }
 
-    .signUpButton:hover {
-        transition: 0.5s;
-        color: #0076E2;
-        background-color: #ffffff;
-    }
+  .signUpButton:hover {
+    transition: 0.5s;
+    color: #0076E2;
+    background-color: #ffffff;
+  }
 
-    .signUpButtonComp {
-        display: flex;
-        margin-top: 30%;
-        align-items: center;
-        justify-content: center;
-    }
+  .signUpButtonComp {
+    display: flex;
+    margin-top: 30%;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .singInButton {
-        display: flex;
-        width: 150px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 8px;
-        color: #0076E2;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #0076E2;
-        border-radius: 20px;
-        padding: 10px;
-    }
+  .singInButton {
+    display: flex;
+    width: 150px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 8px;
+    color: #0076E2;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0076E2;
+    border-radius: 20px;
+    padding: 10px;
+  }
 
-    .singInButton:hover {
-        transition: 0.5s;
-        color: #fff;
-        background-color: #0076E2;
-    }
+  .singInButton:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #0076E2;
+  }
 
-    .signInButtonComp {
-        font-size: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .signInButtonComp {
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .iconsLogin ul {
-        display: grid;
-        grid-template-columns: 33.3% 33.3% 33.3%;
-        font-size: 20px;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+  .iconsLogin ul {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    font-size: 20px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-    .iconsLogin ul li:hover {
-        transition: 0.5s;
-        transform: scale(1.2);
-    }
+  .iconsLogin ul li:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+  }
 
-    .linkedinIcon {
-        color: #0076E2;
-    }
+  .linkedinIcon {
+    color: #0076E2;
+  }
 
-    .signInBackButtonComp {
-        position: absolute;
-        width: 140px;
-        top: 20px;
-        left: 20px;
-    }
+  .signInBackButtonComp {
+    position: absolute;
+    width: 140px;
+    top: 20px;
+    left: 20px;
+  }
 
-    .signInBackButton {
-        display: flex;
-        font-weight: bold;
-        text-decoration: none;
-        color: #0076E2;
-        font-size: 10px;
-    }
+  .signInBackButton {
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0076E2;
+    font-size: 10px;
+  }
 
-    .signInArrowBack {
-        color: #0076E2;
-        margin-right: 8%;
-        width: 12px;
-    }
+  .signInArrowBack {
+    color: #0076E2;
+    margin-right: 8%;
+    width: 12px;
+  }
 
-    .bookMarkIcon {
-        display: flex;
-        margin-top: -25px;
-        color: #d8d8d8;
-        font-size: 25px;
-    }
+  .bookMarkIcon {
+    display: flex;
+    margin-top: -25px;
+    color: #d8d8d8;
+    font-size: 25px;
+  }
 }
