@@ -52,6 +52,7 @@
   .signUpHomeButton {
     display: flex;
     color: #adadad;
+    display: inline-flex;
     border: 1px solid #adadad;
     border-radius: 5px;
     padding: 3px;
