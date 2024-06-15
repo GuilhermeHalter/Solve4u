@@ -72,7 +72,7 @@
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 18px;
     transition: color 0.5s;
   }
 
@@ -113,13 +113,13 @@
     margin-top: 0; /*Modified*/
   }
 
-  .discoveryComp ul li {
+.discoveryComp ul li {
     color: #000;
     font-weight: bold;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 15px; /*Modified*/ 
     transition: color 0.5s;
   }
 
@@ -149,7 +149,6 @@
     font-size: 8px; /*Modified*/
     transition: color 1s;
   }
-}
 
   .signUpHomeButton {
     display: flex;
@@ -173,8 +172,8 @@
     font-size: 8px; /*Modified*/
     transition: color 0.5s;
   }
-
+  
   .discoveryCompUl { /*Modified*/
     padding-left: 10px;
   }
-
+}
