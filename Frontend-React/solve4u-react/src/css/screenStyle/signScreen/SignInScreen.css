@@ -373,7 +373,7 @@
     color: #ffff;
     text-align: left; /*Modified*/
     font-size: 10px; /*Modified*/
-    width: 120%; /*Modified*/
+    width: 100%; /*Modified*/
   }
 
   .loginComp {
