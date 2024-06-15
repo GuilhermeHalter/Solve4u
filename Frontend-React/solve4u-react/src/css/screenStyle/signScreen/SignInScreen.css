@@ -358,7 +358,7 @@
 
 @media only screen and (max-width: 541px) {
   .welcomeComp {
-    width: 20%; /*Modified*/
+    width: 30%; /*Modified*/
     height: 250px; /*Modified*/
     margin-left: 5%;
     background: linear-gradient(180deg, rgba(0, 118, 226, 1) 0%, rgba(0, 65, 124, 1) 100%);
@@ -377,7 +377,7 @@
   }
 
   .loginComp {
-    width: 20%; /*Modified*/
+    width: 30%; /*Modified*/
     height: 250px; /*Modified*/
     margin-right: 5%;
     background-color: whitesmoke;
