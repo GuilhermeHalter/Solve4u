@@ -55,18 +55,18 @@
   .footerList .contactLi,
   .footerList .helpLi,
   .footerList .followUsLi {
-    padding: 0 180px 0px;
+    padding: 0 180px 0px; /*Modified*/
   }
 
   .helpLi,
   .followUsLi,
   .contactLi {
     flex-grow: 1;
-    text-align: center;
+    text-align: center; /*Modified*/
   }
 
   .footerList h2 {
-    font-size: 25px;
+    font-size: 25px; /*Modified*/
     margin-bottom: 10px;
     color: #ffffff;
   }
@@ -80,25 +80,25 @@
   .footerList .contactLi,
   .footerList .helpLi,
   .footerList .followUsLi {
-    padding: 0 180px 0px;
+    padding: 0 180px 0px; /*Modified*/
   }
 
   .helpLi,
   .followUsLi,
   .contactLi {
     flex-grow: 1;
-    text-align: center;
+    text-align: center; /*Modified*/
   }
 
   .footerList h2 {
-    font-size: 12px;
+    font-size: 12px; /*Modified*/
     margin-bottom: 10px;
     color: #ffffff;
   }
 
   .footerList ul li a {
     color: #ffffff;
-    text-decoration: none;
-    font-size: 10px
+    text-decoration: none; 
+    font-size: 10px /*Modified*/
   }
 }
