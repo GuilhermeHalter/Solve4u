@@ -52,6 +52,56 @@
                                  <---------------- Tablet ---------------->
 */
 
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+  .card-project {
+    word-wrap: break-word;
+  }
+  
+  .projects-container {
+    margin-left: 15%;
+    display: block;
+  }
+  
+  .analytics-container {
+    margin-left: 15%;
+  }
+  
+  .title {
+    display: flex;
+    margin-left: 15%;
+  }
+  
+  .subtitle {
+    display: flex;
+    margin-left: 15%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ButtonNew {
+    width: 20%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+    background-color: transparent;
+    color: #0076e2;
+    font-weight: bold;
+    border: 2px solid #0076e2;
+    border-radius: 40px;
+  }
+  
+  .ButtonNew:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #04539c;
+    font-weight: bold;
+    border: 2px solid #04539c;
+  }
+
+}
 
 
 /* 

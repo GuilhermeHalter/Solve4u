@@ -20,7 +20,29 @@
 /* 
                                  <---------------- Tablet ---------------->
 */
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+  .cardAnalitycs {
+    display: block;
+    width: 100%;
+  }
 
+  .chartAnalitycs{
+    height: 400px;
+  }
+  
+  .conteinerCardAnalitycs {
+    width: 95%;
+    height: 90%;
+    margin-top: 40px;
+    border: 1px solid #3b3b3b;
+    border-radius: 10px;
+  }
+  
+  .titleAnalitycs {
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+}
 
 
 /* 

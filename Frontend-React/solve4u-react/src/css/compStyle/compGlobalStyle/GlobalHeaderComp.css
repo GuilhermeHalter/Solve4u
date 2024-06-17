@@ -25,7 +25,18 @@
 /* 
                                  <---------------- Tablet ---------------->
 */
-
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+  .logo {
+    display: flex;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 80%;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 552;
+    font-style: normal;
+  }
+}
 
 
 /* 
