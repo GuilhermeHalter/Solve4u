@@ -69,6 +69,7 @@ const CardAnalitycsComp = () => {
         <div className="conteinerCardAnalitycs" key={index}>
           <h2 className="titleAnalitycs">{chart.projectName}</h2>
           <Chart
+            className="chartAnalitycs"
             chartType="ColumnChart"
             width="100%"
             height="200px"

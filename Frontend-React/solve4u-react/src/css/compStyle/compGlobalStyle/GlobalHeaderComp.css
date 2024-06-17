@@ -21,3 +21,27 @@
   padding-right: 30px;
   background-color: rgb(48, 82, 235);
 }
+
+/* 
+                                 <---------------- Tablet ---------------->
+*/
+
+
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+
+@media only screen and (max-width: 541px) {
+  .logo {
+    display: flex;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 70%;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 552;
+    font-style: normal;
+  }
+}

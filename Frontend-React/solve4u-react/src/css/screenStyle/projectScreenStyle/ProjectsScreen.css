@@ -47,3 +47,65 @@
   font-weight: bold;
   border: 2px solid #04539c;
 }
+
+/* 
+                                 <---------------- Tablet ---------------->
+*/
+
+
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+@media only screen and (max-width: 541px) {
+
+  .card-project {
+    word-wrap: break-word;
+  }
+  
+  .projects-container {
+    margin-left: 20%;
+    display: block;
+  }
+  
+  .analytics-container {
+    margin-left: 20%;
+  }
+  
+  .title {
+    display: flex;
+    margin-left: 20%;
+  }
+  
+  .subtitle {
+    display: flex;
+    margin-left: 20%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ButtonNew {
+    width: 20%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+    background-color: transparent;
+    color: #0076e2;
+    font-weight: bold;
+    border: 2px solid #0076e2;
+    border-radius: 40px;
+  }
+  
+  .ButtonNew:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #04539c;
+    font-weight: bold;
+    border: 2px solid #04539c;
+  }
+
+}
