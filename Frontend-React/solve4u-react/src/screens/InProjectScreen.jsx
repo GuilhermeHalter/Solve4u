@@ -59,7 +59,6 @@ const InProject = () => {
 
   const closeSectorCard = () => {
     setSectorCardVisible(false);
-    window.location.reload();
   };
 
   const handleSectorClick = (sector) => {
@@ -86,7 +85,6 @@ const InProject = () => {
     });
     setSectors(updatedSectors);
 
-    window.location.reload();
   };
 
   return (

@@ -29,7 +29,6 @@ const Projects = () => {
 
   const closeCard = () => {
     setCardVisible(false);
-    window.location.reload();
   };
 
   return (
