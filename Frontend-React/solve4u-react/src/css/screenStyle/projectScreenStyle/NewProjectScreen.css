@@ -55,7 +55,7 @@ html {
 
 .cardButtonJoin {
   width: 60%;
-  height: auto;
+  height: 50px;
   border: 3px solid transparent;
   border-radius: 20px;
   color: #fff;
@@ -78,7 +78,7 @@ html {
   display: inline-flex;
   align-items: center;
   width: 60%;
-  height: auto;
+  height: 50px;
   border: 3px solid transparent;
   border-radius: 20px;
   color: #fff;
@@ -110,4 +110,248 @@ html {
   font-size: 20px;
   margin-left: 10px;
   vertical-align: middle;
+}
+
+/* 
+                                 <---------------- Tablet ---------------->
+*/
+
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .new-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .titlen {
+    font-weight: bold;
+    font-size: 25px;
+    color: #0000005e;
+    text-align: center;
+  }
+
+  .cardsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardsRow {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+
+  .joinProjectCard {
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 60%;
+    max-width: 400px;
+    border: 4px solid #0076e2;
+    margin-bottom: 20px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .createProjectCard {
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 60%;
+    max-width: 400px;
+    border: 4px solid #1db035;
+    margin-bottom: 20px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .cardButtonJoin {
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0076e2;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .cardButtonJoin:hover {
+    transition: 0.5s;
+    border-color: #0076e2;
+    background-color: transparent;
+    color: #0076e2;
+  }
+
+  .cardButtonCreate {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #1db035;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .cardButtonCreate:hover {
+    transition: 0.5s;
+    border-color: #1db035;
+    background-color: transparent;
+    color: #1db035;
+  }
+
+  .joinProjectCard p,
+  .createProjectCard p {
+    font-size: 18px;
+    color: #0000008c;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+}
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+@media only screen and (max-width: 541px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .new-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .titlen {
+    font-weight: bold;
+    font-size: 25px;
+    color: #0000005e;
+    text-align: center;
+  }
+
+  .cardsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardsRow {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+
+  .joinProjectCard {
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 60%;
+    max-width: 400px;
+    border: 4px solid #0076e2;
+    margin-bottom: 20px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .createProjectCard {
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 60%;
+    max-width: 400px;
+    border: 4px solid #1db035;
+    margin-bottom: 20px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .cardButtonJoin {
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0076e2;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .cardButtonJoin:hover {
+    transition: 0.5s;
+    border-color: #0076e2;
+    background-color: transparent;
+    color: #0076e2;
+  }
+
+  .cardButtonCreate {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #1db035;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .cardButtonCreate:hover {
+    transition: 0.5s;
+    border-color: #1db035;
+    background-color: transparent;
+    color: #1db035;
+  }
+
+  .joinProjectCard p,
+  .createProjectCard p {
+    font-size: 18px;
+    color: #0000008c;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
 }
