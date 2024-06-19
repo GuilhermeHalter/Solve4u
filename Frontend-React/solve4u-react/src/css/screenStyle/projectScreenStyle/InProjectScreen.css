@@ -35,7 +35,7 @@
   justify-content: center;
   width: 100%;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-right: 3%;
   background-color: transparent;
   color: #0076e2;
@@ -58,7 +58,7 @@
   justify-content: center;
   width: 100%;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-right: 3%;
   background-color: transparent;
   color: #0076e2;
@@ -96,4 +96,216 @@
   display: grid;
   flex-wrap: wrap;
   grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+
+/* 
+                                 <---------------- Tablet ---------------->
+*/
+
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+  .containerCard {
+    margin-left: 15%;
+  }
+  
+  .titleI {
+    color: #0000009c;
+  }
+  
+  .ButtonDelete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+    background-color: transparent;
+    color: #d50000;
+    font-weight: bold;
+    border: 2px solid #d50000;
+    border-radius: 40px;
+  }
+  
+  .ButtonDelete:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #640202;
+    font-weight: bold;
+    border: 2px solid #640202;
+  }
+  
+  .ButtonCreateSec {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    margin-right: 3%;
+    background-color: transparent;
+    color: #0076e2;
+    font-weight: bold;
+    border: 2px solid #0076e2;
+    border-radius: 40px;
+  }
+  
+  .ButtonCreateSec:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #03417a;
+    font-weight: bold;
+    border: 2px solid #03417a;
+  }
+  
+  .ButtonEditProject {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    margin-right: 3%;
+    background-color: transparent;
+    color: #0076e2;
+    font-weight: bold;
+    border: 2px solid #0076e2;
+    border-radius: 40px;
+  }
+  
+  .sections2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ButtonEditProject:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #03417a;
+    font-weight: bold;
+    border: 2px solid #03417a;
+  }
+  
+  .conteinerHeader {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+  }
+  
+  .iconC {
+    margin-left: 10px;
+  }
+  
+  .sectionCards {
+    margin-left: -2.5%;
+    display: block;
+
+  }
+}
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+@media only screen and (max-width: 541px) {
+  .containerCard {
+    margin-left: 23%;
+  }
+  
+  .titleI {
+    color: #0000009c;
+  }
+  
+  .ButtonDelete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+    background-color: transparent;
+    color: #d50000;
+    font-weight: bold;
+    border: 2px solid #d50000;
+    border-radius: 40px;
+  }
+  
+  .ButtonDelete:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #640202;
+    font-weight: bold;
+    border: 2px solid #640202;
+  }
+  
+  .ButtonCreateSec {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    margin-right: 3%;
+    background-color: transparent;
+    color: #0076e2;
+    font-weight: bold;
+    border: 2px solid #0076e2;
+    border-radius: 40px;
+  }
+  
+  .ButtonCreateSec:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #03417a;
+    font-weight: bold;
+    border: 2px solid #03417a;
+  }
+  
+  .ButtonEditProject {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    margin-right: 3%;
+    background-color: transparent;
+    color: #0076e2;
+    font-weight: bold;
+    border: 2px solid #0076e2;
+    border-radius: 40px;
+  }
+  
+  .sections2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ButtonEditProject:hover {
+    transition: 1s;
+    cursor: pointer;
+    color: #03417a;
+    font-weight: bold;
+    border: 2px solid #03417a;
+  }
+  
+  .conteinerHeader {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+  }
+  
+  .iconC {
+    margin-left: 10px;
+  }
+  
+  .sectionCards {
+    margin-left: -2.5%;
+    display: block;
+
+  }
+  
 }
