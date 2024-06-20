@@ -2,6 +2,25 @@ import React, { useState } from "react";
 import "../../css/cardStyle/CardEditProjectComp.css";
 import { FaPlus } from "react-icons/fa";
 
+/**
+ * Component for editing an existing project.
+ *
+ * @component
+ * @example
+ * const project = {
+ *   id: 1,
+ *   projectName: "Sample Project",
+ *   projectDescription: "This is a sample project",
+ *   category: "Option 1"
+ * };
+ * const handleClose = () => {};
+ * return <CardEditProjectComp project={project} onClose={handleClose} />;
+ * 
+ * @param {Object} props - Component properties.
+ * @param {Object} props.project - The project to edit.
+ * @param {Function} props.onClose - Function to call when closing the edit form.
+ */
+
 const CardEditProjectComp = ({ project, onClose }) => {
   const [projectName, setProjectName] = useState(project.projectName);
   const [projectDescription, setProjectDescription] = useState(
@@ -9,6 +28,9 @@ const CardEditProjectComp = ({ project, onClose }) => {
   );
   const [category, setCategory] = useState(project.category);
 
+  /**
+   * Handle editing the project and saving changes to localStorage.
+   */
   const handleEditProject = () => {
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
     const updatedProjects = projects.map((item) => {
@@ -25,6 +47,12 @@ const CardEditProjectComp = ({ project, onClose }) => {
     localStorage.setItem("projects", JSON.stringify(updatedProjects));
     onClose();
   };
+
+    /**
+   * Handle input changes for project fields.
+   *
+   * @param {Object} event - The input change event.
+   */
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
