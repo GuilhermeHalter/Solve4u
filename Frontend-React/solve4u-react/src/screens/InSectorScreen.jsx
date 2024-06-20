@@ -84,14 +84,11 @@ const InSectorScreen = () => {
           New Task
         </button>
       </div>
-      <div className="subtitlesTasks">
-        <h3>Process</h3>
-        <h3>Checking</h3>
-        <h3>Finished</h3>
-        <h3>Pending</h3>
-      </div>
-      <div className="containerTasks">
-        <div className="sectionTasksProcess">
+      
+      <div className="containerGlobalSector">
+        <div className="sectionCardsTasks">
+          <h3>Process</h3>
+          <div className="sectionTasksProcess">
           {tasks
             .filter((task) => task.taskStage == 1)
             .map((task) => (
@@ -104,9 +101,12 @@ const InSectorScreen = () => {
               </div>
             ))}
         </div>
+        </div>
         <hr className="division" />
 
-        <div className="sectionTasksChecking">
+        <div className="sectionCardsTasks">
+          <h3>Checking</h3>
+          <div className="sectionTasksChecking">
           {tasks
             .filter((task) => task.taskStage == 2)
             .map((task) => (
@@ -119,10 +119,12 @@ const InSectorScreen = () => {
               </div>
             ))}
         </div>
-
+        </div>
         <hr className="division" />
 
-        <div className="sectionTasksFinished">
+        <div className="sectionCardsTasks">
+          <h3>Finished</h3>
+          <div className="sectionTasksFinished">
           {tasks
             .filter((task) => task.taskStage == 3)
             .map((task) => (
@@ -135,16 +137,22 @@ const InSectorScreen = () => {
               </div>
             ))}
         </div>
-
+        </div>
         <hr className="division" />
-        <div className="sectionTasksPending">
-          {tasks
-            .filter((task) => task.taskStage == 4)
-            .map((task) => (
-              <TaskCard key={task.taskId} task={task} />
-            ))}
+
+        <div className="sectionCardsTasks">
+          <h3>Pending</h3>
+          <div className="sectionTasksPending">
+            {tasks
+              .filter((task) => task.taskStage === 4)
+              .map((task) => (
+                <TaskCard key={task.taskId} task={task} />
+              ))}
+          </div>
         </div>
       </div>
+      
+
       <div className="containerButton">
         <button className="ButtonDeleteSector">
           Delete Sector <MdDelete />

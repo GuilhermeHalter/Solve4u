@@ -1,8 +1,13 @@
+/* General styles for containers and buttons */
 .containerTasks {
   margin-left: 10%;
+  display: block;
+}
+
+.containerGlobalSector{
+  margin-left: 8%;
   display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: 24.5% 0.5% 24.5% 0.5% 24.5% 0.5% 24.5%;
+  grid-template-columns: 24.9% 0.01% 24.5% 0.01% 24.5% 0.01% 24.5%;
 }
 
 .containerButton {
@@ -34,39 +39,27 @@
   border: 2px solid #640202;
 }
 
-.sectionTasksProcess {
-  margin-top: 20px;
-  margin-right: 50px;
-}
-
-.sectionTasksProcess:hover {
-  cursor: pointer;
-}
-
-.sectionTasksFinished:hover {
-  cursor: pointer;
-}
-
-.sectionTasksChecking {
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-.sectionTasksChecking:hover {
-  cursor: pointer;
-}
-
-.sectionTasksFinished {
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
+.sectionTasksProcess,
+.sectionTasksChecking,
+.sectionTasksFinished,
 .sectionTasksPending {
   margin-top: 20px;
 }
 
+.sectionCardsTasks{  
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sectionTasksProcess:hover,
+.sectionTasksFinished:hover,
+.sectionTasksChecking:hover {
+  cursor: pointer;
+}
+
 .division {
-  width: 0.5px;
+  width: 100%;
+  margin: 10px 0;
 }
 
 .titleInSector {
@@ -107,9 +100,155 @@
 }
 
 .subtitlesTasks {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   margin-top: 20px;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+/* 
+                                 <---------------- Tablet ---------------->
+*/
+
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+  .containerTasks {
+    margin-left: 0%;
+    display: block;
+  }
+
+  .containerGlobalSector {
+    display: block;
+    margin-left: 80px;
+  }
+
+
+  .containerButton {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .ButtonDeleteSector {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .sectionTasksProcess,
+  .sectionTasksChecking,
+  .sectionTasksFinished,
+  .sectionTasksPending {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .division {
+    width: 100%;
+  }
+
+  .titleInSector {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menuContainer {
+    margin-left: 10%;
+    align-items: center;
+  }
+
+  .titleInSector {
+    width: 20%;
+  }
+  
+  .ButtonCreateTask {
+    width: 20%;
+    margin-top: 10px;
+  }
+
+  .subtitlesTasks {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .ButtonDeleteSector {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+
+  }
+}
+
+/* 
+                                 <---------------- Mobile ---------------->
+*/
+
+@media only screen and (max-width: 541px) {
+  .containerTasks {
+    margin-left: 0%;
+    display: block;
+  }
+
+  .containerGlobalSector {
+    display: block;
+    margin-left: 80px;
+  }
+
+  .containerButton {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .ButtonDeleteSector {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .sectionTasksProcess,
+  .sectionTasksChecking,
+  .sectionTasksFinished,
+  .sectionTasksPending {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .division {
+    width: 100%;
+  }
+
+  .titleInSector {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menuContainer {
+    margin-left: 18%;
+    align-items: center;
+  }
+
+  .titleInSector {
+    width: 20%;
+  }
+  
+  .ButtonCreateTask {
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  .subtitlesTasks {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .ButtonDeleteSector {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 3px;
+
+  }
 }
