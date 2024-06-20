@@ -1,6 +1,20 @@
 import React from "react";
 import "../../css//cardStyle/CardDeleteConfirmation.css";
 
+/**
+ * Component for confirming the deletion of a project.
+ *
+ * @component
+ * @example
+ * const handleConfirm = () => {};
+ * const handleCancel = () => {};
+ * return <DeleteConfirmation onConfirm={handleConfirm} onCancel={handleCancel} />;
+ * 
+ * @param {Object} props - Component properties.
+ * @param {Function} props.onConfirm - Function to call when confirming the deletion.
+ * @param {Function} props.onCancel - Function to call when canceling the deletion.
+ */
+
 const DeleteConfirmation = ({ onConfirm, onCancel }) => {
   return (
     <div className="modal-backgraundDelete">
