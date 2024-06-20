@@ -3,7 +3,7 @@
 ### Thank you for considering contributing to the Solve4u Project! 
 
 Before you begin, please make sure to read and agree to our 
-[Community Guidelines]() to ensure a positive and collaborative
+[Community Guidelines](https://github.com/GuilhermeHalter/Solve4u/blob/main/CODE_OF_CONDUCT.md) to ensure a positive and collaborative
 environment in our community.
 
 ## Reporting Issues
@@ -30,7 +30,7 @@ git checkout -b my-contribution
    - Maintain consistency with the existing code.
    - Use clear and explanatory comments in the code.
    - Add relevant tests, if applicable.
-   - 
+
 4. Commit your changes clearly and descriptively.
 ```bash
 git commit -m "Add functionality ..." 
