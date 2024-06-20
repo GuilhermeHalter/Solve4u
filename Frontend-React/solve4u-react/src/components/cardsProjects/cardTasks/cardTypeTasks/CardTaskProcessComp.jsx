@@ -4,7 +4,24 @@ import { MdDelete } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 import { HiPencil } from "react-icons/hi2";
 
+/**
+ * Component to view details of an in-progress task and provide options for moving, editing, or deleting the task.
+ *
+ * @component
+ * @example
+ * const task = { taskId: 1, taskName: "Task 1", taskDescription: "Description", taskUser: "User", startDate: "2024-01-01", dateDeadline: "2024-01-10" };
+ * const handleClose = () => {};
+ * return <CardTaskProcessComp task={task} onClose={handleClose} />;
+ * 
+ * @param {Object} props - The properties of the component.
+ * @param {Object} props.task - The task to display.
+ * @param {Function} props.onClose - Function to close the modal.
+ */
+
 const CardTaskProcessComp = ({ task, onClose }) => {
+  /**
+   * Moves the task to the next stage (stage "2") and saves it to localStorage.
+   */
   const handleMoveTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const updatedTasks = tasks.map((t) => {
@@ -17,6 +34,9 @@ const CardTaskProcessComp = ({ task, onClose }) => {
     onClose();
   };
 
+  /**
+   * Deletes the task from localStorage.
+   */
   const handleDeleteTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const updatedTasks = tasks.filter((t) => t.taskId !== task.taskId);
