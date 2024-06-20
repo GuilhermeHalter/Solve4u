@@ -5,7 +5,25 @@ import { IoClose } from "react-icons/io5";
 
 import "../../../../css/cardStyle/cardTasks/CardTaskChekingComp.css";
 
+/**
+ * Component for checking and approving/failing tasks.
+ *
+ * @component
+ * @example
+ * const task = { taskId: 1, taskName: "Task 1", taskDescription: "Description", taskUser: "User", startDate: "2024-01-01", dateDeadline: "2024-01-10" };
+ * const handleClose = () => {};
+ * return <CardTaskChekingComp task={task} onClose={handleClose} />;
+ * 
+ * @param {Object} props - The properties of the component.
+ * @param {Object} props.task - The task to be checked.
+ * @param {Function} props.onClose - Function to close the modal.
+ */
+
 const CardTaskChekingComp = ({ task, onClose }) => {
+
+  /**
+   * Approves the task by updating the stage to "3" and saves it to localStorage.
+   */
   const handleApprovedTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const approvedTasks = tasks.map((t) => {
@@ -18,6 +36,9 @@ const CardTaskChekingComp = ({ task, onClose }) => {
     onClose();
   };
 
+  /**
+   * Fails the task by updating the stage to "1" and saves it to localStorage.
+   */
   const handleNotApprovedTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const notApprovedTask = tasks.map((t) => {
