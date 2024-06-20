@@ -6,6 +6,14 @@ import { BiLogOut, BiBell } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../../css/compStyle/compGlobalStyle/SidebarComp.css";
 
+/**
+ * Sidebar component for navigation and settings.
+ *
+ * @component
+ * @example
+ * return <Sidebar />;
+ */
+
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
 
