@@ -2,10 +2,27 @@ import React, { useState } from "react";
 import "../../css/cardStyle/CardCreateProjectComp.css";
 import { FaPlus } from "react-icons/fa";
 
+/**
+ * Component to create a new project.
+ * 
+ * @component
+ * @example
+ * return <CardCreateProject onClose={handleClose} />;
+ * 
+ * @param {Object} props - The properties of the component.
+ * @param {Function} props.onClose - Function to close the modal.
+ */
+
 const CardCreateProject = ({ onClose }) => {
   const [projectName, setProjectName] = useState("");
   const [projectDescription, setProjectDescription] = useState("");
   const [category, setCategory] = useState("Option 1");
+
+ /**
+   * Generates a random 8-character code.
+   * 
+   * @returns {string} A random code.
+   */
 
   const generateRandomCode = () => {
     const characters =
@@ -16,6 +33,10 @@ const CardCreateProject = ({ onClose }) => {
     }
     return code;
   };
+
+  /**
+   * Creates a new project and stores it in localStorage.
+   */
 
   const handleCreateProject = () => {
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
@@ -35,6 +56,12 @@ const CardCreateProject = ({ onClose }) => {
     setProjectDescription("");
     setCategory("Option 1");
   };
+
+ /**
+   * Handles the input change to update the state of the component.
+   * 
+   * @param {Object} event - The event of change.
+   */
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
