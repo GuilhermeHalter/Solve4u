@@ -2,6 +2,20 @@ import React, { useState } from "react";
 import "../../../css/cardStyle/CardCreateTaskComp.css";
 import { FaPlus } from "react-icons/fa";
 
+/**
+ * Component to create a new task.
+ *
+ * @component
+ * @example
+ * const sectorId = 1;
+ * const handleClose = () => {};
+ * return <CardCreateTask onClose={handleClose} sectorId={sectorId} />;
+ * 
+ * @param {Object} props - The properties of the component.
+ * @param {Function} props.onClose - Function to close the modal.
+ * @param {number} props.sectorId - The ID of the sector where the task will be created.
+ */
+
 const CardCreateTask = ({ onClose, sectorId }) => {
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
@@ -10,6 +24,9 @@ const CardCreateTask = ({ onClose, sectorId }) => {
 
   const users = ["User 1", "User 2", "User 3"];
 
+  /**
+   * Creates a new task and adds it to localStorage.
+   */
   const handleCreateTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const newTaskId = tasks.length > 0 ? tasks[tasks.length - 1].taskId + 1 : 1;
@@ -36,6 +53,10 @@ const CardCreateTask = ({ onClose, sectorId }) => {
     onClose();
   };
 
+  /**
+   * Updates the input state as the user types.
+   * @param {Object} event - The input event.
+   */
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     if (name === "taskName") {
@@ -46,6 +67,11 @@ const CardCreateTask = ({ onClose, sectorId }) => {
       setDateDeadline(value);
     }
   };
+
+  /**
+   * Updates the state of the selected user.
+   * @param {Object} event - The input event.
+   */
 
   const handleUserSelect = (event) => {
     setTaskUser(event.target.value);
