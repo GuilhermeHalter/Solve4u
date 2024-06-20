@@ -57,7 +57,7 @@ git push origin my-contribution
     
 ## Licensing
 
-By submitting a contribution, you agree that your contribution will be licensed under the project's [MIT License]().
+By submitting a contribution, you agree that your contribution will be licensed under the project's [MIT License](https://github.com/GuilhermeHalter/Solve4u/blob/main/LICENSE).
 
 
 ## Support
