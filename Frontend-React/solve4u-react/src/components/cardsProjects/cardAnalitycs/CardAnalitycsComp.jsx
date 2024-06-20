@@ -2,12 +2,28 @@ import React, { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
 import "../../../css/cardStyle/cardAnalitycs/CardAnalitycsComp.css";
 
+
+/**
+ * Gets the projects, sectors, and tasks from localStorage.
+ * 
+ * @returns {object} An object containing arrays of projects, sectors, and tasks.
+ */
+
 const getProjectsFromLocalStorage = () => {
   const projects = JSON.parse(localStorage.getItem("projects")) || [];
   const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   return { projects, sectors, tasks };
 };
+
+/**
+ * Counts the tasks per stage for each project.
+ * 
+ * @param {Array} projects - Array of projects.
+ * @param {Array} sectors - Array of sectors.
+ * @param {Array} tasks - Array of tasks.
+ * @returns {object} An object containing the count of tasks per stage for each project.
+ */
 
 const countTasksByStage = (projects, sectors, tasks) => {
   const taskCounts = {};
@@ -40,6 +56,14 @@ const countTasksByStage = (projects, sectors, tasks) => {
 
   return taskCounts;
 };
+
+/**
+ * Component for displaying analytic charts of tasks.
+ *
+ * @component
+ * @example
+ * return <CardAnalitycsComp />;
+ */
 
 const CardAnalitycsComp = () => {
   const [chartsData, setChartsData] = useState([]);
