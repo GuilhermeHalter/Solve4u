@@ -2,6 +2,20 @@ import React, { useState } from "react";
 import "../../css/cardStyle/CardCreateSectorComp.css";
 import { FaPlus, FaTimes } from "react-icons/fa";
 
+/**
+ * Component for creating a new sector.
+ *
+ * @component
+ * @example
+ * const projectId = 1;
+ * const handleClose = () => {};
+ * return <CardCreateSector onClose={handleClose} projectId={projectId} />;
+ * 
+ * @param {Object} props - Component properties.
+ * @param {Function} props.onClose - Function to close the modal.
+ * @param {number} props.projectId - The ID of the project to which the sector will be associated.
+ */
+
 const CardCreateSector = ({ onClose, projectId }) => {
   const [sectorName, setSectorName] = useState("");
   const [sectorDescription, setSectorDescription] = useState("");
@@ -10,6 +24,10 @@ const CardCreateSector = ({ onClose, projectId }) => {
   const [sectorColor, setSectorColor] = useState("#ffffff");
 
   const users = ["User 1", "User 2", "User 3"];
+
+  /**
+   * Creates a new sector and adds it to localStorage.
+   */
 
   const handleCreateSector = () => {
     const sectors = JSON.parse(localStorage.getItem("sectors")) || [];
@@ -35,6 +53,11 @@ const CardCreateSector = ({ onClose, projectId }) => {
     onClose();
   };
 
+   /**
+   * Updates the input state as the user types.
+   * @param {Object} event - The input event.
+   */
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     if (name === "sectorName") {
@@ -44,9 +67,18 @@ const CardCreateSector = ({ onClose, projectId }) => {
     }
   };
 
+ /**
+   * Updates the selected user state.
+   * @param {Object} event - The select event.
+   */
+
   const handleUserSelect = (event) => {
     setSelectedUser(event.target.value);
   };
+
+  /**
+   * Adds the selected user to the sector's user list.
+   */
 
   const handleAddUser = () => {
     if (selectedUser && !selectedUsers.includes(selectedUser)) {
@@ -55,9 +87,19 @@ const CardCreateSector = ({ onClose, projectId }) => {
     }
   };
 
+/**
+   * Removes a user from the sector's user list.
+   * @param {string} userToRemove - The user to remove.
+   */
+
   const handleRemoveUser = (userToRemove) => {
     setSelectedUsers(selectedUsers.filter((user) => user !== userToRemove));
   };
+
+ /**
+   * Updates the sector color as selected by the user.
+   * @param {Object} event - The color change event.
+   */
 
   const handleColorChange = (event) => {
     setSectorColor(event.target.value);
