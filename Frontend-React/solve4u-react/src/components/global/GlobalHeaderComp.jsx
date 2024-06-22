@@ -14,7 +14,7 @@ const GlobalHeader = () => {
   return (
     <nav className="navbar">
       <h1 className="logo">
-        Solve<span className="four">4</span>u
+       <span translate="no" >Solve</span><span className="four" translate="no">4</span><span translate="no">u</span>
       </h1>
     </nav>
   );

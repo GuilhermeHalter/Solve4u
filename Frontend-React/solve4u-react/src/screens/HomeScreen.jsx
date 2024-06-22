@@ -10,8 +10,8 @@ const Home = () => {
         <HomeHeader />
         <div className="welcomeText">
           <h1 className="titleAnimation">Welcome to</h1>
-          <h2 className="subTitleAnimation">
-            Solve<div className="four">4</div>u
+          <h2 className="subTitleAnimation" translate="no">
+            <span translate="no">Solve</span><div className="four" translate="no">4</div><span translate="no">u</span>
           </h2>
           <div className="divHomeText">
             <p className="homeText">
