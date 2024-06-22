@@ -3,8 +3,8 @@
 .logo {
   display: flex;
   font-size: 30px;
+  margin-right: 5%;
   color: #fff;
-  margin-left: 90%;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 552;
@@ -16,9 +16,9 @@
 }
 
 .navbar {
+  align-items: end;
+  justify-content: end;
   display: flex;
-  padding-left: 30px;
-  padding-right: 30px;
   background-color: rgb(48, 82, 235);
 }
 
@@ -30,14 +30,12 @@
     display: flex;
     font-size: 30px;
     color: #fff;
-    margin-left: 80%;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 552;
     font-style: normal;
   }
 }
-
 
 /* 
                                  <---------------- Mobile ---------------->
@@ -47,9 +45,9 @@
 @media only screen and (max-width: 541px) {
   .logo {
     display: flex;
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
-    margin-left: 70%;
+    margin-left: 40%;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 552;
