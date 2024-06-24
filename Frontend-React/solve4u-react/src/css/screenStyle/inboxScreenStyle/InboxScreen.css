@@ -1,0 +1,11 @@
+.inboxComingSoon {
+  width: 500px;
+  height: auto;
+}
+
+.InboxContainer{
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

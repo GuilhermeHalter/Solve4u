@@ -10,7 +10,7 @@ import Projects from "./screens/ProjectsScreen.jsx";
 import InProject from "./screens/InProjectScreen.jsx";
 import InSector from "./screens/InSectorScreen.jsx";
 import Inbox from './screens/InboxScreen.jsx';
-import Config from "./screens/ConfigScreen.jsx";
+import Config from './screens/ConfigScreen.jsx';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       {
         path: "/inbox",
         element: <Inbox />,
-      }
+      },
       {
         path: "/config",
         element: <Config />,

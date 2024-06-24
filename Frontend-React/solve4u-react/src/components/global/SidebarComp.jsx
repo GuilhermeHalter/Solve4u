@@ -28,7 +28,7 @@ const Sidebar = () => {
       </div>
       <div className="sidebarmain">
         <ul>
-          <Link to={""} className="Aheaders">
+          <Link to={"/inbox"} className="Aheaders">
             <div className="bell">
               <li>Notifications</li>
               <BiBell />
