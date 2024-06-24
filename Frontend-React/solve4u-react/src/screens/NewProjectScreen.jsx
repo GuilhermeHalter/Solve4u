@@ -30,9 +30,8 @@ const NewProject = () => {
     <>
       <GlobalHeader />
       <div className="new-project-container">
-        <h1 className="titlen">
-          You don't have
-          <br /> any project create one!!
+        <h1 className="titleProject">
+          You don't have any project create one!!
         </h1>
         <Sidebar />
         <div className="cardsContainer">
