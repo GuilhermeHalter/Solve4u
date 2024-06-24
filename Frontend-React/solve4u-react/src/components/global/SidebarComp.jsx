@@ -40,11 +40,11 @@ const Sidebar = () => {
               <FaRegFolder />
             </div>
           </Link>
-          <Link to={"/projects"} className="Aheaders">
+          <Link to={"/config"} className="Aheaders">
+            <div className="config">
+              <li>Settings</li> <IoSettingsOutline />
+            </div>
           </Link>
-          <div className="config">
-            <li>Settings</li> <IoSettingsOutline />
-          </div>
         </ul>
       </div>
       <div className="sidebarfooter">
