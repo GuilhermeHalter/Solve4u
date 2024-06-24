@@ -10,3 +10,8 @@
       text-align: center;
   }
   
+@media only screen and (max-width: 541px) {
+    .configComingSoon {
+        width: 300px;
+      }
+}
