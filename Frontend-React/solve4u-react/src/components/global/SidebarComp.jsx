@@ -40,6 +40,8 @@ const Sidebar = () => {
               <FaRegFolder />
             </div>
           </Link>
+          <Link to={"/projects"} className="Aheaders">
+          </Link>
           <div className="config">
             <li>Settings</li> <IoSettingsOutline />
           </div>
