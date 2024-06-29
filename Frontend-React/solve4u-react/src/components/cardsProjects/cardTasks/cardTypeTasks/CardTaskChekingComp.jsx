@@ -68,7 +68,7 @@ const CardTaskChekingComp = ({ task, onClose }) => {
         <div className="modalContentRightChecking">
           <div className="upRightChecking">
             <div className="dateTaks">
-              <p>Deadline: {task.startDate}</p>
+              <p>Start Date: {task.startDate}</p>
               <p>Deadline: {task.dateDeadline}</p>
             </div>
 

@@ -34,7 +34,7 @@ const CardTaskFinishedComp = ({ task, onClose }) => {
         <div className="modalContentRightFinished">
           <div className="upRightFinished">
             <div className="dateTaks">
-              <p>Deadline: {task.startDate}</p>
+              <p>Start Date: {task.startDate}</p>
               <p>Deadline: {task.dateDeadline}</p>
             </div>
           </div>

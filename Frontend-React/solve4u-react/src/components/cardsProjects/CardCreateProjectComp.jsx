@@ -18,7 +18,7 @@ const CardCreateProject = ({ onClose }) => {
   const [projectDescription, setProjectDescription] = useState("");
   const [category, setCategory] = useState("Option 1");
 
- /**
+   /**
    * Generates a random 8-character code.
    * 
    * @returns {string} A random code.
@@ -34,11 +34,12 @@ const CardCreateProject = ({ onClose }) => {
     return code;
   };
 
-  /**
+ /**
    * Creates a new project and stores it in localStorage.
    */
 
-  const handleCreateProject = () => {
+  const handleCreateProject = (event) => {
+    event.preventDefault();
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
     const lastId = projects.length > 0 ? projects[projects.length - 1].id : 0;
     const newProject = {
@@ -81,38 +82,40 @@ const CardCreateProject = ({ onClose }) => {
           X
         </button>
         <h2>Create New Project</h2>
-        <input
-          type="text"
-          className="projectInput"
-          placeholder="Project Name"
-          name="projectName"
-          value={projectName}
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Project Description"
-          className="description"
-          name="projectDescription"
-          value={projectDescription}
-          onChange={handleInputChange}
-          required
-        />
-        <select
-          name="category"
-          id="category"
-          value={category}
-          onChange={handleInputChange}
-          required
-        >
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-          <option value="Option 3">Option 3</option>
-        </select>
-        <button className="create-btn" onClick={handleCreateProject}>
-          Create Project <FaPlus className="iconCard" />
-        </button>
+        <form onSubmit={handleCreateProject}>
+          <input
+            type="text"
+            className="projectInput"
+            placeholder="Project Name"
+            name="projectName"
+            value={projectName}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Project Description"
+            className="description"
+            name="projectDescription"
+            value={projectDescription}
+            onChange={handleInputChange}
+            required
+          />
+          <select
+            name="category"
+            id="category"
+            value={category}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+          </select>
+          <button type="submit" className="create-btn">
+            Create Project <FaPlus className="iconCard" />
+          </button>
+        </form>
       </div>
     </div>
   );

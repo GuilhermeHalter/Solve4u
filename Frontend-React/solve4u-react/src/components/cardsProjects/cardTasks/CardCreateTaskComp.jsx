@@ -54,6 +54,21 @@ const CardCreateTask = ({ onClose, sectorId }) => {
   };
 
   /**
+   * Handles form submission.
+   * Checks if required fields are filled before creating the task.
+   */
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!taskName || !taskDescription || !taskUser || !dateDeadline) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    handleCreateTask();
+  };
+
+  /**
    * Updates the input state as the user types.
    * @param {Object} event - The input event.
    */
@@ -65,16 +80,9 @@ const CardCreateTask = ({ onClose, sectorId }) => {
       setTaskDescription(value);
     } else if (name === "dateDeadline") {
       setDateDeadline(value);
+    } else if (name === "taskUser") {
+      setTaskUser(value);
     }
-  };
-
-  /**
-   * Updates the state of the selected user.
-   * @param {Object} event - The input event.
-   */
-
-  const handleUserSelect = (event) => {
-    setTaskUser(event.target.value);
   };
 
   const today = new Date().toISOString().split("T")[0];
@@ -86,54 +94,57 @@ const CardCreateTask = ({ onClose, sectorId }) => {
           X
         </button>
         <h2>Create New Task</h2>
-        <input
-          type="text"
-          className="sectorInput"
-          placeholder="Task Name"
-          name="taskName"
-          value={taskName}
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Task Description"
-          className="description"
-          name="taskDescription"
-          value={taskDescription}
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          type="date"
-          placeholder="Deadline"
-          className="dateInput"
-          name="dateDeadline"
-          value={dateDeadline}
-          onChange={handleInputChange}
-          min={today}
-          required
-        />
-        <div className="user-select-container">
-          <select
-            value={taskUser}
-            onChange={handleUserSelect}
-            className="user-select"
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="sectorInput"
+            placeholder="Task Name"
+            name="taskName"
+            value={taskName}
+            onChange={handleInputChange}
             required
-          >
-            <option value="" disabled>
-              Select User
-            </option>
-            {users.map((user) => (
-              <option key={user} value={user}>
-                {user}
+          />
+          <input
+            type="text"
+            placeholder="Task Description"
+            className="description"
+            name="taskDescription"
+            value={taskDescription}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            type="date"
+            placeholder="Deadline"
+            className="dateInput"
+            name="dateDeadline"
+            value={dateDeadline}
+            onChange={handleInputChange}
+            min={today}
+            required
+          />
+          <div className="user-select-container">
+            <select
+              value={taskUser}
+              onChange={handleInputChange}
+              className="user-select"
+              name="taskUser"
+              required
+            >
+              <option value="" disabled>
+                Select User
               </option>
-            ))}
-          </select>
-        </div>
-        <button className="create-btn" onClick={handleCreateTask}>
-          Create Task <FaPlus className="iconCard" />
-        </button>
+              {users.map((user) => (
+                <option key={user} value={user}>
+                  {user}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button type="submit" className="create-btn">
+            Create Task <FaPlus className="iconCard" />
+          </button>
+        </form>
       </div>
     </div>
   );

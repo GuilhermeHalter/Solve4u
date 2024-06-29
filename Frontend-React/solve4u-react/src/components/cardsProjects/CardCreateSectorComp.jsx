@@ -51,9 +51,27 @@ const CardCreateSector = ({ onClose, projectId }) => {
     setSelectedUser("");
     setSelectedUsers([]);
     onClose();
+    window.location.reload();
   };
 
-   /**
+  /**
+   * Handles form submission.
+   * Checks if required fields are filled before creating the sector.
+   */
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Check if required fields are filled
+    if (!sectorName || !sectorDescription ) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    handleCreateSector();
+
+  };
+
+  /**
    * Updates the input state as the user types.
    * @param {Object} event - The input event.
    */
@@ -67,7 +85,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
     }
   };
 
- /**
+  /**
    * Updates the selected user state.
    * @param {Object} event - The select event.
    */
@@ -87,7 +105,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
     }
   };
 
-/**
+  /**
    * Removes a user from the sector's user list.
    * @param {string} userToRemove - The user to remove.
    */
@@ -96,7 +114,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
     setSelectedUsers(selectedUsers.filter((user) => user !== userToRemove));
   };
 
- /**
+  /**
    * Updates the sector color as selected by the user.
    * @param {Object} event - The color change event.
    */
@@ -112,72 +130,73 @@ const CardCreateSector = ({ onClose, projectId }) => {
           X
         </button>
         <h2>Create New Sector</h2>
-        <div className="color-picker-container">
+        <form onSubmit={handleSubmit}>
+          <div className="color-picker-container">
+            <input
+              type="text"
+              className="sectorInput"
+              placeholder="Sector Name"
+              name="sectorName"
+              value={sectorName}
+              onChange={handleInputChange}
+              required  
+            />
+
+            <input
+              type="color"
+              className="color-picker"
+              value={sectorColor}
+              onChange={handleColorChange}
+              required  
+            />
+          </div>
+
           <input
             type="text"
-            className="sectorInput"
-            placeholder="Sector Name"
-            name="sectorName"
-            value={sectorName}
+            placeholder="Sector Description"
+            className="description"
+            name="sectorDescription"
+            value={sectorDescription}
             onChange={handleInputChange}
-            required
+            required 
           />
-
-          <input
-            type="color"
-            className="color-picker"
-            value={sectorColor}
-            onChange={handleColorChange}
-            required
-          />
-        </div>
-
-        <input
-          type="text"
-          placeholder="Sector Description"
-          className="description"
-          name="sectorDescription"
-          value={sectorDescription}
-          onChange={handleInputChange}
-          required
-        />
-        <div className="user-select-container">
-          <select
-            value={selectedUser}
-            onChange={handleUserSelect}
-            className="user-select"
-            required
-          >
-            <option value="" disabled>
-              Select User
-            </option>
-            {users.map((user) => (
-              <option key={user} value={user}>
-                {user}
+          <div className="user-select-container">
+            <select
+              value={selectedUser}
+              onChange={handleUserSelect}
+              className="user-select"
+            >
+              <option value="" disabled>
+                Select User
               </option>
+              {users.map((user) => (
+                <option key={user} value={user}>
+                  {user}
+                </option>
+              ))}
+            </select>
+            <button type="button" className="add-user-btn" onClick={handleAddUser}>
+              Add User
+              <FaPlus className="iconCard" />
+            </button>
+          </div>
+          <div className="selected-users">
+            {selectedUsers.map((user) => (
+              <div key={user} className="selected-user">
+                {user}
+                <button
+                  className="remove-user-btn"
+                  onClick={() => handleRemoveUser(user)}
+                >
+                  <FaTimes />
+                </button>
+              </div>
             ))}
-          </select>
-          <button className="add-user-btn" onClick={handleAddUser}>
-            Add User
-            <FaPlus className="iconCard" />
+          </div>
+          <button type="submit" className="create-btn">
+            Create Sector <FaPlus className="iconCard" />
           </button>
-        </div>
-        <div className="selected-users">
-          {selectedUsers.map((user) => (
-            <div key={user} className="selected-user">
-              {user}
-              <button
-                className="remove-user-btn"
-                onClick={() => handleRemoveUser(user)}
-              >
-                <FaTimes />
-              </button>
-            </div>
-          ))}
-        </div>
-        <button className="create-btn" onClick={handleCreateSector}>
-          Create Sector <FaPlus className="iconCard" />
-        </button>
+        </form>
       </div>
     </div>
   );
