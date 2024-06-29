@@ -31,6 +31,7 @@ const Home = () => {
             className="section2Img"
             src="https://www.doplim.com.br/noticias/wp-content/uploads/2024/02/relacoes-interpessoais-no-trabalho-administrativo-no-brasil-900x500.jpg"
             alt="Solution"
+            loading="lazy"
           />
         </div>
         <div className="section2Text">
@@ -66,6 +67,7 @@ const Home = () => {
             className="section3Img"
             src="https://img.freepik.com/premium-vector/set-colorful-infographic-elements-presentation-graphics-statistics-data-diagrams_172533-81.jpg"
             alt="Performance"
+            loading="lazy"
           />
         </div>
       </div>
