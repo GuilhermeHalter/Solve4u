@@ -64,7 +64,7 @@ h2 {
 .edit-btn {
   display: inline-flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   font-weight: bold;
   padding: 10px;

@@ -31,7 +31,8 @@ const CardEditProjectComp = ({ project, onClose }) => {
   /**
    * Handle editing the project and saving changes to localStorage.
    */
-  const handleEditProject = () => {
+  const handleEditProject = (event) => {
+    event.preventDefault();
     const projects = JSON.parse(localStorage.getItem("projects")) || [];
     const updatedProjects = projects.map((item) => {
       if (item.id === project.id) {
@@ -48,12 +49,11 @@ const CardEditProjectComp = ({ project, onClose }) => {
     onClose();
   };
 
-    /**
+  /**
    * Handle input changes for project fields.
    *
    * @param {Object} event - The input change event.
    */
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     if (name === "projectName") {
@@ -72,38 +72,40 @@ const CardEditProjectComp = ({ project, onClose }) => {
           X
         </button>
         <h2>Edit Project</h2>
-        <input
-          type="text"
-          className="projectInput"
-          placeholder="Project Name"
-          name="projectName"
-          value={projectName}
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Project Description"
-          className="description"
-          name="projectDescription"
-          value={projectDescription}
-          onChange={handleInputChange}
-          required
-        />
-        <select
-          name="category"
-          id="category"
-          value={category}
-          onChange={handleInputChange}
-          required
-        >
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-          <option value="Option 3">Option 3</option>
-        </select>
-        <button className="edit-btn" onClick={handleEditProject}>
-          Edit Project <FaPlus className="iconCard" />
-        </button>
+        <form onSubmit={handleEditProject}>
+          <input
+            type="text"
+            className="projectInput"
+            placeholder="Project Name"
+            name="projectName"
+            value={projectName}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Project Description"
+            className="description"
+            name="projectDescription"
+            value={projectDescription}
+            onChange={handleInputChange}
+            required
+          />
+          <select
+            name="category"
+            id="category"
+            value={category}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+          </select>
+          <button type="submit" className="edit-btn">
+            Edit Project <FaPlus className="iconCard" />
+          </button>
+        </form>
       </div>
     </div>
   );
