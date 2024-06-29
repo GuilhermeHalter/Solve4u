@@ -1,11 +1,12 @@
 @media only screen and (max-width: 1920px) {
     .homeHeaderNav {
-        width: 100%;
+        width: 99%;
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
-        background-color: transparent;
-        position: absolute; 
+        background: rgba(255, 255, 255, 0.09); 
+        backdrop-filter: blur(10px); 
+        position: fixed; 
         top: 0;
         left: 0;
         opacity: 0;
