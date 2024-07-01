@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Outlet } from "react-router-dom";
 import { InfinitySpin } from "react-loader-spinner";
+import { ThemeProvider, useTheme } from './assets/JavaScript/ThemeContext';
 
-function App() {
+function AppContent() {
   const [loading, setLoading] = useState(true);
+  const { isDarkTheme } = useTheme();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -13,6 +15,10 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    document.body.className = isDarkTheme ? 'dark' : 'light';
+  }, [isDarkTheme]);
 
   return (
     <div className="containerApp">
@@ -29,6 +35,14 @@ function App() {
         <Outlet />
       )}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

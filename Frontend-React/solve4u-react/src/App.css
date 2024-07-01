@@ -4,3 +4,50 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+
+                                            /*-----------Dark Theme-----------*/
+
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #22263f;
+  --text-color-dark: #ffffff;
+  --backgrond-color-dark-sidebar: #605f5f;
+}
+
+body.light {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+body.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+
+/*-Sidebar Dark Theme-*/
+
+.sidebar.dark {
+  background-color: var(--backgrond-color-dark-sidebar);
+  color: var(--text-color-dark);
+}
+
+.logout.dark {
+  color: var(--text-color-dark);
+}
+
+.bell.dark{
+  color: var(--text-color-dark);
+}
+
+.folder.dark{
+  color: var(--text-color-dark);
+}
+
+.config.dark{
+  color: var(--text-color-dark);
+}
