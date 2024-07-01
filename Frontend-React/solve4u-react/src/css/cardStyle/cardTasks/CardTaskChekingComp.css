@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99999;
 }
 
 .modalChecking {
@@ -17,8 +18,10 @@
   border: 2px solid #939393;
   border-radius: 8px;
   width: 500px;
+  max-width: 100%;
   height: 400px;
   position: relative;
+  z-index: 99999;
 }
 
 .lineVerticalChecking {
@@ -109,4 +112,10 @@
   margin-left: 3px;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 541px) {
+  .notApproved-task-btn {
+    margin-bottom: 10px;
+  }
 }

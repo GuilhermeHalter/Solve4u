@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99999;
 }
 
 .modalFinished {
@@ -17,8 +18,10 @@
   border: 2px solid #939393;
   border-radius: 8px;
   width: 500px;
+  max-width: 100%;
   height: 400px;
   position: relative;
+  z-index: 99999;
 }
 
 .lineVerticalFinished {
