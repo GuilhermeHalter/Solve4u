@@ -1,6 +1,7 @@
 @media only screen and (max-width: 1920px) {
     .homeHeaderNav {
         width: 99%;
+        height: 50px;
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
@@ -12,6 +13,7 @@
         opacity: 0;
         transform: translateY(-100px);
         animation: slideIn 1.5s forwards;
+        z-index: 9999;
     }
 
   @keyframes slideIn {

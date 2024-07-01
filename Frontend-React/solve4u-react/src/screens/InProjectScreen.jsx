@@ -21,11 +21,11 @@ const InProject = () => {
   const projectId = project.id;
 
   useEffect(() => {
-    const fetchProjectsAndSectors = () => {
+    const fetchProjectsAndSectors = async () => {
       const allProjects = JSON.parse(localStorage.getItem("projects")) || [];
       const allSectors = JSON.parse(localStorage.getItem("sectors")) || [];
-      setProjects(allProjects);
-      setSectors(allSectors.filter((sector) => sector.projectId === projectId));
+      await setProjects(allProjects);
+      await setSectors(allSectors.filter((sector) => sector.projectId === projectId));
     };
 
     fetchProjectsAndSectors();
@@ -33,6 +33,26 @@ const InProject = () => {
 
   const handleDeleteProject = () => {
     setShowConfirmation(true);
+  };
+
+  const updateTasksForDeletedSectors = () => {
+    const updatedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    // Filtra as tasks que não estão associadas aos setores que serão removidos
+    const updatedSectors = sectors.filter(
+      (sector) => sector.projectId !== projectId
+    );
+
+    // Coleta os IDs dos setores que serão removidos
+    const sectorIdsToRemove = updatedSectors.map((sector) => sector.sectorId);
+
+    // Atualiza as tasks removendo aquelas associadas aos setores que serão deletados
+    const filteredTasks = updatedTasks.filter(
+      (task) => !sectorIdsToRemove.includes(task.sectorId)
+    );
+
+    // Atualiza as tasks no localStorage
+    localStorage.setItem("tasks", JSON.stringify(filteredTasks));
   };
 
   const deleteProjectAndRelatedSectors = () => {
@@ -45,6 +65,9 @@ const InProject = () => {
     );
     localStorage.setItem("sectors", JSON.stringify(updatedSectors));
     setSectors(updatedSectors);
+
+    // Chama a função para atualizar as tasks relacionadas aos setores removidos
+    updateTasksForDeletedSectors();
 
     navigate("/projects");
   };
@@ -84,7 +107,6 @@ const InProject = () => {
       return sector;
     });
     setSectors(updatedSectors);
-
   };
 
   return (
