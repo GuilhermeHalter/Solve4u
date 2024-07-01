@@ -5,10 +5,13 @@ import { FaArrowRight, FaPlus } from "react-icons/fa";
 import { useState } from "react";
 import CardCreateProject from "../components/cardsProjects/CardCreateProjectComp.jsx";
 import CardJoinProject from "../components/cardsProjects/CardJoinProjectComp.jsx";
+import { useTheme } from "../assets/JavaScript/ThemeContext.jsx"; 
 
 const NewProject = () => {
   const [isCardVisible, setCardVisible] = useState(false);
   const [isCardVisibleJ, setCardVisibleJ] = useState(false);
+  const { isDarkTheme } = useTheme();
+
 
   const openCard = () => {
     setCardVisible(true);
@@ -30,13 +33,13 @@ const NewProject = () => {
     <>
       <GlobalHeader />
       <div className="new-project-container">
-        <h1 className="titleProject">
+        <h1 className={`titleProject ${isDarkTheme ? 'dark' : 'light'}`}>
           You don't have any project create one!!
         </h1>
         <Sidebar />
         <div className="cardsContainer">
           <div className="cardsRow">
-            <div className="joinProjectCard">
+            <div className={`joinProjectCard ${isDarkTheme ? 'dark' : 'light'}`}>
               <p>
                 If you were invited to a project, you can access it directly
                 here through a code generated and shared by the owner of that
@@ -54,7 +57,7 @@ const NewProject = () => {
                 Join Project <FaArrowRight className="icon" />
               </button>
             </div>
-            <div className="createProjectCard">
+            <div className={`createProjectCard ${isDarkTheme ? 'dark' : 'light'}`}>
               <p>
                 This field is perfect if you want to create a project to manage
                 tasks, track project development and organize your team in a

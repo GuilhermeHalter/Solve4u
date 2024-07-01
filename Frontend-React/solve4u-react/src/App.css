@@ -13,9 +13,9 @@
 :root {
   --background-color-light: #ffffff;
   --text-color-light: #000000;
-  --background-color-dark: #333751;
+  --background-color-dark: #1d2033;
   --text-color-dark: #ffffff;
-  --backgrond-color-dark-sidebar: #605f5f;
+  --backgrond-color-dark-sidebar: #6e6d6d;
 }
 
 body.light {
@@ -29,6 +29,8 @@ body.dark {
   transition: background-color 1s;
   color: var(--text-color-dark);
 }
+
+
 
 
 /*-Sidebar Dark Theme-*/
@@ -55,6 +57,69 @@ body.dark {
 }
 
 .config.dark{
+  color: var(--text-color-dark);
+  transition: background-color 1s;
+}
+
+/*-New Project Screen Dark Theme-*/
+
+.titleProject.dark{
+  color: var(--text-color-dark);
+  transition: background-color 1s;
+}
+
+.joinProjectCard.dark{
+  border-color: #73b2ed;
+}
+
+.joinProjectCard.dark .cardButtonJoin{
+  background-color: #73b2ed;
+}
+
+.joinProjectCard.dark .cardButtonJoin:hover{
+  background-color: transparent;
+  border-color: #73b2ed;
+  color: #73b2ed;
+}
+
+.createProjectCard.dark{
+  border-color: #45aa56;
+}
+
+.createProjectCard.dark .cardButtonCreate{
+  background-color: #45aa56;
+}
+
+.createProjectCard.dark .cardButtonCreate:hover{
+  background-color: transparent;
+  border-color: #45aa56;
+  color: #45aa56;
+}
+
+.joinProjectCard.dark p {
+  color: var(--text-color-dark);
+}
+
+.createProjectCard.dark p{
+  color: var(--text-color-dark);
+}
+
+/*-Card Analitycs Dark Theme-*/
+
+.chartAnalitycs.dark{
+  transition: background-color 1s;
+}
+
+.titleAnalitycs.dark{
+  color: var(--text-color-dark);
+  transition: background-color 1s;
+}
+
+.conteinerCardAnalitycs.dark{
+  border-color: #ffffff;
+}
+
+.subtitle.dark{
   color: var(--text-color-dark);
   transition: background-color 1s;
 }

@@ -7,11 +7,15 @@ import CardAnalitycsComp from "../components/cardsProjects/cardAnalitycs/CardAna
 
 import "../css/screenStyle/projectScreenStyle/ProjectsScreen.css";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../assets/JavaScript/ThemeContext.jsx";
+
 
 const Projects = () => {
   const [isCardVisible, setCardVisible] = useState(false);
   const navigate = useNavigate();
   const [projects, setProjects] = useState([]);
+  const { isDarkTheme } = useTheme();
+
 
   useEffect(() => {
     const localStorageProjects =
@@ -54,7 +58,7 @@ const Projects = () => {
           ))}
         </div>
         <section>
-          <h2 className="subtitle">Analityc's</h2>
+          <h2 className={`subtitle ${isDarkTheme ? 'dark' : 'light'}`}>Analityc's</h2>
           <div className="analytics-container">
             <CardAnalitycsComp />
           </div>

@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
 import "../../../css/cardStyle/cardAnalitycs/CardAnalitycsComp.css";
-
-
-/**
- * Gets the projects, sectors, and tasks from localStorage.
- * 
- * @returns {object} An object containing arrays of projects, sectors, and tasks.
- */
+import { useTheme } from "../../../assets/JavaScript/ThemeContext.jsx";
 
 const getProjectsFromLocalStorage = () => {
   const projects = JSON.parse(localStorage.getItem("projects")) || [];
@@ -15,15 +9,6 @@ const getProjectsFromLocalStorage = () => {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   return { projects, sectors, tasks };
 };
-
-/**
- * Counts the tasks per stage for each project.
- * 
- * @param {Array} projects - Array of projects.
- * @param {Array} sectors - Array of sectors.
- * @param {Array} tasks - Array of tasks.
- * @returns {object} An object containing the count of tasks per stage for each project.
- */
 
 const countTasksByStage = (projects, sectors, tasks) => {
   const taskCounts = {};
@@ -57,16 +42,9 @@ const countTasksByStage = (projects, sectors, tasks) => {
   return taskCounts;
 };
 
-/**
- * Component for displaying analytic charts of tasks.
- *
- * @component
- * @example
- * return <CardAnalitycsComp />;
- */
-
 const CardAnalitycsComp = () => {
   const [chartsData, setChartsData] = useState([]);
+  const { isDarkTheme } = useTheme();
 
   useEffect(() => {
     const { projects, sectors, tasks } = getProjectsFromLocalStorage();
@@ -87,17 +65,26 @@ const CardAnalitycsComp = () => {
     setChartsData(allChartData);
   }, []);
 
+  const chartOptions = {
+    backgroundColor: isDarkTheme ? '#22263f' : '#ffffff',
+    legend: { textStyle: { color: isDarkTheme ? '#ffffff' : '#000000' } },
+    hAxis: { textStyle: { color: isDarkTheme ? '#ffffff' : '#000000' } },
+    vAxis: { textStyle: { color: isDarkTheme ? '#ffffff' : '#000000' } },
+    titleTextStyle: { color: isDarkTheme ? '#ffffff' : '#000000' },
+  };
+
   return (
     <div className="cardAnalitycs">
       {chartsData.map((chart, index) => (
-        <div className="conteinerCardAnalitycs" key={index}>
-          <h2 className="titleAnalitycs">{chart.projectName}</h2>
+        <div className={`conteinerCardAnalitycs ${isDarkTheme ? 'dark' : 'light'}`} key={index}>
+          <h2 className={`titleAnalitycs ${isDarkTheme ? 'dark' : 'light'}`}>{chart.projectName}</h2>
           <Chart
-            className="chartAnalitycs"
+            className={`chartAnalitycs ${isDarkTheme ? 'dark' : 'light'}`}
             chartType="ColumnChart"
             width="100%"
             height="200px"
             data={chart.data}
+            options={chartOptions}
           />
         </div>
       ))}
