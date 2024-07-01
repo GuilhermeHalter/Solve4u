@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../../css/cardStyle/CardSectorComp.css";
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
+
 
 /**
  * Component for displaying a sector card.
@@ -27,9 +29,11 @@ import "../../css/cardStyle/CardSectorComp.css";
 
 const SectorCard = ({ sector, onClick }) => {
   const { sectorName, sectorDescription, selectedUsers, sectorColor } = sector;
+  const { isDarkTheme } = useTheme();
+
 
   return (
-    <div className="sector-card" onClick={() => onClick(sector)}>
+    <div className={`sector-card ${isDarkTheme ? 'dark' : 'light'}`} onClick={() => onClick(sector)}>
       <h3
         style={{
           backgroundColor: sectorColor,

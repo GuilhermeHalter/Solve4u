@@ -8,6 +8,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import SectorCard from "../components/cardsProjects/CardSectorComp.jsx";
 import "../css/screenStyle/projectScreenStyle/InProjectScreen.css";
+import { useTheme } from "../assets/JavaScript/ThemeContext.jsx"; 
+
 
 const InProject = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -15,6 +17,7 @@ const InProject = () => {
   const [isEditProjectVisible, setEditProjectVisible] = useState(false);
   const [projects, setProjects] = useState([]);
   const [sectors, setSectors] = useState([]);
+  const { isDarkTheme} = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
   const project = location.state.project;
@@ -116,7 +119,7 @@ const InProject = () => {
       <div className="containerCard">
         <div className="conteinerHeader">
           <div className="sections1">
-            <h1 className="titleI">{project.projectName}</h1>
+            <h1 className={`titleI ${isDarkTheme ? 'dark' : 'light'}`}>{project.projectName}</h1>
           </div>
 
           <div className="sections2">

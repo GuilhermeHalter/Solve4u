@@ -48,6 +48,10 @@
   align-items: center;
 }
 
+.theme:hover {
+  cursor: pointer;
+}
+
 .sidebarmain {
   height: 60%;
 }

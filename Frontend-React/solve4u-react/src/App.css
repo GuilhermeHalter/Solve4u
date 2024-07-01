@@ -123,3 +123,26 @@ body.dark {
   color: var(--text-color-dark);
   transition: background-color 1s;
 }
+
+/*-Card Sector Dark Theme-*/
+
+.sector-card.dark{
+  background-color: var(--background-color-dark);
+  border-color: #ffffff;
+  color: #ffffff;
+  transition: 1s;
+}
+
+.sector-card.dark h3{
+  color: #ffffff;
+  transition: 1s;
+}
+
+.sector-card.dark p{
+  color: #ffffff;
+  transition: 1s;
+}
+
+.titleI.dark{
+  color: var(--text-color-dark);
+}
