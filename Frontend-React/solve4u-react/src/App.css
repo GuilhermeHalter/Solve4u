@@ -208,6 +208,15 @@ body.dark {
   color: #45aa56;
 }
 
+.delete-confirmation.dark{
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.delete-confirmation.dark h2{
+  color: var(--text-color-dark);
+}
+
 /*  
 
 import { useTheme } from "../assets/JavaScript/ThemeContext.jsx"; 

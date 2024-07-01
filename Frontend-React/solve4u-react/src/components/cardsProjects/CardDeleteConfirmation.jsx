@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css//cardStyle/CardDeleteConfirmation.css";
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
 
 /**
  * Component for confirming the deletion of a project.
@@ -16,9 +17,12 @@ import "../../css//cardStyle/CardDeleteConfirmation.css";
  */
 
 const DeleteConfirmation = ({ onConfirm, onCancel }) => {
+
+  const { isDarkTheme} = useTheme();
+
   return (
     <div className="modal-backgraundDelete">
-      <div className="delete-confirmation">
+      <div className={`delete-confirmation ${isDarkTheme ? 'dark' : 'light'}`}>
         <h2>Tem certeza que deseja excluir esse projeto?</h2>
         <p>*Todos os Sectors serão excluidos</p>
         <div className="button-container">
