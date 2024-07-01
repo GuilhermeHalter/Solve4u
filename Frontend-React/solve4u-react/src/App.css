@@ -147,7 +147,7 @@ body.dark {
   color: var(--text-color-dark);
 }
 
-/*-Card Join Project Dark Theme-*/
+/*-Card Project Dark Theme-*/
 
 .modal.dark{
   background-color: var(--background-color-dark);
@@ -198,7 +198,15 @@ body.dark {
   color: #45aa56;
 }
 
+.edit-btn.dark{
+  background-color: #45aa56;
+}
 
+.edit-btn.dark:hover{
+  background-color: transparent;
+  border-color: #45aa56;
+  color: #45aa56;
+}
 
 /*  
 

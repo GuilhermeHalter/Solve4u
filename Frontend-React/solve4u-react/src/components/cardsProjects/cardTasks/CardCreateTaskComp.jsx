@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../../css/cardStyle/CardCreateTaskComp.css";
 import { FaPlus } from "react-icons/fa";
+import { useTheme } from "../../../assets/JavaScript/ThemeContext.jsx"; 
 
 /**
  * Component to create a new task.
@@ -21,6 +22,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
   const [taskDescription, setTaskDescription] = useState("");
   const [taskUser, setTaskUser] = useState("");
   const [dateDeadline, setDateDeadline] = useState("");
+  const { isDarkTheme} = useTheme();
 
   const users = ["User 1", "User 2", "User 3"];
 
@@ -89,7 +91,8 @@ const CardCreateTask = ({ onClose, sectorId }) => {
 
   return (
     <div className="modal-background">
-      <div className="modal">
+      <div className={`modal ${isDarkTheme ? 'dark' : 'light'}`}
+      >
         <button className="close-btn" onClick={onClose}>
           X
         </button>
@@ -141,7 +144,7 @@ const CardCreateTask = ({ onClose, sectorId }) => {
               ))}
             </select>
           </div>
-          <button type="submit" className="create-btn">
+          <button type="submit" className={`create-btn ${isDarkTheme ? 'dark' : 'light'}`}>
             Create Task <FaPlus className="iconCard" />
           </button>
         </form>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../css/cardStyle/CardCreateSectorComp.css";
 import { FaPlus, FaTimes } from "react-icons/fa";
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
+
 
 /**
  * Component for creating a new sector.
@@ -21,6 +23,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
   const [sectorDescription, setSectorDescription] = useState("");
   const [selectedUser, setSelectedUser] = useState("");
   const [selectedUsers, setSelectedUsers] = useState([]);
+  const { isDarkTheme} = useTheme();
   const [sectorColor, setSectorColor] = useState("#ffffff");
 
   const users = ["User 1", "User 2", "User 3"];
@@ -125,13 +128,14 @@ const CardCreateSector = ({ onClose, projectId }) => {
 
   return (
     <div className="modal-background">
-      <div className="modal">
-        <button className="close-btn" onClick={onClose}>
+      <div className={`modal ${isDarkTheme ? 'dark' : 'light'}`}
+      >
+        <button className={`close-btn ${isDarkTheme ? 'dark' : 'light'}`} onClick={onClose}>
           X
         </button>
         <h2>Create New Sector</h2>
         <form onSubmit={handleSubmit}>
-          <div className="color-picker-container">
+          <div className={`color-picker-container ${isDarkTheme ? 'dark' : 'light'}`}>
             <input
               type="text"
               className="sectorInput"
@@ -144,7 +148,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
 
             <input
               type="color"
-              className="color-picker"
+              className={`color-picker ${isDarkTheme ? 'dark' : 'light'}`}
               value={sectorColor}
               onChange={handleColorChange}
               required  
@@ -193,7 +197,7 @@ const CardCreateSector = ({ onClose, projectId }) => {
               </div>
             ))}
           </div>
-          <button type="submit" className="create-btn">
+          <button type="submit" className={`create-btn ${isDarkTheme ? 'dark' : 'light'}`}>
             Create Sector <FaPlus className="iconCard" />
           </button>
         </form>

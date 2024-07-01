@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../css/cardStyle/CardEditProjectComp.css";
 import { FaPlus } from "react-icons/fa";
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
+
 
 /**
  * Component for editing an existing project.
@@ -27,6 +29,8 @@ const CardEditProjectComp = ({ project, onClose }) => {
     project.projectDescription
   );
   const [category, setCategory] = useState(project.category);
+  const { isDarkTheme} = useTheme();
+
 
   /**
    * Handle editing the project and saving changes to localStorage.
@@ -67,7 +71,7 @@ const CardEditProjectComp = ({ project, onClose }) => {
 
   return (
     <div className="modal-background">
-      <div className="modal">
+      <div className={`modal ${isDarkTheme ? 'dark' : 'light'}`}>
         <button className="close-btn" onClick={onClose}>
           X
         </button>
@@ -102,7 +106,7 @@ const CardEditProjectComp = ({ project, onClose }) => {
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>
           </select>
-          <button type="submit" className="edit-btn">
+          <button type="submit" className={`edit-btn ${isDarkTheme ? 'dark' : 'light'}`}>
             Edit Project <FaPlus className="iconCard" />
           </button>
         </form>
