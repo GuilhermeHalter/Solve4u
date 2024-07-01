@@ -23,14 +23,14 @@ const DeleteConfirmation = ({ onConfirm, onCancel }) => {
   return (
     <div className="modal-backgraundDelete">
       <div className={`delete-confirmation ${isDarkTheme ? 'dark' : 'light'}`}>
-        <h2>Tem certeza que deseja excluir esse projeto?</h2>
-        <p>*Todos os Sectors serão excluidos</p>
+        <h2>Are you sure you want to delete this project?</h2>
+        <p>*All Sectors will be excluded</p>
         <div className="button-container">
           <button className="confirm-button" onClick={onConfirm}>
-            Confirmar
+            Confirm
           </button>
           <button className="cancel-button" onClick={onCancel}>
-            Cancelar
+            Cancel
           </button>
         </div>
       </div>
