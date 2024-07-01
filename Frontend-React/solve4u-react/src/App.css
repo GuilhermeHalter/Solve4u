@@ -13,18 +13,20 @@
 :root {
   --background-color-light: #ffffff;
   --text-color-light: #000000;
-  --background-color-dark: #22263f;
+  --background-color-dark: #333751;
   --text-color-dark: #ffffff;
   --backgrond-color-dark-sidebar: #605f5f;
 }
 
 body.light {
   background-color: var(--background-color-light);
+  transition: background-color 1s;
   color: var(--text-color-light);
 }
 
 body.dark {
   background-color: var(--background-color-dark);
+  transition: background-color 1s;
   color: var(--text-color-dark);
 }
 
@@ -33,21 +35,26 @@ body.dark {
 
 .sidebar.dark {
   background-color: var(--backgrond-color-dark-sidebar);
+  transition: left 0.3s ease;
   color: var(--text-color-dark);
 }
 
 .logout.dark {
   color: var(--text-color-dark);
+  transition: background-color 1s;
 }
 
 .bell.dark{
   color: var(--text-color-dark);
+  transition: background-color 1s;
 }
 
 .folder.dark{
   color: var(--text-color-dark);
+  transition: background-color 1s;
 }
 
 .config.dark{
   color: var(--text-color-dark);
+  transition: background-color 1s;
 }

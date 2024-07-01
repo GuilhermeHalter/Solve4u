@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { VscLayoutSidebarRight } from "react-icons/vsc";
 import { IoSettingsOutline } from "react-icons/io5";
-import { FaRegFolder, FaRegMoon, FaSun } from "react-icons/fa";
+import { FaRegFolder, FaRegMoon } from "react-icons/fa";
 import { BiLogOut, BiBell } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../../css/compStyle/compGlobalStyle/SidebarComp.css";
-import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; // Importando o ThemeContext
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
+import { FiSun } from "react-icons/fi";
+
 
 /**
  * Sidebar component for navigation and settings.
@@ -24,7 +26,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={`sidebar ${isOpen ? "" : "closed"} && ${isDarkTheme ? 'dark' : 'light'}`}>
+    <div className={`sidebar ${isOpen ? "" : "closed"} ${isDarkTheme ? 'dark' : 'light'}`}>
       <div className="toggle-icon" onClick={toggleSidebar}>
         <VscLayoutSidebarRight />
       </div>
@@ -60,7 +62,7 @@ const Sidebar = () => {
           </Link>
           <div className="theme" onClick={toggleTheme}>
             <li>Theme</li>
-            {isDarkTheme ? <FaSun /> : <FaRegMoon />} 
+            {isDarkTheme ? <FiSun /> : <FaRegMoon />} 
           </div>
         </ul>
       </div>
