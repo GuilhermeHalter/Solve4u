@@ -3,18 +3,29 @@
   color: #ffffff;
   padding: 20px 0;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footerList {
-  display: flex;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3% ;
   flex-wrap: wrap;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+
 
 .footerList .contactLi,
 .footerList .helpLi,
 .footerList .followUsLi {
+  display: inline;
+  text-align: center;
+  align-items: center;
   padding: 0 50px 0px;
+  margin-bottom: 20px;
 }
 
 .helpLi,
@@ -47,6 +58,20 @@
   text-decoration: underline;
 }
 
+.footerCopyright {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.footerCopyright .copyright {
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+.footerCopyright .copyright:hover {
+  text-decoration: underline;
+}
+
 /* 
                                  <---------------- Tablet ---------------->
 */
@@ -55,18 +80,18 @@
   .footerList .contactLi,
   .footerList .helpLi,
   .footerList .followUsLi {
-    padding: 0 180px 0px; /*Modified*/
+    padding: 0 20px 0px;
   }
 
   .helpLi,
   .followUsLi,
   .contactLi {
     flex-grow: 1;
-    text-align: center; /*Modified*/
+    text-align: center;
   }
 
   .footerList h2 {
-    font-size: 25px; /*Modified*/
+    font-size: 25px;
     margin-bottom: 10px;
     color: #ffffff;
   }
@@ -80,25 +105,28 @@
   .footerList .contactLi,
   .footerList .helpLi,
   .footerList .followUsLi {
-    padding: 0 180px 0px; /*Modified*/
+    padding: 0 10px 0px;
   }
 
   .helpLi,
   .followUsLi,
   .contactLi {
     flex-grow: 1;
-    text-align: center; /*Modified*/
+    text-align: center;
   }
 
   .footerList h2 {
-    font-size: 12px; /*Modified*/
+    font-size: 20px;
     margin-bottom: 10px;
     color: #ffffff;
   }
 
   .footerList ul li a {
     color: #ffffff;
-    text-decoration: none; 
-    font-size: 10px /*Modified*/
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .footerCopyright {
+    font-size: 10px;
   }
 }
