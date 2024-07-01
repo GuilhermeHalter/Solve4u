@@ -146,3 +146,66 @@ body.dark {
 .titleI.dark{
   color: var(--text-color-dark);
 }
+
+/*-Card Join Project Dark Theme-*/
+
+.modal.dark{
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.modal.dark input{
+  background-color: var(--background-color-dark);
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+}
+
+.modal.dark input::placeholder{
+  color: #ffffff;
+}
+
+.modal.dark select{
+  background-color: var(--background-color-dark);
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+}
+
+.modal.dark h2{
+  color: var(--text-color-dark);
+}
+
+.close-btn.dark{
+  color: var(--text-color-dark);
+}
+
+.create-btnJ.dark{
+  background-color: #73b2ed;
+}
+
+.create-btnJ.dark:hover{
+  background-color: transparent;
+  border-color: #73b2ed;
+  color: #73b2ed;
+}
+
+.create-btn.dark{
+  background-color: #45aa56;
+}
+
+.create-btn.dark:hover{
+  background-color: transparent;
+  border-color: #45aa56;
+  color: #45aa56;
+}
+
+
+
+/*  
+
+import { useTheme } from "../assets/JavaScript/ThemeContext.jsx"; 
+
+const { isDarkTheme} = useTheme();
+
+{`folder ${isDarkTheme ? 'dark' : 'light'}`}
+
+*/

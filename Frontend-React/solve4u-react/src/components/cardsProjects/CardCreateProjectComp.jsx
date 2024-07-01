@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../css/cardStyle/CardCreateProjectComp.css";
 import { FaPlus } from "react-icons/fa";
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
+
 
 /**
  * Component to create a new project.
@@ -15,6 +17,7 @@ import { FaPlus } from "react-icons/fa";
 
 const CardCreateProject = ({ onClose }) => {
   const [projectName, setProjectName] = useState("");
+  const { isDarkTheme} = useTheme();
   const [projectDescription, setProjectDescription] = useState("");
   const [category, setCategory] = useState("Option 1");
 
@@ -77,8 +80,8 @@ const CardCreateProject = ({ onClose }) => {
 
   return (
     <div className="modal-background">
-      <div className="modal">
-        <button className="close-btn" onClick={onClose}>
+      <div className={`modal ${isDarkTheme ? 'dark' : 'light'}`}>
+        <button className={`close-btn ${isDarkTheme ? 'dark' : 'light'}`} onClick={onClose}>
           X
         </button>
         <h2>Create New Project</h2>
@@ -112,7 +115,7 @@ const CardCreateProject = ({ onClose }) => {
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>
           </select>
-          <button type="submit" className="create-btn">
+          <button type="submit" className={`create-btn ${isDarkTheme ? 'dark' : 'light'}`}>
             Create Project <FaPlus className="iconCard" />
           </button>
         </form>
