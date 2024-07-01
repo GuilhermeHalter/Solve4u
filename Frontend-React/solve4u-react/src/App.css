@@ -217,6 +217,42 @@ body.dark {
   color: var(--text-color-dark);
 }
 
+/*-Card Task Process Dark Theme-*/
+
+.modal-process.dark{
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.modal-process.dark h2{
+  color: #ffffff;
+}
+
+/*-Card Task Checking Dark Theme-*/
+
+.modalChecking.dark{
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.modalChecking.dark h2{
+  color: #ffffff;
+}
+
+/*-Card Task Finished Dark Theme-*/
+
+.modalFinished.dark{
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.modalFinished.dark h2{
+  color: #ffffff;
+}
+
+
+
+
 /*  
 
 import { useTheme } from "../assets/JavaScript/ThemeContext.jsx"; 

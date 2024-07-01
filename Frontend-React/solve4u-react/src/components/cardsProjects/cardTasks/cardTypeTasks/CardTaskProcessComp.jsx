@@ -4,6 +4,9 @@ import { MdDelete } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 import { HiPencil } from "react-icons/hi2";
 import CardEditTaskComp from "../../../cardsProjects/cardTasks/CardEditTaskComp.jsx";
+import { useTheme } from "../../../../assets/JavaScript/ThemeContext.jsx"; 
+
+
 
 /**
  * Component to view details of an in-progress task and provide options for moving, editing, or deleting the task.
@@ -21,6 +24,8 @@ import CardEditTaskComp from "../../../cardsProjects/cardTasks/CardEditTaskComp.
 
 const CardTaskProcessComp = ({ task, onClose }) => {
   const [isEditing, setIsEditing] = useState(false);
+  const { isDarkTheme} = useTheme();
+
 
   /**
    * Moves the task to the next stage (stage "2") and saves it to localStorage.
@@ -66,7 +71,8 @@ const CardTaskProcessComp = ({ task, onClose }) => {
       {isEditing ? (
         <CardEditTaskComp task={task} onClose={handleCloseEdit} />
       ) : (
-        <div className="modal-process">
+        <div className={`modal-process ${isDarkTheme ? 'dark' : 'light'}`}
+>
           <button className="close-btn" onClick={onClose}>
             X
           </button>

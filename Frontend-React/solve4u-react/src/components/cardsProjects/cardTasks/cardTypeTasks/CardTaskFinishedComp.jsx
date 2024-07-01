@@ -2,6 +2,9 @@ import React from "react";
 
 import "../../../../css/cardStyle/cardTasks/CardTaskFinishedComp.css";
 
+import { useTheme } from "../../../../assets/JavaScript/ThemeContext.jsx"; 
+
+
 /**
  * Component to view details of a finished task.
  *
@@ -17,9 +20,14 @@ import "../../../../css/cardStyle/cardTasks/CardTaskFinishedComp.css";
  */
 
 const CardTaskFinishedComp = ({ task, onClose }) => {
+
+  const { isDarkTheme} = useTheme();
+
+
   return (
     <div className="modal-backgroundFinished">
-      <div className="modalFinished">
+      <div className={`modalFinished ${isDarkTheme ? 'dark' : 'light'}`}
+      >
         <button className="close-btn" onClick={onClose}>
           X
         </button>

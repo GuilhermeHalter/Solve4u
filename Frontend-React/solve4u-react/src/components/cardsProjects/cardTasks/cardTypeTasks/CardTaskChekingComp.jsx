@@ -4,6 +4,7 @@ import { FaCheck } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 import "../../../../css/cardStyle/cardTasks/CardTaskChekingComp.css";
+import { useTheme } from "../../../../assets/JavaScript/ThemeContext.jsx"; 
 
 /**
  * Component for checking and approving/failing tasks.
@@ -20,6 +21,7 @@ import "../../../../css/cardStyle/cardTasks/CardTaskChekingComp.css";
  */
 
 const CardTaskChekingComp = ({ task, onClose }) => {
+  const { isDarkTheme} = useTheme();
 
   /**
    * Approves the task by updating the stage to "3" and saves it to localStorage.
@@ -53,7 +55,8 @@ const CardTaskChekingComp = ({ task, onClose }) => {
 
   return (
     <div className="modal-backgroundChecking">
-      <div className="modalChecking">
+      <div className={`modalChecking ${isDarkTheme ? 'dark' : 'light'}`}
+      >
         <button className="close-btn" onClick={onClose}>
           X
         </button>
