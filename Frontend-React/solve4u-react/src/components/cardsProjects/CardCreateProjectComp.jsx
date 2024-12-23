@@ -1,32 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../css/cardStyle/CardCreateProjectComp.css";
 import { FaPlus } from "react-icons/fa";
-import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
-
-
-/**
- * Component to create a new project.
- * 
- * @component
- * @example
- * return <CardCreateProject onClose={handleClose} />;
- * 
- * @param {Object} props - The properties of the component.
- * @param {Function} props.onClose - Function to close the modal.
- */
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx";
+import { createProject } from "../../API/api.js"; // Importando a função de API
 
 const CardCreateProject = ({ onClose }) => {
   const [projectName, setProjectName] = useState("");
-  const { isDarkTheme} = useTheme();
+  const { isDarkTheme } = useTheme();
   const [projectDescription, setProjectDescription] = useState("");
   const [category, setCategory] = useState("Option 1");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-   /**
-   * Generates a random 8-character code.
-   * 
-   * @returns {string} A random code.
-   */
-
+  // Função para gerar um código aleatório de 8 caracteres
   const generateRandomCode = () => {
     const characters =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -37,36 +23,38 @@ const CardCreateProject = ({ onClose }) => {
     return code;
   };
 
- /**
-   * Creates a new project and stores it in localStorage.
-   */
-
-  const handleCreateProject = (event) => {
+  // Função chamada ao submeter o formulário para criar o projeto
+  const handleCreateProject = async (event) => {
     event.preventDefault();
-    const projects = JSON.parse(localStorage.getItem("projects")) || [];
-    const lastId = projects.length > 0 ? projects[projects.length - 1].id : 0;
+    setLoading(true);
+    setError(null); // Reseta o erro ao tentar novamente
+
     const newProject = {
-      id: lastId + 1,
-      codigo: generateRandomCode(),
-      projectName,
-      projectDescription,
+      name: projectName,
+      description: projectDescription,
       category,
+      codigo: generateRandomCode(), // Adicionando o código aleatório
     };
 
-    projects.push(newProject);
-    localStorage.setItem("projects", JSON.stringify(projects));
+    try {
+      // Chama a função da API para criar o projeto no Spring Boot
+      const response = await createProject(newProject);
+      console.log("Project created successfully", response);
 
-    setProjectName("");
-    setProjectDescription("");
-    setCategory("Option 1");
+      // Limpa os campos e fecha o modal após o sucesso
+      setProjectName("");
+      setProjectDescription("");
+      setCategory("Option 1");
+      onClose(); // Fecha o modal após a criação do projeto
+    } catch (err) {
+      console.error("Error creating project:", err);
+      setError("Failed to create project. Please try again."); // Exibe a mensagem de erro
+    } finally {
+      setLoading(false); // Desativa o carregamento após a tentativa
+    }
   };
 
- /**
-   * Handles the input change to update the state of the component.
-   * 
-   * @param {Object} event - The event of change.
-   */
-
+  // Função para atualizar o estado dos inputs
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     if (name === "projectName") {
@@ -115,10 +103,11 @@ const CardCreateProject = ({ onClose }) => {
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>
           </select>
-          <button type="submit" className={`create-btn ${isDarkTheme ? 'dark' : 'light'}`}>
-            Create Project <FaPlus className="iconCard" />
+          <button type="submit" className={`create-btn ${isDarkTheme ? 'dark' : 'light'}`} disabled={loading}>
+            {loading ? "Creating..." : "Create Project"} <FaPlus className="iconCard" />
           </button>
         </form>
+        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );
