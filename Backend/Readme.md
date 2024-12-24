@@ -33,3 +33,47 @@
 
 ## Diagrama de Classe
 <img src="./img/DiagramaSolve4u.png" alt="Descrição da Imagem" width="600">
+
+
+## Code SQL
+
+-- Criação da tabela User
+CREATE TABLE User (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('Admin', 'Member') NOT NULL
+);
+
+-- Criação da tabela Project
+CREATE TABLE Project (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    code VARCHAR(50) UNIQUE NOT NULL,
+    status ENUM('Active', 'Completed', 'Pending') NOT NULL
+);
+
+-- Criação da tabela Group
+CREATE TABLE "Group" (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    idProject UUID NOT NULL,
+    FOREIGN KEY (idProject) REFERENCES Project(id) ON DELETE CASCADE
+);
+
+-- Criação da tabela Task
+CREATE TABLE Task (
+    id UUID PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    deadline DATE,
+    idGroup UUID NOT NULL,
+    status ENUM('Todo', 'In Progress', 'Done') NOT NULL,
+    assignedUser UUID,
+    FOREIGN KEY (idGroup) REFERENCES "Group"(id) ON DELETE CASCADE,
+    FOREIGN KEY (assignedUser) REFERENCES User(id) ON DELETE SET NULL
+);
+
