@@ -36,7 +36,7 @@
 
 
 ## Code SQL
-
+```SQL
 -- Criação da tabela User
 CREATE TABLE User (
     id UUID PRIMARY KEY,
@@ -76,4 +76,4 @@ CREATE TABLE Task (
     FOREIGN KEY (idGroup) REFERENCES "Group"(id) ON DELETE CASCADE,
     FOREIGN KEY (assignedUser) REFERENCES User(id) ON DELETE SET NULL
 );
-
+```
