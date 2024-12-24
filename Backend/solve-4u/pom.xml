@@ -46,6 +46,13 @@
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.5.0</version> <!-- Verifique se há uma versão mais recente -->
+    </dependency>
+
+
     <!-- Thymeleaf para criar páginas HTML -->
     <dependency>
         <groupId>org.springframework.boot</groupId>

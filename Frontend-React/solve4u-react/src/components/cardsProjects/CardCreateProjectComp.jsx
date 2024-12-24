@@ -30,29 +30,30 @@ const CardCreateProject = ({ onClose }) => {
     setError(null); // Reseta o erro ao tentar novamente
 
     const newProject = {
-      name: projectName,
-      description: projectDescription,
-      category,
-      codigo: generateRandomCode(), // Adicionando o código aleatório
+        projectName, // Envia com o nome correto
+        projectDescription, // Envia com o nome correto
+        category,
+        codigo: generateRandomCode(), // Adicionando o código aleatório
     };
 
     try {
-      // Chama a função da API para criar o projeto no Spring Boot
-      const response = await createProject(newProject);
-      console.log("Project created successfully", response);
+        // Chama a função da API para criar o projeto no Spring Boot
+        const response = await createProject(newProject);
+        console.log("Project created successfully", response);
 
-      // Limpa os campos e fecha o modal após o sucesso
-      setProjectName("");
-      setProjectDescription("");
-      setCategory("Option 1");
-      onClose(); // Fecha o modal após a criação do projeto
+        // Limpa os campos e fecha o modal após o sucesso
+        setProjectName("");
+        setProjectDescription("");
+        setCategory("Option 1");
+        onClose(); // Fecha o modal após a criação do projeto
     } catch (err) {
-      console.error("Error creating project:", err);
-      setError("Failed to create project. Please try again."); // Exibe a mensagem de erro
+        console.error("Error creating project:", err);
+        setError("Failed to create project. Please try again."); // Exibe a mensagem de erro
     } finally {
-      setLoading(false); // Desativa o carregamento após a tentativa
+        setLoading(false); // Desativa o carregamento após a tentativa
     }
-  };
+};
+
 
   // Função para atualizar o estado dos inputs
   const handleInputChange = (event) => {

@@ -14,7 +14,7 @@ const API_URL = "http://localhost:8080";
  * @returns {Promise} Retorna uma promessa com a resposta da requisição.
  */
 export const createProject = (newProject) => {
-  return axios.post(`${API_URL}/projects`, newProject);
+  return axios.post(`${API_URL}/api/projects`, newProject);
 };
 
 /**
@@ -23,7 +23,7 @@ export const createProject = (newProject) => {
  * @returns {Promise} Retorna uma promessa com a resposta da requisição.
  */
 export const getProjects = () => {
-  return axios.get(`${API_URL}/projects`);
+  return axios.get(`${API_URL}/api/projects`);
 };
 
 /**
@@ -33,7 +33,7 @@ export const getProjects = () => {
  * @returns {Promise} Retorna uma promessa com a resposta da requisição.
  */
 export const getProjectById = (projectId) => {
-  return axios.get(`${API_URL}/projects/${projectId}`);
+  return axios.get(`${API_URL}/api/projects/${projectId}`);
 };
 
 /**
@@ -44,7 +44,7 @@ export const getProjectById = (projectId) => {
  * @returns {Promise} Retorna uma promessa com a resposta da requisição.
  */
 export const updateProject = (projectId, updatedProject) => {
-  return axios.put(`${API_URL}/projects/${projectId}`, updatedProject);
+  return axios.put(`${API_URL}/api/projects/${projectId}`, updatedProject);
 };
 
 /**
@@ -54,7 +54,7 @@ export const updateProject = (projectId, updatedProject) => {
  * @returns {Promise} Retorna uma promessa com a resposta da requisição.
  */
 export const deleteProject = (projectId) => {
-  return axios.delete(`${API_URL}/projects/${projectId}`);
+  return axios.delete(`${API_URL}/api/projects/${projectId}`);
 };
 
 // --------------------------------------
