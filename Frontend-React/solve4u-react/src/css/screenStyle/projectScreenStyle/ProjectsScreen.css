@@ -1,4 +1,4 @@
-.card-project {
+project-screen.card-project {
   word-wrap: break-word;
 }
 
@@ -32,7 +32,7 @@
   width: 8%;
   height: 40px;
   margin-top: 20px;
-  margin-right: 3px;
+  margin-right: 2%;
   background-color: transparent;
   color: #0076e2;
   font-weight: bold;
@@ -85,7 +85,7 @@
     width: 20%;
     height: 40px;
     margin-top: 20px;
-    margin-right: 3px;
+    margin-right: 3%;
     background-color: transparent;
     color: #0076e2;
     font-weight: bold;

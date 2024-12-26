@@ -41,20 +41,20 @@ const InProject = () => {
   const updateTasksForDeletedSectors = () => {
     const updatedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    // Filtra as tasks que não estão associadas aos setores que serão removidos
+   
     const updatedSectors = sectors.filter(
       (sector) => sector.projectId !== projectId
     );
 
-    // Coleta os IDs dos setores que serão removidos
+
     const sectorIdsToRemove = updatedSectors.map((sector) => sector.sectorId);
 
-    // Atualiza as tasks removendo aquelas associadas aos setores que serão deletados
+
     const filteredTasks = updatedTasks.filter(
       (task) => !sectorIdsToRemove.includes(task.sectorId)
     );
 
-    // Atualiza as tasks no localStorage
+
     localStorage.setItem("tasks", JSON.stringify(filteredTasks));
   };
 
@@ -69,7 +69,6 @@ const InProject = () => {
     localStorage.setItem("sectors", JSON.stringify(updatedSectors));
     setSectors(updatedSectors);
 
-    // Chama a função para atualizar as tasks relacionadas aos setores removidos
     updateTasksForDeletedSectors();
 
     navigate("/projects");
@@ -135,7 +134,7 @@ const InProject = () => {
           </div>
         </div>
 
-        <p>Code: {project.codigo}</p>
+        <p className="Projectcode">Code: {project.codigo}</p>
 
         <div className="sectionCards">
           {sectors.map((sector) => (

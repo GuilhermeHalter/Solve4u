@@ -6,14 +6,19 @@
   color: #0000009c;
 }
 
+.Projectcode {
+}
+
 .ButtonDelete {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 12%;
+  width: 150px;
   height: 40px;
-  margin-top: 20px;
-  margin-right: 3px;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  position: absolute;
+  bottom: 0;
   background-color: transparent;
   color: #d50000;
   font-weight: bold;
@@ -71,6 +76,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 3%;
 }
 
 .ButtonEditProject:hover {
@@ -111,21 +117,7 @@
   .titleI {
     color: #0000009c;
   }
-  
-  .ButtonDelete {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 40px;
-    margin-top: 20px;
-    margin-right: 3px;
-    background-color: transparent;
-    color: #d50000;
-    font-weight: bold;
-    border: 2px solid #d50000;
-    border-radius: 40px;
-  }
+
   
   .ButtonDelete:hover {
     transition: 1s;
@@ -215,21 +207,6 @@
   
   .titleI {
     color: #0000009c;
-  }
-  
-  .ButtonDelete {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 40px;
-    margin-top: 20px;
-    margin-right: 3px;
-    background-color: transparent;
-    color: #d50000;
-    font-weight: bold;
-    border: 2px solid #d50000;
-    border-radius: 40px;
   }
   
   .ButtonDelete:hover {
