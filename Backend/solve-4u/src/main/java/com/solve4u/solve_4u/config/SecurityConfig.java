@@ -15,6 +15,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/h2-console/**").permitAll() // Permite acesso ao console do H2
                 .requestMatchers("/api/**").permitAll() // Permite acesso público às APIs
+                .requestMatchers("/**").permitAll()
                 .anyRequest().authenticated() // Requer autenticação para outras requisições
             )
             .headers(headers -> headers.frameOptions().sameOrigin()); // Necessário para o H2 Console

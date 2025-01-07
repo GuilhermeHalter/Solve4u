@@ -40,10 +40,22 @@
         <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
-    <!-- Spring Boot Web (para criar APIs RESTful) -->
+    <!-- Dependência para Spring Boot Web (RestController e requisições HTTP) -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- Dependência para o cliente HTTP -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+
+    <!-- Dependência para o Jackson (Para manipulação de JSON) -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
     </dependency>
 
     <dependency>

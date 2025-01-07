@@ -30,11 +30,12 @@ const CardCreateProject = ({ onClose }) => {
     setError(null); // Reseta o erro ao tentar novamente
 
     const newProject = {
-        projectName, // Envia com o nome correto
-        projectDescription, // Envia com o nome correto
-        category,
-        codigo: generateRandomCode(), // Adicionando o código aleatório
-    };
+      name: projectName, // Alterado para "name"
+      description: projectDescription, // Alterado para "description"
+      code: generateRandomCode(), // Alterado para "code"
+      status: category, // "category" será salvo como "status"
+  };
+  
 
     try {
         // Chama a função da API para criar o projeto no Spring Boot

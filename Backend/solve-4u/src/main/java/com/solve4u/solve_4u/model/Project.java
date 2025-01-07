@@ -1,59 +1,70 @@
 package com.solve4u.solve_4u.model;
 
+import java.util.UUID;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "Project")
 public class Project {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String codigo;
-    private String projectName;
-    private String projectDescription;
-    private String category;
+    @GeneratedValue(strategy = GenerationType.AUTO) 
+    private UUID id;  // Make sure this is UUID
 
-    // Getters and Setters
-    public Long getId() {
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "code")
+    private String code;
+
+    public Project() {
+    }
+
+    public Project(String name, String description, String code) {
+        this.name = name;
+        this.description = description;
+        this.code = code;
+    }
+
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getName() {
+        return name;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getProjectName() {
-        return projectName;
+    public String getDescription() {
+        return description;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getProjectDescription() {
-        return projectDescription;
+    public String getCode() {
+        return code;
     }
 
-    public void setProjectDescription(String projectDescription) {
-        this.projectDescription = projectDescription;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
 }
