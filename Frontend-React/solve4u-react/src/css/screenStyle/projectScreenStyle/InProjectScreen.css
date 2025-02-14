@@ -6,8 +6,6 @@
   color: #0000009c;
 }
 
-.Projectcode {
-}
 
 .ButtonDelete {
   display: inline-flex;
@@ -206,7 +204,16 @@
   }
   
   .titleI {
+    margin-bottom: 10%;
     color: #0000009c;
+  }
+
+  .projectCodeFather{
+    margin-top: 20%;
+  }
+
+  .projectCode {
+    padding: 5%;
   }
   
   .ButtonDelete:hover {

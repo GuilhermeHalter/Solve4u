@@ -8,8 +8,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import SectorCard from "../components/cardsProjects/CardSectorComp.jsx";
 import "../css/screenStyle/projectScreenStyle/InProjectScreen.css";
-import { useTheme } from "../assets/JavaScript/ThemeContext.jsx"; 
-
+import { useTheme } from "../assets/JavaScript/ThemeContext.jsx";
 
 const InProject = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -17,7 +16,7 @@ const InProject = () => {
   const [isEditProjectVisible, setEditProjectVisible] = useState(false);
   const [projects, setProjects] = useState([]);
   const [sectors, setSectors] = useState([]);
-  const { isDarkTheme} = useTheme();
+  const { isDarkTheme } = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
   const project = location.state.project;
@@ -28,7 +27,9 @@ const InProject = () => {
       const allProjects = JSON.parse(localStorage.getItem("projects")) || [];
       const allSectors = JSON.parse(localStorage.getItem("sectors")) || [];
       await setProjects(allProjects);
-      await setSectors(allSectors.filter((sector) => sector.projectId === projectId));
+      await setSectors(
+        allSectors.filter((sector) => sector.projectId === projectId)
+      );
     };
 
     fetchProjectsAndSectors();
@@ -41,19 +42,15 @@ const InProject = () => {
   const updateTasksForDeletedSectors = () => {
     const updatedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-   
     const updatedSectors = sectors.filter(
       (sector) => sector.projectId !== projectId
     );
 
-
     const sectorIdsToRemove = updatedSectors.map((sector) => sector.sectorId);
-
 
     const filteredTasks = updatedTasks.filter(
       (task) => !sectorIdsToRemove.includes(task.sectorId)
     );
-
 
     localStorage.setItem("tasks", JSON.stringify(filteredTasks));
   };
@@ -118,7 +115,9 @@ const InProject = () => {
       <div className="containerCard">
         <div className="conteinerHeader">
           <div className="sections1">
-            <h1 className={`titleI ${isDarkTheme ? 'dark' : 'light'}`}>{project.projectName}</h1>
+            <h1 className={`titleI ${isDarkTheme ? "dark" : "light"}`}>
+              {project.projectName}
+            </h1>
           </div>
 
           <div className="sections2">
@@ -134,7 +133,9 @@ const InProject = () => {
           </div>
         </div>
 
-        <p className="Projectcode">Code: {project.codigo}</p>
+        <div className="projectCodeFather">
+          <p className="Projectcode">Code: {project.codigo}</p>
+        </div>
 
         <div className="sectionCards">
           {sectors.map((sector) => (
