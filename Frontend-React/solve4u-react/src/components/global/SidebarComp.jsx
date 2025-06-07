@@ -1,24 +1,14 @@
 import { useState } from "react";
-import { VscLayoutSidebarRight } from "react-icons/vsc";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegFolder, FaRegMoon } from "react-icons/fa";
 import { BiLogOut, BiBell } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "../../css/compStyle/compGlobalStyle/SidebarComp.css";
-import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx"; 
+import { useTheme } from "../../assets/JavaScript/ThemeContext.jsx";
 import { FiSun } from "react-icons/fi";
 
-
-/**
- * Sidebar component for navigation and settings.
- *
- * @component
- * @example
- * return <Sidebar />;
- */
-
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const { isDarkTheme, toggleTheme } = useTheme();
 
   const toggleSidebar = () => {
@@ -26,44 +16,59 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={`sidebar ${isOpen ? "" : "closed"} ${isDarkTheme ? 'dark' : 'light'}`}>
+    <div className={`sidebar ${isOpen ? "open" : "closed"} ${isDarkTheme ? "dark" : "light"}`}>
       <div className="toggle-icon" onClick={toggleSidebar}>
-        <VscLayoutSidebarRight />
+        <h1 className="logo">
+          {isOpen ? (
+            <div className="logo-container">
+              <span className="solve" translate="no">Solve</span>
+              <span className="four" translate="no">4</span>
+              <span className="u" translate="no">u</span>
+            </div>
+          ) : (
+            <span className="solve-single" translate="no">S</span>
+          )}
+        </h1>
       </div>
+
       <div className="sidebarmain">
         <ul>
           <Link to={"/inbox"} className="Aheaders">
-            <div className={`bell ${isDarkTheme ? 'dark' : 'light'}`}>
-              <li>Notifications</li>
-              <BiBell />
+            <div className={`menu-item bell ${isDarkTheme ? "dark" : "light"}`}>
+              {isOpen && <li>Notifications</li>}
+              <BiBell className="icon" />
             </div>
           </Link>
           <Link to={"/projects"} className="Aheaders">
-            <div className={`folder ${isDarkTheme ? 'dark' : 'light'}`}>
-              <li>Projects</li>
-              <FaRegFolder />
+            <div className={`menu-item folder ${isDarkTheme ? "dark" : "light"}`}>
+              {isOpen && <li>Projects</li>}
+              <FaRegFolder className="icon" />
             </div>
           </Link>
           <Link to={"/config"} className="Aheaders">
-            <div className={`config ${isDarkTheme ? 'dark' : 'light'}`}>
-              <li>Settings</li> <IoSettingsOutline />
+            <div className={`menu-item config ${isDarkTheme ? "dark" : "light"}`}>
+              {isOpen && <li>Settings</li>}
+              <IoSettingsOutline className="icon" />
             </div>
           </Link>
         </ul>
       </div>
+
       <div className="sidebarfooter">
-        <hr />
+        {isOpen && <hr className="divider" />}
         <ul>
           <Link to={"/"} className="Aheaders">
-            <div className={`logout ${isDarkTheme ? 'dark' : 'light'}`}>
-              <li>Logout</li>
-              <BiLogOut />
+            <div className={`menu-item logout ${isDarkTheme ? "dark" : "light"}`}>
+              {isOpen && <li>Logout</li>}
+              <BiLogOut className="icon" />
             </div>
           </Link>
-          <div className="theme" onClick={toggleTheme}>
-            <li>Theme</li>
-            {isDarkTheme ? <FiSun /> : <FaRegMoon />} 
-          </div>
+          <div className="Aheaders">
+            <div className={`menu-item theme ${isDarkTheme ? "dark" : "light"}`} onClick={toggleTheme}>
+              {isOpen && <li>Theme</li>}
+              {isDarkTheme ? <FiSun className="icon" /> : <FaRegMoon className="icon" />}
+            </div>
+          </div> 
         </ul>
       </div>
     </div>

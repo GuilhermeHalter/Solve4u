@@ -13,9 +13,9 @@
 :root {
   --background-color-light: #ffffff;
   --text-color-light: #000000;
-  --background-color-dark: #1d2033;
+  --background-color-dark: #262626;
   --text-color-dark: #ffffff;
-  --backgrond-color-dark-sidebar: #6e6d6d;
+  --backgrond-color-dark-sidebar: #1d2033;
 }
 
 body.light {
@@ -69,17 +69,17 @@ body.dark {
 }
 
 .joinProjectCard.dark{
-  border-color: #73b2ed;
+  border-color: #45aa56;
 }
 
 .joinProjectCard.dark .cardButtonJoin{
-  background-color: #73b2ed;
+  background-color: #45aa56;
 }
 
 .joinProjectCard.dark .cardButtonJoin:hover{
   background-color: transparent;
-  border-color: #73b2ed;
-  color: #73b2ed;
+  border-color: #45aa56;
+  color: #45aa56;
 }
 
 .createProjectCard.dark{
@@ -179,13 +179,13 @@ body.dark {
 }
 
 .create-btnJ.dark{
-  background-color: #73b2ed;
+  background-color: #45aa56;
 }
 
 .create-btnJ.dark:hover{
   background-color: transparent;
-  border-color: #73b2ed;
-  color: #73b2ed;
+  border-color: #45aa56;
+  color: #45aa56;
 }
 
 .create-btn.dark{

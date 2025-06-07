@@ -61,7 +61,7 @@ const HomeFooter = () => {
       </div>
       <div className="footerCopyright">
         <a href="https://github.com/GuilhermeHalter/Solve4u/blob/main/LICENSE" className="copyright">
-          Copyright (c) 2024 Guilherme Halter Nunes, Wedley Silva Schmoeller.
+          Copyright © 2024 - Guilherme Halter Nunes and Wedley Silva Schmoeller.
         </a>
       </div>
     </div>

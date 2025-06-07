@@ -11,50 +11,41 @@
   font-style: normal;
 }
 
-.four {
+.four-header {
   color: #8cc5fa;
 }
 
-.solve, .u {
+.solve-header, .u-header {
   font-weight: bold;
+  color: #fff;
 }
 
 .navbar {
   align-items: end;
   justify-content: end;
   display: flex;
-  background-color: rgb(48, 82, 235);
+  transition: background-color 0.3s ease;
 }
 
-/* 
-                                 <---------------- Tablet ---------------->
-*/
+.navbar.dark {
+  background-color: #1d2033; 
+}
+
+
+.navbar.light {
+  background-color: #3052eb;
+  color: #000;
+}
+
 @media only screen and (min-width: 541px) and (max-width: 768px) {
   .logo {
-    display: flex;
     font-size: 30px;
-    color: #fff;
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 552;
-    font-style: normal;
   }
 }
 
-/* 
-                                 <---------------- Mobile ---------------->
-*/
-
-
 @media only screen and (max-width: 541px) {
   .logo {
-    display: flex;
     font-size: 25px;
-    color: #fff;
     margin-left: 40%;
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 552;
-    font-style: normal;
   }
 }

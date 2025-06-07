@@ -1,95 +1,304 @@
+.spinnerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #ffff;
+  --background-color-dark: #262626;
+  --text-color-dark: #ffffff;
+  --background-color-dark-sidebar: #1d2033; 
+}
+
+body.light {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 1s;
+}
+
+body.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  transition: background-color 1s;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: -200px;
-  width: 250px;
-  height: 100%;
-  background-color: #f0f0f0;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: left 0.3s ease;
-  z-index: 9999;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease, left 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar.open {
+  width: 180px;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar.light {
+  background-color: #3052eb;
+  color: #ffff;
+  transition: width 0.3s ease, left 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar.dark {
+  background-color: var(--background-color-dark-sidebar);
+  color: var(--text-color-dark);
+  transition: width 0.3s ease, left 0.3s ease, background-color 0.3s ease;
+}
+
+.logo {
+  margin: 0;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solve,
+.u,
+.sidebar.dark .solve,
+.sidebar.dark .u {
+  color: #fff;
+}
+
+.four {
+  color: #73b2ed;
+}
+
+.solve-single {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sidebarmain,
+.sidebarfooter {
+  width: 100%;
+}
+
+.sidebarmain ul,
+.sidebarfooter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+  margin: 4px 8px;
+  color: inherit;
+}
+
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar.dark .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item li {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 1rem;
+  min-width: 20px;
+}
+
+.sidebar.closed .icon {
+  margin: 0 auto;
+}
+
+.sidebar.open .icon {
+  margin-left: auto;
 }
 
 .Aheaders {
   text-decoration: none;
-  color: #272727;
+  color: inherit;
 }
 
-.closed {
-  left: 0.1%;
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 8px 0;
 }
 
-.config {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
+.sidebar.dark .divider {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.bell {
-  display: flex;
-  margin-top: 90px;
-  margin-bottom: 40px;
-  justify-content: space-between;
-  align-items: center;
+.menu-item.light {
+  color: #ffff;
 }
 
-.logout {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.theme {
-  display: flex;
-  margin-top: 20px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.theme:hover {
-  cursor: pointer;
-}
-
-.sidebarmain {
-  height: 60%;
-}
-
-.sidebarfooter {
-  width: 100%;
-  height: 30%;
-}
-
-.folder {
-  display: flex;
-  margin-bottom: 40px;
-  justify-content: space-between;
-  align-items: center;
-}
-hr {
-  width: 108.5%;
-}
-
-.sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar li {
-  align-items: center;
-  cursor: pointer;
+.menu-item.dark {
+  color: var(--text-color-dark);
 }
 
 .toggle-icon {
+  width: 100%;
   display: flex;
-  justify-content: end;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+
+.titleProject.dark,
+.titleAnalitycs.dark,
+.subtitle.dark,
+.titleI.dark {
+  color: var(--text-color-dark);
+  transition: background-color 1s;
+}
+
+.joinProjectCard.dark,
+.createProjectCard.dark {
+  border-color: #73b2ed;
+  color: var(--text-color-dark);
+  transition: border-color 0.3s ease;
+}
+
+.createProjectCard.dark {
+  border-color: #45aa56;
+}
+
+.joinProjectCard.dark .cardButtonJoin {
+  background-color: #73b2ed;
+  transition: background-color 0.3s ease;
+}
+
+.joinProjectCard.dark .cardButtonJoin:hover {
+  background-color: transparent;
+  border-color: #73b2ed;
+  color: #73b2ed;
+}
+
+.createProjectCard.dark .cardButtonCreate {
+  background-color: #45aa56;
+  transition: background-color 0.3s ease;
+}
+
+.createProjectCard.dark .cardButtonCreate:hover {
+  background-color: transparent;
+  border-color: #45aa56;
+  color: #45aa56;
+}
+
+.chartAnalitycs.dark {
+  transition: background-color 1s;
+}
+
+.conteinerCardAnalitycs.dark {
+  border-color: #ffffff;
+}
+
+.sector-card.dark {
+  background-color: var(--background-color-dark);
+  border-color: #ffffff;
+  color: #ffffff;
+  transition: 1s;
+}
+
+.sector-card.dark h3,
+.sector-card.dark p {
+  color: #ffffff;
+  transition: 1s;
+}
+
+.modal.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.modal.dark input,
+.modal.dark select {
+  background-color: var(--background-color-dark);
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+}
+
+.modal.dark input::placeholder {
+  color: #ffffff;
+}
+
+.modal.dark h2 {
+  color: var(--text-color-dark);
+}
+
+.close-btn.dark {
+  color: var(--text-color-dark);
+}
+
+.create-btnJ.dark,
+.edit-btn.dark {
+  background-color: #45aa56;
+  transition: background-color 0.3s ease;
+}
+
+.create-btnJ.dark:hover,
+.edit-btn.dark:hover {
+  background-color: transparent;
+  border-color: #45aa56;
+  color: #45aa56;
+}
+
+.create-btnJ.dark {
+  background-color: #73b2ed;
+}
+
+.create-btnJ.dark:hover {
+  background-color: transparent;
+  border-color: #73b2ed;
+  color: #73b2ed;
+}
+
+.delete-confirmation.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.delete-confirmation.dark h2 {
+  color: var(--text-color-dark);
+}
+
+.modal-process.dark,
+.modalChecking.dark,
+.modalFinished.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.modal-process.dark h2,
+.modalChecking.dark h2,
+.modalFinished.dark h2 {
+  color: #ffffff;
 }
