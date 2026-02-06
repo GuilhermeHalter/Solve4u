@@ -14,7 +14,7 @@ html {
 .titleProject {
   width: 30%; 
   font-weight: bold;
-  color: #0000005e;
+  color: #0914205e;
   text-align: center;
 }
 
@@ -97,7 +97,7 @@ html {
 .joinProjectCard p,
 .createProjectCard p {
   font-size: 18px;
-  color: #0000008c;
+  color: #0914208c;
   font-weight: bold;
   text-align: left;
   margin-top: 20px;
@@ -119,7 +119,7 @@ html {
     width: 40%; 
     font-weight: bold;
     font-size: 30px;
-    color: #0000005e;
+    color: #0914205e;
     text-align: center;
   }
 
@@ -187,7 +187,7 @@ html {
     width: 60%; 
     font-weight: bold;
     font-size: 20px;
-    color: #0000005e;
+    color: #0914205e;
     text-align: center;
   }
 
@@ -246,7 +246,7 @@ html {
   .joinProjectCard p,
   .createProjectCard p {
     font-size: 14px;
-    color: #0000008c;
+    color: #0914208c;
     font-weight: bold;
     text-align: left;
     margin-top: 20px;

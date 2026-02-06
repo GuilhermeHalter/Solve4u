@@ -67,10 +67,10 @@ const CardAnalitycsComp = () => {
 
   const chartOptions = {
     backgroundColor: isDarkTheme ? '#22263f' : '#ffffff',
-    legend: { textStyle: { color: isDarkTheme ? '#ffffff' : '#000000' } },
-    hAxis: { textStyle: { color: isDarkTheme ? '#ffffff' : '#000000' } },
-    vAxis: { textStyle: { color: isDarkTheme ? '#ffffff' : '#000000' } },
-    titleTextStyle: { color: isDarkTheme ? '#ffffff' : '#000000' },
+    legend: { textStyle: { color: isDarkTheme ? '#ffffff' : '#091420' } },
+    hAxis: { textStyle: { color: isDarkTheme ? '#ffffff' : '#091420' } },
+    vAxis: { textStyle: { color: isDarkTheme ? '#ffffff' : '#091420' } },
+    titleTextStyle: { color: isDarkTheme ? '#ffffff' : '#091420' },
   };
 
   return (

@@ -29,7 +29,7 @@ const TaskCard = ({ task }) => {
       case "4":
         return "#FF0000"; // Red for Pending
       default:
-        return "#000000";
+        return "#091420";
     }
   };
 

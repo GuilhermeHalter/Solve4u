@@ -93,14 +93,14 @@
 
   .homeHeaderNav ul {
     display: flex;
-    gap: 0.5rem;  /*Modified*/
+    gap: 0.5rem; 
   }
 
   .Aheader {
     font-weight: bold;
     text-decoration: none;
     color: #adadad;
-    font-size: 15px;  /*Modified*/
+    font-size: 15px; 
     transition: color 1s;
   }
 
@@ -114,7 +114,7 @@
   }
 
   .signInHomeButton {
-    margin-top: 0; /*Modified*/
+    margin-top: 0;
   }
 
 .discoveryComp ul li {
@@ -123,11 +123,11 @@
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    font-size: 15px; /*Modified*/ 
+    font-size: 15px; 
     transition: color 0.5s;
   }
 
-  .discoveryCompUl { /*Modified*/
+  .discoveryCompUl {
     padding-left: 10px;
   }
 }
@@ -142,7 +142,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 8px; /*Modified*/
+    margin-right: 8px;
   }
 
 
@@ -150,7 +150,7 @@
     font-weight: bold;
     text-decoration: none;
     color: #adadad;
-    font-size: 8px; /*Modified*/
+    font-size: 8px;
     transition: color 1s;
   }
 
@@ -164,7 +164,7 @@
   }
 
   .signInHomeButton {
-    margin-top: -3px; /*Modified*/
+    margin-top: -3px;
   }
 
   .discoveryComp ul li {
@@ -173,11 +173,11 @@
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    font-size: 8px; /*Modified*/
+    font-size: 8px;
     transition: color 0.5s;
   }
   
-  .discoveryCompUl { /*Modified*/
+  .discoveryCompUl {
     padding-left: 10px;
   }
 }
